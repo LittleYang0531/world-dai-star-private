@@ -4,7 +4,7 @@ const fs = require("fs");
 const { isArray, isObject, isString } = require("util");
 const port = 3000;
 var app = new express();
-var config = JSON.parse(fs.readFileSync("config.json"));
+var config = JSON.parse(fs.readFileSync(path.join(__dirname, "../config.json")));
 
 function DFS(json, dep) {
     if (!isObject(json)) {
@@ -30,8 +30,8 @@ function DFS2(json, dep = 0) {
     } return json;
 }
 
-var data = JSON.parse(fs.readFileSync("data.json"));
-var search = DFS(JSON.parse(fs.readFileSync("search.json")));
+var data = JSON.parse(fs.readFileSync(path.join(__dirname, "../data.json")));
+var search = DFS(JSON.parse(fs.readFileSync(path.join(__dirname, "../search.json"))));
 var sonolusApp = new sonolus.Sonolus(app, {
     levels: { search: { options: search["levels"] } },
     skins: { search: { options: search["skins"] } },
@@ -146,7 +146,7 @@ sonolusApp.engineListHandler = (sonolus, query, page) => {
     };
 }
 
-app.use(express.static("public/web"));
+app.use(express.static(path.join(__dirname, "../public/web")));
 
 app.listen(port, () => {
     console.log("Server listening at port", port);
