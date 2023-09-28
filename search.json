@@ -1,0 +1,82 @@
+{
+    "levels": [
+        {
+            "name": "#KEYWORDS",
+            "placeholder": "Enter keywords...",
+            "query": "keywords",
+            "type": "text"
+        },
+        {
+            "name": "#ARTISTS",
+            "placeholder": "Enter artist name...",
+            "query": "artist",
+            "type": "text"
+        },
+        {
+            "name": "#AUTHOR",
+            "placeholder": "Enter author name...",
+            "query": "author",
+            "type": "text"
+        },
+        {
+            "def": 5,
+            "max": 40,
+            "min": 5,
+            "name": "#RATING_MINIMUM",
+            "query": "minRating",
+            "step": 1,
+            "type": "slider",
+            "unit": ""
+        },
+        {
+            "def": 40,
+            "max": 40,
+            "min": 5,
+            "name": "#RATING_MAXIMUM",
+            "query": "maxRating",
+            "step": 1,
+            "type": "slider",
+            "unit": ""
+        }
+    ],
+    "skins": [
+        {
+            "name": "#KEYWORDS",
+            "placeholder": "Enter keywords...",
+            "query": "keywords",
+            "type": "text"
+        }
+    ],
+    "backgrounds": [
+        {
+            "name": "#KEYWORDS",
+            "placeholder": "Enter keywords...",
+            "query": "keywords",
+            "type": "text"
+        }
+    ],
+    "effects": [
+        {
+            "name": "#KEYWORDS",
+            "placeholder": "Enter keywords...",
+            "query": "keywords",
+            "type": "text"
+        }
+    ],
+    "particles": [
+        {
+            "name": "#KEYWORDS",
+            "placeholder": "Enter keywords...",
+            "query": "keywords",
+            "type": "text"
+        }
+    ],
+    "engines": [
+        {
+            "name": "#KEYWORDS",
+            "placeholder": "Enter keywords...",
+            "query": "keywords",
+            "type": "text"
+        }
+    ]
+}
