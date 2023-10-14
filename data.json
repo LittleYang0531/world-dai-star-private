@@ -5,30 +5,30 @@
             "author" : "ワールドダイスター 夢のステラリウム",
             "configuration" : 
             {
-                "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa",
+                "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n",
                 "type" : "BackgroundConfiguration",
-                "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa"
+                "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n"
             },
             "data" : 
             {
-                "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f",
+                "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n",
                 "type" : "BackgroundData",
-                "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f"
+                "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n"
             },
             "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
             "image" : 
             {
-                "hash" : "0ac807f318d577fe98cfcfba76568d6f020ceaa9",
+                "hash" : "0ac807f318d577fe98cfcfba76568d6f020ceaa9\n",
                 "type" : "BackgroundImage",
-                "url" : "/data/0ac807f318d577fe98cfcfba76568d6f020ceaa9"
+                "url" : "/data/0ac807f318d577fe98cfcfba76568d6f020ceaa9\n"
             },
             "name" : "sirius-65",
             "subtitle" : "新妻八恵、本巣叶羽",
             "thumbnail" : 
             {
-                "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb",
+                "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n",
                 "type" : "BackgroundThumbnail",
-                "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb"
+                "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n"
             },
             "title" : "adrenaline!!!",
             "version" : 2
@@ -37,15 +37,15 @@
             "author" : "ワールドダイスター 夢のステラリウム",
             "configuration" : 
             {
-                "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa",
+                "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n",
                 "type" : "BackgroundConfiguration",
-                "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa"
+                "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n"
             },
             "data" : 
             {
-                "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f",
+                "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n",
                 "type" : "BackgroundData",
-                "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f"
+                "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n"
             },
             "description" : "Pronounce Name: かくめいだんす\nArranger: 志村真白\nComposer: 志村真白\nLyric Writer: 志村真白\nSinger: 柳場ぱんだ、与那国緋花里\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
             "image" : 
@@ -58,9 +58,9 @@
             "subtitle" : "柳場ぱんだ、与那国緋花里",
             "thumbnail" : 
             {
-                "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a",
+                "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a\n",
                 "type" : "BackgroundThumbnail",
-                "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a"
+                "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a\n"
             },
             "title" : "革命ダンス",
             "version" : 2
@@ -2343,30 +2343,30 @@
                     "author" : "ワールドダイスター 夢のステラリウム",
                     "configuration" : 
                     {
-                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa",
+                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n",
                         "type" : "BackgroundConfiguration",
-                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa"
+                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n"
                     },
                     "data" : 
                     {
-                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f",
+                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n",
                         "type" : "BackgroundData",
-                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f"
+                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n"
                     },
                     "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
                     "image" : 
                     {
-                        "hash" : "0ac807f318d577fe98cfcfba76568d6f020ceaa9",
+                        "hash" : "0ac807f318d577fe98cfcfba76568d6f020ceaa9\n",
                         "type" : "BackgroundImage",
-                        "url" : "/data/0ac807f318d577fe98cfcfba76568d6f020ceaa9"
+                        "url" : "/data/0ac807f318d577fe98cfcfba76568d6f020ceaa9\n"
                     },
                     "name" : "sirius-65",
                     "subtitle" : "新妻八恵、本巣叶羽",
                     "thumbnail" : 
                     {
-                        "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb",
+                        "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n",
                         "type" : "BackgroundThumbnail",
-                        "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb"
+                        "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n"
                     },
                     "title" : "adrenaline!!!",
                     "version" : 2
@@ -2665,30 +2665,30 @@
                     "author" : "ワールドダイスター 夢のステラリウム",
                     "configuration" : 
                     {
-                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa",
+                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n",
                         "type" : "BackgroundConfiguration",
-                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa"
+                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n"
                     },
                     "data" : 
                     {
-                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f",
+                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n",
                         "type" : "BackgroundData",
-                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f"
+                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n"
                     },
                     "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
                     "image" : 
                     {
-                        "hash" : "0ac807f318d577fe98cfcfba76568d6f020ceaa9",
+                        "hash" : "0ac807f318d577fe98cfcfba76568d6f020ceaa9\n",
                         "type" : "BackgroundImage",
-                        "url" : "/data/0ac807f318d577fe98cfcfba76568d6f020ceaa9"
+                        "url" : "/data/0ac807f318d577fe98cfcfba76568d6f020ceaa9\n"
                     },
                     "name" : "sirius-65",
                     "subtitle" : "新妻八恵、本巣叶羽",
                     "thumbnail" : 
                     {
-                        "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb",
+                        "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n",
                         "type" : "BackgroundThumbnail",
-                        "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb"
+                        "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n"
                     },
                     "title" : "adrenaline!!!",
                     "version" : 2
@@ -2987,30 +2987,30 @@
                     "author" : "ワールドダイスター 夢のステラリウム",
                     "configuration" : 
                     {
-                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa",
+                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n",
                         "type" : "BackgroundConfiguration",
-                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa"
+                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n"
                     },
                     "data" : 
                     {
-                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f",
+                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n",
                         "type" : "BackgroundData",
-                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f"
+                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n"
                     },
                     "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
                     "image" : 
                     {
-                        "hash" : "0ac807f318d577fe98cfcfba76568d6f020ceaa9",
+                        "hash" : "0ac807f318d577fe98cfcfba76568d6f020ceaa9\n",
                         "type" : "BackgroundImage",
-                        "url" : "/data/0ac807f318d577fe98cfcfba76568d6f020ceaa9"
+                        "url" : "/data/0ac807f318d577fe98cfcfba76568d6f020ceaa9\n"
                     },
                     "name" : "sirius-65",
                     "subtitle" : "新妻八恵、本巣叶羽",
                     "thumbnail" : 
                     {
-                        "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb",
+                        "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n",
                         "type" : "BackgroundThumbnail",
-                        "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb"
+                        "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n"
                     },
                     "title" : "adrenaline!!!",
                     "version" : 2
@@ -3309,30 +3309,30 @@
                     "author" : "ワールドダイスター 夢のステラリウム",
                     "configuration" : 
                     {
-                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa",
+                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n",
                         "type" : "BackgroundConfiguration",
-                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa"
+                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n"
                     },
                     "data" : 
                     {
-                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f",
+                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n",
                         "type" : "BackgroundData",
-                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f"
+                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n"
                     },
                     "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
                     "image" : 
                     {
-                        "hash" : "0ac807f318d577fe98cfcfba76568d6f020ceaa9",
+                        "hash" : "0ac807f318d577fe98cfcfba76568d6f020ceaa9\n",
                         "type" : "BackgroundImage",
-                        "url" : "/data/0ac807f318d577fe98cfcfba76568d6f020ceaa9"
+                        "url" : "/data/0ac807f318d577fe98cfcfba76568d6f020ceaa9\n"
                     },
                     "name" : "sirius-65",
                     "subtitle" : "新妻八恵、本巣叶羽",
                     "thumbnail" : 
                     {
-                        "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb",
+                        "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n",
                         "type" : "BackgroundThumbnail",
-                        "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb"
+                        "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n"
                     },
                     "title" : "adrenaline!!!",
                     "version" : 2
@@ -3631,30 +3631,30 @@
                     "author" : "ワールドダイスター 夢のステラリウム",
                     "configuration" : 
                     {
-                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa",
+                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n",
                         "type" : "BackgroundConfiguration",
-                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa"
+                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n"
                     },
                     "data" : 
                     {
-                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f",
+                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n",
                         "type" : "BackgroundData",
-                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f"
+                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n"
                     },
                     "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
                     "image" : 
                     {
-                        "hash" : "0ac807f318d577fe98cfcfba76568d6f020ceaa9",
+                        "hash" : "0ac807f318d577fe98cfcfba76568d6f020ceaa9\n",
                         "type" : "BackgroundImage",
-                        "url" : "/data/0ac807f318d577fe98cfcfba76568d6f020ceaa9"
+                        "url" : "/data/0ac807f318d577fe98cfcfba76568d6f020ceaa9\n"
                     },
                     "name" : "sirius-65",
                     "subtitle" : "新妻八恵、本巣叶羽",
                     "thumbnail" : 
                     {
-                        "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb",
+                        "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n",
                         "type" : "BackgroundThumbnail",
-                        "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb"
+                        "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n"
                     },
                     "title" : "adrenaline!!!",
                     "version" : 2
@@ -3773,9 +3773,9 @@
             },
             "data" : 
             {
-                "hash" : "752d4e2023608b6484bbcbb44c4c449669cb2193",
+                "hash" : "752d4e2023608b6484bbcbb44c4c449669cb2193\n",
                 "type" : "LevelData",
-                "url" : "/data/752d4e2023608b6484bbcbb44c4c449669cb2193"
+                "url" : "/data/752d4e2023608b6484bbcbb44c4c449669cb2193\n"
             },
             "description" : "Pronounce Name: かくめいだんす\nArranger: 志村真白\nComposer: 志村真白\nLyric Writer: 志村真白\nSinger: 柳場ぱんだ、与那国緋花里\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
             "engine" : 
@@ -3953,15 +3953,15 @@
                     "author" : "ワールドダイスター 夢のステラリウム",
                     "configuration" : 
                     {
-                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa",
+                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n",
                         "type" : "BackgroundConfiguration",
-                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa"
+                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n"
                     },
                     "data" : 
                     {
-                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f",
+                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n",
                         "type" : "BackgroundData",
-                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f"
+                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n"
                     },
                     "description" : "Pronounce Name: かくめいだんす\nArranger: 志村真白\nComposer: 志村真白\nLyric Writer: 志村真白\nSinger: 柳場ぱんだ、与那国緋花里\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
                     "image" : 
@@ -3974,9 +3974,9 @@
                     "subtitle" : "柳場ぱんだ、与那国緋花里",
                     "thumbnail" : 
                     {
-                        "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a",
+                        "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a\n",
                         "type" : "BackgroundThumbnail",
-                        "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a"
+                        "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a\n"
                     },
                     "title" : "革命ダンス",
                     "version" : 2
@@ -4095,9 +4095,9 @@
             },
             "data" : 
             {
-                "hash" : "8ad61e211772da218c0f3d5f69b76f5bd0beb6be",
+                "hash" : "8ad61e211772da218c0f3d5f69b76f5bd0beb6be\n",
                 "type" : "LevelData",
-                "url" : "/data/8ad61e211772da218c0f3d5f69b76f5bd0beb6be"
+                "url" : "/data/8ad61e211772da218c0f3d5f69b76f5bd0beb6be\n"
             },
             "description" : "Pronounce Name: かくめいだんす\nArranger: 志村真白\nComposer: 志村真白\nLyric Writer: 志村真白\nSinger: 柳場ぱんだ、与那国緋花里\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
             "engine" : 
@@ -4275,15 +4275,15 @@
                     "author" : "ワールドダイスター 夢のステラリウム",
                     "configuration" : 
                     {
-                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa",
+                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n",
                         "type" : "BackgroundConfiguration",
-                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa"
+                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n"
                     },
                     "data" : 
                     {
-                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f",
+                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n",
                         "type" : "BackgroundData",
-                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f"
+                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n"
                     },
                     "description" : "Pronounce Name: かくめいだんす\nArranger: 志村真白\nComposer: 志村真白\nLyric Writer: 志村真白\nSinger: 柳場ぱんだ、与那国緋花里\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
                     "image" : 
@@ -4296,9 +4296,9 @@
                     "subtitle" : "柳場ぱんだ、与那国緋花里",
                     "thumbnail" : 
                     {
-                        "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a",
+                        "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a\n",
                         "type" : "BackgroundThumbnail",
-                        "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a"
+                        "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a\n"
                     },
                     "title" : "革命ダンス",
                     "version" : 2
@@ -4417,9 +4417,9 @@
             },
             "data" : 
             {
-                "hash" : "71c8e1bd410eef1afaeea476360129f3fad39d35",
+                "hash" : "71c8e1bd410eef1afaeea476360129f3fad39d35\n",
                 "type" : "LevelData",
-                "url" : "/data/71c8e1bd410eef1afaeea476360129f3fad39d35"
+                "url" : "/data/71c8e1bd410eef1afaeea476360129f3fad39d35\n"
             },
             "description" : "Pronounce Name: かくめいだんす\nArranger: 志村真白\nComposer: 志村真白\nLyric Writer: 志村真白\nSinger: 柳場ぱんだ、与那国緋花里\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
             "engine" : 
@@ -4597,15 +4597,15 @@
                     "author" : "ワールドダイスター 夢のステラリウム",
                     "configuration" : 
                     {
-                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa",
+                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n",
                         "type" : "BackgroundConfiguration",
-                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa"
+                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n"
                     },
                     "data" : 
                     {
-                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f",
+                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n",
                         "type" : "BackgroundData",
-                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f"
+                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n"
                     },
                     "description" : "Pronounce Name: かくめいだんす\nArranger: 志村真白\nComposer: 志村真白\nLyric Writer: 志村真白\nSinger: 柳場ぱんだ、与那国緋花里\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
                     "image" : 
@@ -4618,9 +4618,9 @@
                     "subtitle" : "柳場ぱんだ、与那国緋花里",
                     "thumbnail" : 
                     {
-                        "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a",
+                        "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a\n",
                         "type" : "BackgroundThumbnail",
-                        "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a"
+                        "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a\n"
                     },
                     "title" : "革命ダンス",
                     "version" : 2
@@ -4739,9 +4739,9 @@
             },
             "data" : 
             {
-                "hash" : "89ceea48cd1f0d014b429ec0f2ab202d12f31182",
+                "hash" : "89ceea48cd1f0d014b429ec0f2ab202d12f31182\n",
                 "type" : "LevelData",
-                "url" : "/data/89ceea48cd1f0d014b429ec0f2ab202d12f31182"
+                "url" : "/data/89ceea48cd1f0d014b429ec0f2ab202d12f31182\n"
             },
             "description" : "Pronounce Name: かくめいだんす\nArranger: 志村真白\nComposer: 志村真白\nLyric Writer: 志村真白\nSinger: 柳場ぱんだ、与那国緋花里\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
             "engine" : 
@@ -4919,15 +4919,15 @@
                     "author" : "ワールドダイスター 夢のステラリウム",
                     "configuration" : 
                     {
-                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa",
+                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n",
                         "type" : "BackgroundConfiguration",
-                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa"
+                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n"
                     },
                     "data" : 
                     {
-                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f",
+                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n",
                         "type" : "BackgroundData",
-                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f"
+                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n"
                     },
                     "description" : "Pronounce Name: かくめいだんす\nArranger: 志村真白\nComposer: 志村真白\nLyric Writer: 志村真白\nSinger: 柳場ぱんだ、与那国緋花里\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
                     "image" : 
@@ -4940,9 +4940,9 @@
                     "subtitle" : "柳場ぱんだ、与那国緋花里",
                     "thumbnail" : 
                     {
-                        "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a",
+                        "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a\n",
                         "type" : "BackgroundThumbnail",
-                        "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a"
+                        "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a\n"
                     },
                     "title" : "革命ダンス",
                     "version" : 2
@@ -5061,9 +5061,9 @@
             },
             "data" : 
             {
-                "hash" : "e666b685a86aa795648a740125636f72a791c0d4",
+                "hash" : "e666b685a86aa795648a740125636f72a791c0d4\n",
                 "type" : "LevelData",
-                "url" : "/data/e666b685a86aa795648a740125636f72a791c0d4"
+                "url" : "/data/e666b685a86aa795648a740125636f72a791c0d4\n"
             },
             "description" : "Pronounce Name: かくめいだんす\nArranger: 志村真白\nComposer: 志村真白\nLyric Writer: 志村真白\nSinger: 柳場ぱんだ、与那国緋花里\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
             "engine" : 
@@ -5241,15 +5241,15 @@
                     "author" : "ワールドダイスター 夢のステラリウム",
                     "configuration" : 
                     {
-                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa",
+                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n",
                         "type" : "BackgroundConfiguration",
-                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa"
+                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n"
                     },
                     "data" : 
                     {
-                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f",
+                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n",
                         "type" : "BackgroundData",
-                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f"
+                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n"
                     },
                     "description" : "Pronounce Name: かくめいだんす\nArranger: 志村真白\nComposer: 志村真白\nLyric Writer: 志村真白\nSinger: 柳場ぱんだ、与那国緋花里\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
                     "image" : 
@@ -5262,9 +5262,9 @@
                     "subtitle" : "柳場ぱんだ、与那国緋花里",
                     "thumbnail" : 
                     {
-                        "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a",
+                        "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a\n",
                         "type" : "BackgroundThumbnail",
-                        "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a"
+                        "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a\n"
                     },
                     "title" : "革命ダンス",
                     "version" : 2
