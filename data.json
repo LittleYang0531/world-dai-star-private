@@ -5,6 +5,38 @@
             "author" : "ワールドダイスター 夢のステラリウム",
             "configuration" : 
             {
+                "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n",
+                "type" : "BackgroundConfiguration",
+                "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n"
+            },
+            "data" : 
+            {
+                "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n",
+                "type" : "BackgroundData",
+                "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n"
+            },
+            "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
+            "image" : 
+            {
+                "hash" : "0ac807f318d577fe98cfcfba76568d6f020ceaa9",
+                "type" : "BackgroundImage",
+                "url" : "/data/0ac807f318d577fe98cfcfba76568d6f020ceaa9"
+            },
+            "name" : "sirius-65",
+            "subtitle" : "新妻八恵、本巣叶羽",
+            "thumbnail" : 
+            {
+                "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb",
+                "type" : "BackgroundThumbnail",
+                "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb"
+            },
+            "title" : "adrenaline!!!",
+            "version" : 2
+        },
+        {
+            "author" : "ワールドダイスター 夢のステラリウム",
+            "configuration" : 
+            {
                 "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa",
                 "type" : "BackgroundConfiguration",
                 "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa"
@@ -2114,6 +2146,1616 @@
     ],
     "levels" : 
     [
+        {
+            "artists" : "新妻八恵、本巣叶羽",
+            "author" : "ワールドダイスター 夢のステラリウム",
+            "bgm" : 
+            {
+                "hash" : "14d00d03e5103e0d0163d998f2a7be1f9fc48daf",
+                "type" : "LevelBgm",
+                "url" : "/data/14d00d03e5103e0d0163d998f2a7be1f9fc48daf"
+            },
+            "cover" : 
+            {
+                "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n",
+                "type" : "LevelCover",
+                "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n"
+            },
+            "data" : 
+            {
+                "hash" : "8658f07396c8d4a6667842ad7283eb6611c02c8d",
+                "type" : "LevelData",
+                "url" : "/data/8658f07396c8d4a6667842ad7283eb6611c02c8d"
+            },
+            "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
+            "engine" : 
+            {
+                "author" : "LittleYang0531",
+                "background" : 
+                {
+                    "author" : "World Dai Star: Dream's Stellarium",
+                    "configuration" : 
+                    {
+                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa",
+                        "type" : "BackgroundConfiguration",
+                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa"
+                    },
+                    "data" : 
+                    {
+                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f",
+                        "type" : "BackgroundData",
+                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f"
+                    },
+                    "description" : "",
+                    "image" : 
+                    {
+                        "hash" : "83e331c59146c674d5c3d6ed56ba5ac69ecca06a",
+                        "type" : "BackgroundImage",
+                        "url" : "/data/83e331c59146c674d5c3d6ed56ba5ac69ecca06a"
+                    },
+                    "name" : "sirius-default",
+                    "subtitle" : "World Dai Star: Dream's Stellarium",
+                    "thumbnail" : 
+                    {
+                        "hash" : "4d84f6ea99c28b7787161f012b353baf4c1752e7",
+                        "type" : "BackgroundThumbnail",
+                        "url" : "/data/4d84f6ea99c28b7787161f012b353baf4c1752e7"
+                    },
+                    "title" : "Sirius Default",
+                    "version" : 2
+                },
+                "configuration" : 
+                {
+                    "hash" : "b83d6e65e91fde752ea2f1b9fa875bfa939d7888",
+                    "type" : "EngineConfiguration",
+                    "url" : "/data/b83d6e65e91fde752ea2f1b9fa875bfa939d7888"
+                },
+                "data" : 
+                {
+                    "hash" : "44ad1697cdf3c2d3d698e447512fe6ebfbe43e2b",
+                    "type" : "EngineData",
+                    "url" : "/data/44ad1697cdf3c2d3d698e447512fe6ebfbe43e2b"
+                },
+                "description" : "A recreation of World Dai Star: Dream's Stellarium engine in Sonolus.\nVersion: 1.0.0.20231008_beta\n\nGithub Repository\nhttps://github.com/SonolusHaniwa/sonolus-sirius-engine",
+                "effect" : 
+                {
+                    "audio" : 
+                    {
+                        "hash" : "fb615f16acdbf1f70bdf4253f665ec5d67e51e1c",
+                        "type" : "EffectAudio",
+                        "url" : "/data/fb615f16acdbf1f70bdf4253f665ec5d67e51e1c"
+                    },
+                    "author" : "LittleYang0531",
+                    "data" : 
+                    {
+                        "hash" : "c5809b0d0f595655d669bf2d67cab30ce6bafdb5",
+                        "type" : "EffectData",
+                        "url" : "/data/c5809b0d0f595655d669bf2d67cab30ce6bafdb5"
+                    },
+                    "description" : "",
+                    "name" : "sirius",
+                    "subtitle" : "World Dai Star: Dream's Stellarium",
+                    "thumbnail" : 
+                    {
+                        "hash" : "4d84f6ea99c28b7787161f012b353baf4c1752e7",
+                        "type" : "EffectThumbnail",
+                        "url" : "/data/4d84f6ea99c28b7787161f012b353baf4c1752e7"
+                    },
+                    "title" : "Sirius",
+                    "version" : 5
+                },
+                "name" : "sirius",
+                "particle" : 
+                {
+                    "author" : "Burrito",
+                    "data" : 
+                    {
+                        "hash" : "3d6c06680612cb880c8552672ac2999cfaeb49a8",
+                        "type" : "ParticleData",
+                        "url" : "/data/3d6c06680612cb880c8552672ac2999cfaeb49a8"
+                    },
+                    "description" : "",
+                    "name" : "pjsekai",
+                    "subtitle" : "世界计划 彩色舞台",
+                    "texture" : 
+                    {
+                        "hash" : "57b4bd504f814150dea87b41f39c2c7a63f29518",
+                        "type" : "ParticleTexture",
+                        "url" : "/data/57b4bd504f814150dea87b41f39c2c7a63f29518"
+                    },
+                    "thumbnail" : 
+                    {
+                        "hash" : "e5f439916eac9bbd316276e20aed999993653560",
+                        "type" : "ParticleThumbnail",
+                        "url" : "/data/e5f439916eac9bbd316276e20aed999993653560"
+                    },
+                    "title" : "世界计划",
+                    "version" : 2
+                },
+                "playData" : 
+                {
+                    "hash" : "44ad1697cdf3c2d3d698e447512fe6ebfbe43e2b",
+                    "type" : "EnginePlayData",
+                    "url" : "/data/44ad1697cdf3c2d3d698e447512fe6ebfbe43e2b"
+                },
+                "previewData" : 
+                {
+                    "hash" : "5574ca4074af46ecbd1cc07a4d2a2e950d9e3504",
+                    "type" : "EnginePreviewData",
+                    "url" : "/data/5574ca4074af46ecbd1cc07a4d2a2e950d9e3504"
+                },
+                "skin" : 
+                {
+                    "author" : "LittleYang0531",
+                    "data" : 
+                    {
+                        "hash" : "a1737cf0cb97549d0a662a769461fb752720c32d",
+                        "type" : "SkinData",
+                        "url" : "/data/a1737cf0cb97549d0a662a769461fb752720c32d"
+                    },
+                    "description" : "",
+                    "name" : "sirius",
+                    "subtitle" : "World Dai Star: Dream's Stellarium",
+                    "texture" : 
+                    {
+                        "hash" : "1d85380813552d515b77d4e5e8cf31e51537cdc8",
+                        "type" : "SkinTexture",
+                        "url" : "/data/1d85380813552d515b77d4e5e8cf31e51537cdc8"
+                    },
+                    "thumbnail" : 
+                    {
+                        "hash" : "4d84f6ea99c28b7787161f012b353baf4c1752e7",
+                        "type" : "SkinThumbnail",
+                        "url" : "/data/4d84f6ea99c28b7787161f012b353baf4c1752e7"
+                    },
+                    "title" : "Sirius",
+                    "version" : 4
+                },
+                "subtitle" : "World Dai Star: Dream's Stellarium",
+                "thumbnail" : 
+                {
+                    "hash" : "4d84f6ea99c28b7787161f012b353baf4c1752e7",
+                    "type" : "EngineThumbnail",
+                    "url" : "/data/4d84f6ea99c28b7787161f012b353baf4c1752e7"
+                },
+                "title" : "Sirius",
+                "tutorialData" : 
+                {
+                    "hash" : "cb2e0daf7bb4b92f68e2701b0dea937976c71e07",
+                    "type" : "EngineTutorialData",
+                    "url" : "/data/cb2e0daf7bb4b92f68e2701b0dea937976c71e07"
+                },
+                "version" : 10
+            },
+            "name" : "sirius-65-olivier",
+            "preview" : 
+            {
+                "hash" : "b903797276ce31d38e1382acf380fa1fb0e02182",
+                "type" : "LevelPreview",
+                "url" : "/data/b903797276ce31d38e1382acf380fa1fb0e02182"
+            },
+            "rating" : 33,
+            "title" : "adrenaline!!!",
+            "useBackground" : 
+            {
+                "item" : 
+                {
+                    "author" : "ワールドダイスター 夢のステラリウム",
+                    "configuration" : 
+                    {
+                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n",
+                        "type" : "BackgroundConfiguration",
+                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n"
+                    },
+                    "data" : 
+                    {
+                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n",
+                        "type" : "BackgroundData",
+                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n"
+                    },
+                    "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
+                    "image" : 
+                    {
+                        "hash" : "0ac807f318d577fe98cfcfba76568d6f020ceaa9",
+                        "type" : "BackgroundImage",
+                        "url" : "/data/0ac807f318d577fe98cfcfba76568d6f020ceaa9"
+                    },
+                    "name" : "sirius-65",
+                    "subtitle" : "新妻八恵、本巣叶羽",
+                    "thumbnail" : 
+                    {
+                        "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb",
+                        "type" : "BackgroundThumbnail",
+                        "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb"
+                    },
+                    "title" : "adrenaline!!!",
+                    "version" : 2
+                },
+                "useDefault" : false
+            },
+            "useEffect" : 
+            {
+                "item" : 
+                {
+                    "audio" : 
+                    {
+                        "hash" : "",
+                        "type" : "EffectAudio",
+                        "url" : ""
+                    },
+                    "author" : "",
+                    "data" : 
+                    {
+                        "hash" : "",
+                        "type" : "EffectData",
+                        "url" : ""
+                    },
+                    "description" : "",
+                    "name" : "",
+                    "subtitle" : "",
+                    "thumbnail" : 
+                    {
+                        "hash" : "",
+                        "type" : "EffectThumbnail",
+                        "url" : ""
+                    },
+                    "title" : "",
+                    "version" : 5
+                },
+                "useDefault" : true
+            },
+            "useParticle" : 
+            {
+                "item" : 
+                {
+                    "author" : "",
+                    "data" : 
+                    {
+                        "hash" : "",
+                        "type" : "ParticleData",
+                        "url" : ""
+                    },
+                    "description" : "",
+                    "name" : "",
+                    "subtitle" : "",
+                    "texture" : 
+                    {
+                        "hash" : "",
+                        "type" : "ParticleTexture",
+                        "url" : ""
+                    },
+                    "thumbnail" : 
+                    {
+                        "hash" : "",
+                        "type" : "ParticleThumbnail",
+                        "url" : ""
+                    },
+                    "title" : "",
+                    "version" : 2
+                },
+                "useDefault" : true
+            },
+            "useSkin" : 
+            {
+                "item" : 
+                {
+                    "author" : "",
+                    "data" : 
+                    {
+                        "hash" : "",
+                        "type" : "SkinData",
+                        "url" : ""
+                    },
+                    "description" : "",
+                    "name" : "",
+                    "subtitle" : "",
+                    "texture" : 
+                    {
+                        "hash" : "",
+                        "type" : "SkinTexture",
+                        "url" : ""
+                    },
+                    "thumbnail" : 
+                    {
+                        "hash" : "",
+                        "type" : "SkinThumbnail",
+                        "url" : ""
+                    },
+                    "title" : "",
+                    "version" : 4
+                },
+                "useDefault" : true
+            },
+            "version" : 1
+        },
+        {
+            "artists" : "新妻八恵、本巣叶羽",
+            "author" : "ワールドダイスター 夢のステラリウム",
+            "bgm" : 
+            {
+                "hash" : "14d00d03e5103e0d0163d998f2a7be1f9fc48daf",
+                "type" : "LevelBgm",
+                "url" : "/data/14d00d03e5103e0d0163d998f2a7be1f9fc48daf"
+            },
+            "cover" : 
+            {
+                "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n",
+                "type" : "LevelCover",
+                "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n"
+            },
+            "data" : 
+            {
+                "hash" : "1abbcf43e627e0494e60e7fed586f4639568ed15",
+                "type" : "LevelData",
+                "url" : "/data/1abbcf43e627e0494e60e7fed586f4639568ed15"
+            },
+            "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
+            "engine" : 
+            {
+                "author" : "LittleYang0531",
+                "background" : 
+                {
+                    "author" : "World Dai Star: Dream's Stellarium",
+                    "configuration" : 
+                    {
+                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa",
+                        "type" : "BackgroundConfiguration",
+                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa"
+                    },
+                    "data" : 
+                    {
+                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f",
+                        "type" : "BackgroundData",
+                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f"
+                    },
+                    "description" : "",
+                    "image" : 
+                    {
+                        "hash" : "83e331c59146c674d5c3d6ed56ba5ac69ecca06a",
+                        "type" : "BackgroundImage",
+                        "url" : "/data/83e331c59146c674d5c3d6ed56ba5ac69ecca06a"
+                    },
+                    "name" : "sirius-default",
+                    "subtitle" : "World Dai Star: Dream's Stellarium",
+                    "thumbnail" : 
+                    {
+                        "hash" : "4d84f6ea99c28b7787161f012b353baf4c1752e7",
+                        "type" : "BackgroundThumbnail",
+                        "url" : "/data/4d84f6ea99c28b7787161f012b353baf4c1752e7"
+                    },
+                    "title" : "Sirius Default",
+                    "version" : 2
+                },
+                "configuration" : 
+                {
+                    "hash" : "b83d6e65e91fde752ea2f1b9fa875bfa939d7888",
+                    "type" : "EngineConfiguration",
+                    "url" : "/data/b83d6e65e91fde752ea2f1b9fa875bfa939d7888"
+                },
+                "data" : 
+                {
+                    "hash" : "44ad1697cdf3c2d3d698e447512fe6ebfbe43e2b",
+                    "type" : "EngineData",
+                    "url" : "/data/44ad1697cdf3c2d3d698e447512fe6ebfbe43e2b"
+                },
+                "description" : "A recreation of World Dai Star: Dream's Stellarium engine in Sonolus.\nVersion: 1.0.0.20231008_beta\n\nGithub Repository\nhttps://github.com/SonolusHaniwa/sonolus-sirius-engine",
+                "effect" : 
+                {
+                    "audio" : 
+                    {
+                        "hash" : "fb615f16acdbf1f70bdf4253f665ec5d67e51e1c",
+                        "type" : "EffectAudio",
+                        "url" : "/data/fb615f16acdbf1f70bdf4253f665ec5d67e51e1c"
+                    },
+                    "author" : "LittleYang0531",
+                    "data" : 
+                    {
+                        "hash" : "c5809b0d0f595655d669bf2d67cab30ce6bafdb5",
+                        "type" : "EffectData",
+                        "url" : "/data/c5809b0d0f595655d669bf2d67cab30ce6bafdb5"
+                    },
+                    "description" : "",
+                    "name" : "sirius",
+                    "subtitle" : "World Dai Star: Dream's Stellarium",
+                    "thumbnail" : 
+                    {
+                        "hash" : "4d84f6ea99c28b7787161f012b353baf4c1752e7",
+                        "type" : "EffectThumbnail",
+                        "url" : "/data/4d84f6ea99c28b7787161f012b353baf4c1752e7"
+                    },
+                    "title" : "Sirius",
+                    "version" : 5
+                },
+                "name" : "sirius",
+                "particle" : 
+                {
+                    "author" : "Burrito",
+                    "data" : 
+                    {
+                        "hash" : "3d6c06680612cb880c8552672ac2999cfaeb49a8",
+                        "type" : "ParticleData",
+                        "url" : "/data/3d6c06680612cb880c8552672ac2999cfaeb49a8"
+                    },
+                    "description" : "",
+                    "name" : "pjsekai",
+                    "subtitle" : "世界计划 彩色舞台",
+                    "texture" : 
+                    {
+                        "hash" : "57b4bd504f814150dea87b41f39c2c7a63f29518",
+                        "type" : "ParticleTexture",
+                        "url" : "/data/57b4bd504f814150dea87b41f39c2c7a63f29518"
+                    },
+                    "thumbnail" : 
+                    {
+                        "hash" : "e5f439916eac9bbd316276e20aed999993653560",
+                        "type" : "ParticleThumbnail",
+                        "url" : "/data/e5f439916eac9bbd316276e20aed999993653560"
+                    },
+                    "title" : "世界计划",
+                    "version" : 2
+                },
+                "playData" : 
+                {
+                    "hash" : "44ad1697cdf3c2d3d698e447512fe6ebfbe43e2b",
+                    "type" : "EnginePlayData",
+                    "url" : "/data/44ad1697cdf3c2d3d698e447512fe6ebfbe43e2b"
+                },
+                "previewData" : 
+                {
+                    "hash" : "5574ca4074af46ecbd1cc07a4d2a2e950d9e3504",
+                    "type" : "EnginePreviewData",
+                    "url" : "/data/5574ca4074af46ecbd1cc07a4d2a2e950d9e3504"
+                },
+                "skin" : 
+                {
+                    "author" : "LittleYang0531",
+                    "data" : 
+                    {
+                        "hash" : "a1737cf0cb97549d0a662a769461fb752720c32d",
+                        "type" : "SkinData",
+                        "url" : "/data/a1737cf0cb97549d0a662a769461fb752720c32d"
+                    },
+                    "description" : "",
+                    "name" : "sirius",
+                    "subtitle" : "World Dai Star: Dream's Stellarium",
+                    "texture" : 
+                    {
+                        "hash" : "1d85380813552d515b77d4e5e8cf31e51537cdc8",
+                        "type" : "SkinTexture",
+                        "url" : "/data/1d85380813552d515b77d4e5e8cf31e51537cdc8"
+                    },
+                    "thumbnail" : 
+                    {
+                        "hash" : "4d84f6ea99c28b7787161f012b353baf4c1752e7",
+                        "type" : "SkinThumbnail",
+                        "url" : "/data/4d84f6ea99c28b7787161f012b353baf4c1752e7"
+                    },
+                    "title" : "Sirius",
+                    "version" : 4
+                },
+                "subtitle" : "World Dai Star: Dream's Stellarium",
+                "thumbnail" : 
+                {
+                    "hash" : "4d84f6ea99c28b7787161f012b353baf4c1752e7",
+                    "type" : "EngineThumbnail",
+                    "url" : "/data/4d84f6ea99c28b7787161f012b353baf4c1752e7"
+                },
+                "title" : "Sirius",
+                "tutorialData" : 
+                {
+                    "hash" : "cb2e0daf7bb4b92f68e2701b0dea937976c71e07",
+                    "type" : "EngineTutorialData",
+                    "url" : "/data/cb2e0daf7bb4b92f68e2701b0dea937976c71e07"
+                },
+                "version" : 10
+            },
+            "name" : "sirius-65-stella",
+            "preview" : 
+            {
+                "hash" : "b903797276ce31d38e1382acf380fa1fb0e02182",
+                "type" : "LevelPreview",
+                "url" : "/data/b903797276ce31d38e1382acf380fa1fb0e02182"
+            },
+            "rating" : 25,
+            "title" : "adrenaline!!!",
+            "useBackground" : 
+            {
+                "item" : 
+                {
+                    "author" : "ワールドダイスター 夢のステラリウム",
+                    "configuration" : 
+                    {
+                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n",
+                        "type" : "BackgroundConfiguration",
+                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n"
+                    },
+                    "data" : 
+                    {
+                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n",
+                        "type" : "BackgroundData",
+                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n"
+                    },
+                    "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
+                    "image" : 
+                    {
+                        "hash" : "0ac807f318d577fe98cfcfba76568d6f020ceaa9",
+                        "type" : "BackgroundImage",
+                        "url" : "/data/0ac807f318d577fe98cfcfba76568d6f020ceaa9"
+                    },
+                    "name" : "sirius-65",
+                    "subtitle" : "新妻八恵、本巣叶羽",
+                    "thumbnail" : 
+                    {
+                        "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb",
+                        "type" : "BackgroundThumbnail",
+                        "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb"
+                    },
+                    "title" : "adrenaline!!!",
+                    "version" : 2
+                },
+                "useDefault" : false
+            },
+            "useEffect" : 
+            {
+                "item" : 
+                {
+                    "audio" : 
+                    {
+                        "hash" : "",
+                        "type" : "EffectAudio",
+                        "url" : ""
+                    },
+                    "author" : "",
+                    "data" : 
+                    {
+                        "hash" : "",
+                        "type" : "EffectData",
+                        "url" : ""
+                    },
+                    "description" : "",
+                    "name" : "",
+                    "subtitle" : "",
+                    "thumbnail" : 
+                    {
+                        "hash" : "",
+                        "type" : "EffectThumbnail",
+                        "url" : ""
+                    },
+                    "title" : "",
+                    "version" : 5
+                },
+                "useDefault" : true
+            },
+            "useParticle" : 
+            {
+                "item" : 
+                {
+                    "author" : "",
+                    "data" : 
+                    {
+                        "hash" : "",
+                        "type" : "ParticleData",
+                        "url" : ""
+                    },
+                    "description" : "",
+                    "name" : "",
+                    "subtitle" : "",
+                    "texture" : 
+                    {
+                        "hash" : "",
+                        "type" : "ParticleTexture",
+                        "url" : ""
+                    },
+                    "thumbnail" : 
+                    {
+                        "hash" : "",
+                        "type" : "ParticleThumbnail",
+                        "url" : ""
+                    },
+                    "title" : "",
+                    "version" : 2
+                },
+                "useDefault" : true
+            },
+            "useSkin" : 
+            {
+                "item" : 
+                {
+                    "author" : "",
+                    "data" : 
+                    {
+                        "hash" : "",
+                        "type" : "SkinData",
+                        "url" : ""
+                    },
+                    "description" : "",
+                    "name" : "",
+                    "subtitle" : "",
+                    "texture" : 
+                    {
+                        "hash" : "",
+                        "type" : "SkinTexture",
+                        "url" : ""
+                    },
+                    "thumbnail" : 
+                    {
+                        "hash" : "",
+                        "type" : "SkinThumbnail",
+                        "url" : ""
+                    },
+                    "title" : "",
+                    "version" : 4
+                },
+                "useDefault" : true
+            },
+            "version" : 1
+        },
+        {
+            "artists" : "新妻八恵、本巣叶羽",
+            "author" : "ワールドダイスター 夢のステラリウム",
+            "bgm" : 
+            {
+                "hash" : "14d00d03e5103e0d0163d998f2a7be1f9fc48daf",
+                "type" : "LevelBgm",
+                "url" : "/data/14d00d03e5103e0d0163d998f2a7be1f9fc48daf"
+            },
+            "cover" : 
+            {
+                "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n",
+                "type" : "LevelCover",
+                "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n"
+            },
+            "data" : 
+            {
+                "hash" : "09361ec85d15536159d3ad2caea36a55fd536f07",
+                "type" : "LevelData",
+                "url" : "/data/09361ec85d15536159d3ad2caea36a55fd536f07"
+            },
+            "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
+            "engine" : 
+            {
+                "author" : "LittleYang0531",
+                "background" : 
+                {
+                    "author" : "World Dai Star: Dream's Stellarium",
+                    "configuration" : 
+                    {
+                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa",
+                        "type" : "BackgroundConfiguration",
+                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa"
+                    },
+                    "data" : 
+                    {
+                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f",
+                        "type" : "BackgroundData",
+                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f"
+                    },
+                    "description" : "",
+                    "image" : 
+                    {
+                        "hash" : "83e331c59146c674d5c3d6ed56ba5ac69ecca06a",
+                        "type" : "BackgroundImage",
+                        "url" : "/data/83e331c59146c674d5c3d6ed56ba5ac69ecca06a"
+                    },
+                    "name" : "sirius-default",
+                    "subtitle" : "World Dai Star: Dream's Stellarium",
+                    "thumbnail" : 
+                    {
+                        "hash" : "4d84f6ea99c28b7787161f012b353baf4c1752e7",
+                        "type" : "BackgroundThumbnail",
+                        "url" : "/data/4d84f6ea99c28b7787161f012b353baf4c1752e7"
+                    },
+                    "title" : "Sirius Default",
+                    "version" : 2
+                },
+                "configuration" : 
+                {
+                    "hash" : "b83d6e65e91fde752ea2f1b9fa875bfa939d7888",
+                    "type" : "EngineConfiguration",
+                    "url" : "/data/b83d6e65e91fde752ea2f1b9fa875bfa939d7888"
+                },
+                "data" : 
+                {
+                    "hash" : "44ad1697cdf3c2d3d698e447512fe6ebfbe43e2b",
+                    "type" : "EngineData",
+                    "url" : "/data/44ad1697cdf3c2d3d698e447512fe6ebfbe43e2b"
+                },
+                "description" : "A recreation of World Dai Star: Dream's Stellarium engine in Sonolus.\nVersion: 1.0.0.20231008_beta\n\nGithub Repository\nhttps://github.com/SonolusHaniwa/sonolus-sirius-engine",
+                "effect" : 
+                {
+                    "audio" : 
+                    {
+                        "hash" : "fb615f16acdbf1f70bdf4253f665ec5d67e51e1c",
+                        "type" : "EffectAudio",
+                        "url" : "/data/fb615f16acdbf1f70bdf4253f665ec5d67e51e1c"
+                    },
+                    "author" : "LittleYang0531",
+                    "data" : 
+                    {
+                        "hash" : "c5809b0d0f595655d669bf2d67cab30ce6bafdb5",
+                        "type" : "EffectData",
+                        "url" : "/data/c5809b0d0f595655d669bf2d67cab30ce6bafdb5"
+                    },
+                    "description" : "",
+                    "name" : "sirius",
+                    "subtitle" : "World Dai Star: Dream's Stellarium",
+                    "thumbnail" : 
+                    {
+                        "hash" : "4d84f6ea99c28b7787161f012b353baf4c1752e7",
+                        "type" : "EffectThumbnail",
+                        "url" : "/data/4d84f6ea99c28b7787161f012b353baf4c1752e7"
+                    },
+                    "title" : "Sirius",
+                    "version" : 5
+                },
+                "name" : "sirius",
+                "particle" : 
+                {
+                    "author" : "Burrito",
+                    "data" : 
+                    {
+                        "hash" : "3d6c06680612cb880c8552672ac2999cfaeb49a8",
+                        "type" : "ParticleData",
+                        "url" : "/data/3d6c06680612cb880c8552672ac2999cfaeb49a8"
+                    },
+                    "description" : "",
+                    "name" : "pjsekai",
+                    "subtitle" : "世界计划 彩色舞台",
+                    "texture" : 
+                    {
+                        "hash" : "57b4bd504f814150dea87b41f39c2c7a63f29518",
+                        "type" : "ParticleTexture",
+                        "url" : "/data/57b4bd504f814150dea87b41f39c2c7a63f29518"
+                    },
+                    "thumbnail" : 
+                    {
+                        "hash" : "e5f439916eac9bbd316276e20aed999993653560",
+                        "type" : "ParticleThumbnail",
+                        "url" : "/data/e5f439916eac9bbd316276e20aed999993653560"
+                    },
+                    "title" : "世界计划",
+                    "version" : 2
+                },
+                "playData" : 
+                {
+                    "hash" : "44ad1697cdf3c2d3d698e447512fe6ebfbe43e2b",
+                    "type" : "EnginePlayData",
+                    "url" : "/data/44ad1697cdf3c2d3d698e447512fe6ebfbe43e2b"
+                },
+                "previewData" : 
+                {
+                    "hash" : "5574ca4074af46ecbd1cc07a4d2a2e950d9e3504",
+                    "type" : "EnginePreviewData",
+                    "url" : "/data/5574ca4074af46ecbd1cc07a4d2a2e950d9e3504"
+                },
+                "skin" : 
+                {
+                    "author" : "LittleYang0531",
+                    "data" : 
+                    {
+                        "hash" : "a1737cf0cb97549d0a662a769461fb752720c32d",
+                        "type" : "SkinData",
+                        "url" : "/data/a1737cf0cb97549d0a662a769461fb752720c32d"
+                    },
+                    "description" : "",
+                    "name" : "sirius",
+                    "subtitle" : "World Dai Star: Dream's Stellarium",
+                    "texture" : 
+                    {
+                        "hash" : "1d85380813552d515b77d4e5e8cf31e51537cdc8",
+                        "type" : "SkinTexture",
+                        "url" : "/data/1d85380813552d515b77d4e5e8cf31e51537cdc8"
+                    },
+                    "thumbnail" : 
+                    {
+                        "hash" : "4d84f6ea99c28b7787161f012b353baf4c1752e7",
+                        "type" : "SkinThumbnail",
+                        "url" : "/data/4d84f6ea99c28b7787161f012b353baf4c1752e7"
+                    },
+                    "title" : "Sirius",
+                    "version" : 4
+                },
+                "subtitle" : "World Dai Star: Dream's Stellarium",
+                "thumbnail" : 
+                {
+                    "hash" : "4d84f6ea99c28b7787161f012b353baf4c1752e7",
+                    "type" : "EngineThumbnail",
+                    "url" : "/data/4d84f6ea99c28b7787161f012b353baf4c1752e7"
+                },
+                "title" : "Sirius",
+                "tutorialData" : 
+                {
+                    "hash" : "cb2e0daf7bb4b92f68e2701b0dea937976c71e07",
+                    "type" : "EngineTutorialData",
+                    "url" : "/data/cb2e0daf7bb4b92f68e2701b0dea937976c71e07"
+                },
+                "version" : 10
+            },
+            "name" : "sirius-65-extra",
+            "preview" : 
+            {
+                "hash" : "b903797276ce31d38e1382acf380fa1fb0e02182",
+                "type" : "LevelPreview",
+                "url" : "/data/b903797276ce31d38e1382acf380fa1fb0e02182"
+            },
+            "rating" : 21,
+            "title" : "adrenaline!!!",
+            "useBackground" : 
+            {
+                "item" : 
+                {
+                    "author" : "ワールドダイスター 夢のステラリウム",
+                    "configuration" : 
+                    {
+                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n",
+                        "type" : "BackgroundConfiguration",
+                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n"
+                    },
+                    "data" : 
+                    {
+                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n",
+                        "type" : "BackgroundData",
+                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n"
+                    },
+                    "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
+                    "image" : 
+                    {
+                        "hash" : "0ac807f318d577fe98cfcfba76568d6f020ceaa9",
+                        "type" : "BackgroundImage",
+                        "url" : "/data/0ac807f318d577fe98cfcfba76568d6f020ceaa9"
+                    },
+                    "name" : "sirius-65",
+                    "subtitle" : "新妻八恵、本巣叶羽",
+                    "thumbnail" : 
+                    {
+                        "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb",
+                        "type" : "BackgroundThumbnail",
+                        "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb"
+                    },
+                    "title" : "adrenaline!!!",
+                    "version" : 2
+                },
+                "useDefault" : false
+            },
+            "useEffect" : 
+            {
+                "item" : 
+                {
+                    "audio" : 
+                    {
+                        "hash" : "",
+                        "type" : "EffectAudio",
+                        "url" : ""
+                    },
+                    "author" : "",
+                    "data" : 
+                    {
+                        "hash" : "",
+                        "type" : "EffectData",
+                        "url" : ""
+                    },
+                    "description" : "",
+                    "name" : "",
+                    "subtitle" : "",
+                    "thumbnail" : 
+                    {
+                        "hash" : "",
+                        "type" : "EffectThumbnail",
+                        "url" : ""
+                    },
+                    "title" : "",
+                    "version" : 5
+                },
+                "useDefault" : true
+            },
+            "useParticle" : 
+            {
+                "item" : 
+                {
+                    "author" : "",
+                    "data" : 
+                    {
+                        "hash" : "",
+                        "type" : "ParticleData",
+                        "url" : ""
+                    },
+                    "description" : "",
+                    "name" : "",
+                    "subtitle" : "",
+                    "texture" : 
+                    {
+                        "hash" : "",
+                        "type" : "ParticleTexture",
+                        "url" : ""
+                    },
+                    "thumbnail" : 
+                    {
+                        "hash" : "",
+                        "type" : "ParticleThumbnail",
+                        "url" : ""
+                    },
+                    "title" : "",
+                    "version" : 2
+                },
+                "useDefault" : true
+            },
+            "useSkin" : 
+            {
+                "item" : 
+                {
+                    "author" : "",
+                    "data" : 
+                    {
+                        "hash" : "",
+                        "type" : "SkinData",
+                        "url" : ""
+                    },
+                    "description" : "",
+                    "name" : "",
+                    "subtitle" : "",
+                    "texture" : 
+                    {
+                        "hash" : "",
+                        "type" : "SkinTexture",
+                        "url" : ""
+                    },
+                    "thumbnail" : 
+                    {
+                        "hash" : "",
+                        "type" : "SkinThumbnail",
+                        "url" : ""
+                    },
+                    "title" : "",
+                    "version" : 4
+                },
+                "useDefault" : true
+            },
+            "version" : 1
+        },
+        {
+            "artists" : "新妻八恵、本巣叶羽",
+            "author" : "ワールドダイスター 夢のステラリウム",
+            "bgm" : 
+            {
+                "hash" : "14d00d03e5103e0d0163d998f2a7be1f9fc48daf",
+                "type" : "LevelBgm",
+                "url" : "/data/14d00d03e5103e0d0163d998f2a7be1f9fc48daf"
+            },
+            "cover" : 
+            {
+                "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n",
+                "type" : "LevelCover",
+                "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n"
+            },
+            "data" : 
+            {
+                "hash" : "92453aa181cff84bc5d4925942493528c83623fd",
+                "type" : "LevelData",
+                "url" : "/data/92453aa181cff84bc5d4925942493528c83623fd"
+            },
+            "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
+            "engine" : 
+            {
+                "author" : "LittleYang0531",
+                "background" : 
+                {
+                    "author" : "World Dai Star: Dream's Stellarium",
+                    "configuration" : 
+                    {
+                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa",
+                        "type" : "BackgroundConfiguration",
+                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa"
+                    },
+                    "data" : 
+                    {
+                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f",
+                        "type" : "BackgroundData",
+                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f"
+                    },
+                    "description" : "",
+                    "image" : 
+                    {
+                        "hash" : "83e331c59146c674d5c3d6ed56ba5ac69ecca06a",
+                        "type" : "BackgroundImage",
+                        "url" : "/data/83e331c59146c674d5c3d6ed56ba5ac69ecca06a"
+                    },
+                    "name" : "sirius-default",
+                    "subtitle" : "World Dai Star: Dream's Stellarium",
+                    "thumbnail" : 
+                    {
+                        "hash" : "4d84f6ea99c28b7787161f012b353baf4c1752e7",
+                        "type" : "BackgroundThumbnail",
+                        "url" : "/data/4d84f6ea99c28b7787161f012b353baf4c1752e7"
+                    },
+                    "title" : "Sirius Default",
+                    "version" : 2
+                },
+                "configuration" : 
+                {
+                    "hash" : "b83d6e65e91fde752ea2f1b9fa875bfa939d7888",
+                    "type" : "EngineConfiguration",
+                    "url" : "/data/b83d6e65e91fde752ea2f1b9fa875bfa939d7888"
+                },
+                "data" : 
+                {
+                    "hash" : "44ad1697cdf3c2d3d698e447512fe6ebfbe43e2b",
+                    "type" : "EngineData",
+                    "url" : "/data/44ad1697cdf3c2d3d698e447512fe6ebfbe43e2b"
+                },
+                "description" : "A recreation of World Dai Star: Dream's Stellarium engine in Sonolus.\nVersion: 1.0.0.20231008_beta\n\nGithub Repository\nhttps://github.com/SonolusHaniwa/sonolus-sirius-engine",
+                "effect" : 
+                {
+                    "audio" : 
+                    {
+                        "hash" : "fb615f16acdbf1f70bdf4253f665ec5d67e51e1c",
+                        "type" : "EffectAudio",
+                        "url" : "/data/fb615f16acdbf1f70bdf4253f665ec5d67e51e1c"
+                    },
+                    "author" : "LittleYang0531",
+                    "data" : 
+                    {
+                        "hash" : "c5809b0d0f595655d669bf2d67cab30ce6bafdb5",
+                        "type" : "EffectData",
+                        "url" : "/data/c5809b0d0f595655d669bf2d67cab30ce6bafdb5"
+                    },
+                    "description" : "",
+                    "name" : "sirius",
+                    "subtitle" : "World Dai Star: Dream's Stellarium",
+                    "thumbnail" : 
+                    {
+                        "hash" : "4d84f6ea99c28b7787161f012b353baf4c1752e7",
+                        "type" : "EffectThumbnail",
+                        "url" : "/data/4d84f6ea99c28b7787161f012b353baf4c1752e7"
+                    },
+                    "title" : "Sirius",
+                    "version" : 5
+                },
+                "name" : "sirius",
+                "particle" : 
+                {
+                    "author" : "Burrito",
+                    "data" : 
+                    {
+                        "hash" : "3d6c06680612cb880c8552672ac2999cfaeb49a8",
+                        "type" : "ParticleData",
+                        "url" : "/data/3d6c06680612cb880c8552672ac2999cfaeb49a8"
+                    },
+                    "description" : "",
+                    "name" : "pjsekai",
+                    "subtitle" : "世界计划 彩色舞台",
+                    "texture" : 
+                    {
+                        "hash" : "57b4bd504f814150dea87b41f39c2c7a63f29518",
+                        "type" : "ParticleTexture",
+                        "url" : "/data/57b4bd504f814150dea87b41f39c2c7a63f29518"
+                    },
+                    "thumbnail" : 
+                    {
+                        "hash" : "e5f439916eac9bbd316276e20aed999993653560",
+                        "type" : "ParticleThumbnail",
+                        "url" : "/data/e5f439916eac9bbd316276e20aed999993653560"
+                    },
+                    "title" : "世界计划",
+                    "version" : 2
+                },
+                "playData" : 
+                {
+                    "hash" : "44ad1697cdf3c2d3d698e447512fe6ebfbe43e2b",
+                    "type" : "EnginePlayData",
+                    "url" : "/data/44ad1697cdf3c2d3d698e447512fe6ebfbe43e2b"
+                },
+                "previewData" : 
+                {
+                    "hash" : "5574ca4074af46ecbd1cc07a4d2a2e950d9e3504",
+                    "type" : "EnginePreviewData",
+                    "url" : "/data/5574ca4074af46ecbd1cc07a4d2a2e950d9e3504"
+                },
+                "skin" : 
+                {
+                    "author" : "LittleYang0531",
+                    "data" : 
+                    {
+                        "hash" : "a1737cf0cb97549d0a662a769461fb752720c32d",
+                        "type" : "SkinData",
+                        "url" : "/data/a1737cf0cb97549d0a662a769461fb752720c32d"
+                    },
+                    "description" : "",
+                    "name" : "sirius",
+                    "subtitle" : "World Dai Star: Dream's Stellarium",
+                    "texture" : 
+                    {
+                        "hash" : "1d85380813552d515b77d4e5e8cf31e51537cdc8",
+                        "type" : "SkinTexture",
+                        "url" : "/data/1d85380813552d515b77d4e5e8cf31e51537cdc8"
+                    },
+                    "thumbnail" : 
+                    {
+                        "hash" : "4d84f6ea99c28b7787161f012b353baf4c1752e7",
+                        "type" : "SkinThumbnail",
+                        "url" : "/data/4d84f6ea99c28b7787161f012b353baf4c1752e7"
+                    },
+                    "title" : "Sirius",
+                    "version" : 4
+                },
+                "subtitle" : "World Dai Star: Dream's Stellarium",
+                "thumbnail" : 
+                {
+                    "hash" : "4d84f6ea99c28b7787161f012b353baf4c1752e7",
+                    "type" : "EngineThumbnail",
+                    "url" : "/data/4d84f6ea99c28b7787161f012b353baf4c1752e7"
+                },
+                "title" : "Sirius",
+                "tutorialData" : 
+                {
+                    "hash" : "cb2e0daf7bb4b92f68e2701b0dea937976c71e07",
+                    "type" : "EngineTutorialData",
+                    "url" : "/data/cb2e0daf7bb4b92f68e2701b0dea937976c71e07"
+                },
+                "version" : 10
+            },
+            "name" : "sirius-65-hard",
+            "preview" : 
+            {
+                "hash" : "b903797276ce31d38e1382acf380fa1fb0e02182",
+                "type" : "LevelPreview",
+                "url" : "/data/b903797276ce31d38e1382acf380fa1fb0e02182"
+            },
+            "rating" : 14,
+            "title" : "adrenaline!!!",
+            "useBackground" : 
+            {
+                "item" : 
+                {
+                    "author" : "ワールドダイスター 夢のステラリウム",
+                    "configuration" : 
+                    {
+                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n",
+                        "type" : "BackgroundConfiguration",
+                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n"
+                    },
+                    "data" : 
+                    {
+                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n",
+                        "type" : "BackgroundData",
+                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n"
+                    },
+                    "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
+                    "image" : 
+                    {
+                        "hash" : "0ac807f318d577fe98cfcfba76568d6f020ceaa9",
+                        "type" : "BackgroundImage",
+                        "url" : "/data/0ac807f318d577fe98cfcfba76568d6f020ceaa9"
+                    },
+                    "name" : "sirius-65",
+                    "subtitle" : "新妻八恵、本巣叶羽",
+                    "thumbnail" : 
+                    {
+                        "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb",
+                        "type" : "BackgroundThumbnail",
+                        "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb"
+                    },
+                    "title" : "adrenaline!!!",
+                    "version" : 2
+                },
+                "useDefault" : false
+            },
+            "useEffect" : 
+            {
+                "item" : 
+                {
+                    "audio" : 
+                    {
+                        "hash" : "",
+                        "type" : "EffectAudio",
+                        "url" : ""
+                    },
+                    "author" : "",
+                    "data" : 
+                    {
+                        "hash" : "",
+                        "type" : "EffectData",
+                        "url" : ""
+                    },
+                    "description" : "",
+                    "name" : "",
+                    "subtitle" : "",
+                    "thumbnail" : 
+                    {
+                        "hash" : "",
+                        "type" : "EffectThumbnail",
+                        "url" : ""
+                    },
+                    "title" : "",
+                    "version" : 5
+                },
+                "useDefault" : true
+            },
+            "useParticle" : 
+            {
+                "item" : 
+                {
+                    "author" : "",
+                    "data" : 
+                    {
+                        "hash" : "",
+                        "type" : "ParticleData",
+                        "url" : ""
+                    },
+                    "description" : "",
+                    "name" : "",
+                    "subtitle" : "",
+                    "texture" : 
+                    {
+                        "hash" : "",
+                        "type" : "ParticleTexture",
+                        "url" : ""
+                    },
+                    "thumbnail" : 
+                    {
+                        "hash" : "",
+                        "type" : "ParticleThumbnail",
+                        "url" : ""
+                    },
+                    "title" : "",
+                    "version" : 2
+                },
+                "useDefault" : true
+            },
+            "useSkin" : 
+            {
+                "item" : 
+                {
+                    "author" : "",
+                    "data" : 
+                    {
+                        "hash" : "",
+                        "type" : "SkinData",
+                        "url" : ""
+                    },
+                    "description" : "",
+                    "name" : "",
+                    "subtitle" : "",
+                    "texture" : 
+                    {
+                        "hash" : "",
+                        "type" : "SkinTexture",
+                        "url" : ""
+                    },
+                    "thumbnail" : 
+                    {
+                        "hash" : "",
+                        "type" : "SkinThumbnail",
+                        "url" : ""
+                    },
+                    "title" : "",
+                    "version" : 4
+                },
+                "useDefault" : true
+            },
+            "version" : 1
+        },
+        {
+            "artists" : "新妻八恵、本巣叶羽",
+            "author" : "ワールドダイスター 夢のステラリウム",
+            "bgm" : 
+            {
+                "hash" : "14d00d03e5103e0d0163d998f2a7be1f9fc48daf",
+                "type" : "LevelBgm",
+                "url" : "/data/14d00d03e5103e0d0163d998f2a7be1f9fc48daf"
+            },
+            "cover" : 
+            {
+                "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n",
+                "type" : "LevelCover",
+                "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n"
+            },
+            "data" : 
+            {
+                "hash" : "940c1c02391b239c59d0a5e50d712ecb9b0c0d44",
+                "type" : "LevelData",
+                "url" : "/data/940c1c02391b239c59d0a5e50d712ecb9b0c0d44"
+            },
+            "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
+            "engine" : 
+            {
+                "author" : "LittleYang0531",
+                "background" : 
+                {
+                    "author" : "World Dai Star: Dream's Stellarium",
+                    "configuration" : 
+                    {
+                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa",
+                        "type" : "BackgroundConfiguration",
+                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa"
+                    },
+                    "data" : 
+                    {
+                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f",
+                        "type" : "BackgroundData",
+                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f"
+                    },
+                    "description" : "",
+                    "image" : 
+                    {
+                        "hash" : "83e331c59146c674d5c3d6ed56ba5ac69ecca06a",
+                        "type" : "BackgroundImage",
+                        "url" : "/data/83e331c59146c674d5c3d6ed56ba5ac69ecca06a"
+                    },
+                    "name" : "sirius-default",
+                    "subtitle" : "World Dai Star: Dream's Stellarium",
+                    "thumbnail" : 
+                    {
+                        "hash" : "4d84f6ea99c28b7787161f012b353baf4c1752e7",
+                        "type" : "BackgroundThumbnail",
+                        "url" : "/data/4d84f6ea99c28b7787161f012b353baf4c1752e7"
+                    },
+                    "title" : "Sirius Default",
+                    "version" : 2
+                },
+                "configuration" : 
+                {
+                    "hash" : "b83d6e65e91fde752ea2f1b9fa875bfa939d7888",
+                    "type" : "EngineConfiguration",
+                    "url" : "/data/b83d6e65e91fde752ea2f1b9fa875bfa939d7888"
+                },
+                "data" : 
+                {
+                    "hash" : "44ad1697cdf3c2d3d698e447512fe6ebfbe43e2b",
+                    "type" : "EngineData",
+                    "url" : "/data/44ad1697cdf3c2d3d698e447512fe6ebfbe43e2b"
+                },
+                "description" : "A recreation of World Dai Star: Dream's Stellarium engine in Sonolus.\nVersion: 1.0.0.20231008_beta\n\nGithub Repository\nhttps://github.com/SonolusHaniwa/sonolus-sirius-engine",
+                "effect" : 
+                {
+                    "audio" : 
+                    {
+                        "hash" : "fb615f16acdbf1f70bdf4253f665ec5d67e51e1c",
+                        "type" : "EffectAudio",
+                        "url" : "/data/fb615f16acdbf1f70bdf4253f665ec5d67e51e1c"
+                    },
+                    "author" : "LittleYang0531",
+                    "data" : 
+                    {
+                        "hash" : "c5809b0d0f595655d669bf2d67cab30ce6bafdb5",
+                        "type" : "EffectData",
+                        "url" : "/data/c5809b0d0f595655d669bf2d67cab30ce6bafdb5"
+                    },
+                    "description" : "",
+                    "name" : "sirius",
+                    "subtitle" : "World Dai Star: Dream's Stellarium",
+                    "thumbnail" : 
+                    {
+                        "hash" : "4d84f6ea99c28b7787161f012b353baf4c1752e7",
+                        "type" : "EffectThumbnail",
+                        "url" : "/data/4d84f6ea99c28b7787161f012b353baf4c1752e7"
+                    },
+                    "title" : "Sirius",
+                    "version" : 5
+                },
+                "name" : "sirius",
+                "particle" : 
+                {
+                    "author" : "Burrito",
+                    "data" : 
+                    {
+                        "hash" : "3d6c06680612cb880c8552672ac2999cfaeb49a8",
+                        "type" : "ParticleData",
+                        "url" : "/data/3d6c06680612cb880c8552672ac2999cfaeb49a8"
+                    },
+                    "description" : "",
+                    "name" : "pjsekai",
+                    "subtitle" : "世界计划 彩色舞台",
+                    "texture" : 
+                    {
+                        "hash" : "57b4bd504f814150dea87b41f39c2c7a63f29518",
+                        "type" : "ParticleTexture",
+                        "url" : "/data/57b4bd504f814150dea87b41f39c2c7a63f29518"
+                    },
+                    "thumbnail" : 
+                    {
+                        "hash" : "e5f439916eac9bbd316276e20aed999993653560",
+                        "type" : "ParticleThumbnail",
+                        "url" : "/data/e5f439916eac9bbd316276e20aed999993653560"
+                    },
+                    "title" : "世界计划",
+                    "version" : 2
+                },
+                "playData" : 
+                {
+                    "hash" : "44ad1697cdf3c2d3d698e447512fe6ebfbe43e2b",
+                    "type" : "EnginePlayData",
+                    "url" : "/data/44ad1697cdf3c2d3d698e447512fe6ebfbe43e2b"
+                },
+                "previewData" : 
+                {
+                    "hash" : "5574ca4074af46ecbd1cc07a4d2a2e950d9e3504",
+                    "type" : "EnginePreviewData",
+                    "url" : "/data/5574ca4074af46ecbd1cc07a4d2a2e950d9e3504"
+                },
+                "skin" : 
+                {
+                    "author" : "LittleYang0531",
+                    "data" : 
+                    {
+                        "hash" : "a1737cf0cb97549d0a662a769461fb752720c32d",
+                        "type" : "SkinData",
+                        "url" : "/data/a1737cf0cb97549d0a662a769461fb752720c32d"
+                    },
+                    "description" : "",
+                    "name" : "sirius",
+                    "subtitle" : "World Dai Star: Dream's Stellarium",
+                    "texture" : 
+                    {
+                        "hash" : "1d85380813552d515b77d4e5e8cf31e51537cdc8",
+                        "type" : "SkinTexture",
+                        "url" : "/data/1d85380813552d515b77d4e5e8cf31e51537cdc8"
+                    },
+                    "thumbnail" : 
+                    {
+                        "hash" : "4d84f6ea99c28b7787161f012b353baf4c1752e7",
+                        "type" : "SkinThumbnail",
+                        "url" : "/data/4d84f6ea99c28b7787161f012b353baf4c1752e7"
+                    },
+                    "title" : "Sirius",
+                    "version" : 4
+                },
+                "subtitle" : "World Dai Star: Dream's Stellarium",
+                "thumbnail" : 
+                {
+                    "hash" : "4d84f6ea99c28b7787161f012b353baf4c1752e7",
+                    "type" : "EngineThumbnail",
+                    "url" : "/data/4d84f6ea99c28b7787161f012b353baf4c1752e7"
+                },
+                "title" : "Sirius",
+                "tutorialData" : 
+                {
+                    "hash" : "cb2e0daf7bb4b92f68e2701b0dea937976c71e07",
+                    "type" : "EngineTutorialData",
+                    "url" : "/data/cb2e0daf7bb4b92f68e2701b0dea937976c71e07"
+                },
+                "version" : 10
+            },
+            "name" : "sirius-65-normal",
+            "preview" : 
+            {
+                "hash" : "b903797276ce31d38e1382acf380fa1fb0e02182",
+                "type" : "LevelPreview",
+                "url" : "/data/b903797276ce31d38e1382acf380fa1fb0e02182"
+            },
+            "rating" : 7,
+            "title" : "adrenaline!!!",
+            "useBackground" : 
+            {
+                "item" : 
+                {
+                    "author" : "ワールドダイスター 夢のステラリウム",
+                    "configuration" : 
+                    {
+                        "hash" : "d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n",
+                        "type" : "BackgroundConfiguration",
+                        "url" : "/data/d6d0a3f33b1be72cf49c3e5fe7ef248ee8a0a5fa\n"
+                    },
+                    "data" : 
+                    {
+                        "hash" : "adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n",
+                        "type" : "BackgroundData",
+                        "url" : "/data/adad592c5532a4faf64bcd56f6ef1ac65d783e1f\n"
+                    },
+                    "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
+                    "image" : 
+                    {
+                        "hash" : "0ac807f318d577fe98cfcfba76568d6f020ceaa9",
+                        "type" : "BackgroundImage",
+                        "url" : "/data/0ac807f318d577fe98cfcfba76568d6f020ceaa9"
+                    },
+                    "name" : "sirius-65",
+                    "subtitle" : "新妻八恵、本巣叶羽",
+                    "thumbnail" : 
+                    {
+                        "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb",
+                        "type" : "BackgroundThumbnail",
+                        "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb"
+                    },
+                    "title" : "adrenaline!!!",
+                    "version" : 2
+                },
+                "useDefault" : false
+            },
+            "useEffect" : 
+            {
+                "item" : 
+                {
+                    "audio" : 
+                    {
+                        "hash" : "",
+                        "type" : "EffectAudio",
+                        "url" : ""
+                    },
+                    "author" : "",
+                    "data" : 
+                    {
+                        "hash" : "",
+                        "type" : "EffectData",
+                        "url" : ""
+                    },
+                    "description" : "",
+                    "name" : "",
+                    "subtitle" : "",
+                    "thumbnail" : 
+                    {
+                        "hash" : "",
+                        "type" : "EffectThumbnail",
+                        "url" : ""
+                    },
+                    "title" : "",
+                    "version" : 5
+                },
+                "useDefault" : true
+            },
+            "useParticle" : 
+            {
+                "item" : 
+                {
+                    "author" : "",
+                    "data" : 
+                    {
+                        "hash" : "",
+                        "type" : "ParticleData",
+                        "url" : ""
+                    },
+                    "description" : "",
+                    "name" : "",
+                    "subtitle" : "",
+                    "texture" : 
+                    {
+                        "hash" : "",
+                        "type" : "ParticleTexture",
+                        "url" : ""
+                    },
+                    "thumbnail" : 
+                    {
+                        "hash" : "",
+                        "type" : "ParticleThumbnail",
+                        "url" : ""
+                    },
+                    "title" : "",
+                    "version" : 2
+                },
+                "useDefault" : true
+            },
+            "useSkin" : 
+            {
+                "item" : 
+                {
+                    "author" : "",
+                    "data" : 
+                    {
+                        "hash" : "",
+                        "type" : "SkinData",
+                        "url" : ""
+                    },
+                    "description" : "",
+                    "name" : "",
+                    "subtitle" : "",
+                    "texture" : 
+                    {
+                        "hash" : "",
+                        "type" : "SkinTexture",
+                        "url" : ""
+                    },
+                    "thumbnail" : 
+                    {
+                        "hash" : "",
+                        "type" : "SkinThumbnail",
+                        "url" : ""
+                    },
+                    "title" : "",
+                    "version" : 4
+                },
+                "useDefault" : true
+            },
+            "version" : 1
+        },
         {
             "artists" : "柳場ぱんだ、与那国緋花里",
             "author" : "ワールドダイスター 夢のステラリウム",
