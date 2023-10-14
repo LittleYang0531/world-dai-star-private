@@ -2151,21 +2151,21 @@
             "author" : "ワールドダイスター 夢のステラリウム",
             "bgm" : 
             {
-                "hash" : "14d00d03e5103e0d0163d998f2a7be1f9fc48daf",
+                "hash" : "14d00d03e5103e0d0163d998f2a7be1f9fc48daf\n",
                 "type" : "LevelBgm",
-                "url" : "/data/14d00d03e5103e0d0163d998f2a7be1f9fc48daf"
+                "url" : "/data/14d00d03e5103e0d0163d998f2a7be1f9fc48daf\n"
             },
             "cover" : 
             {
-                "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb",
+                "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n",
                 "type" : "LevelCover",
-                "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb"
+                "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n"
             },
             "data" : 
             {
-                "hash" : "8658f07396c8d4a6667842ad7283eb6611c02c8d",
+                "hash" : "8658f07396c8d4a6667842ad7283eb6611c02c8d\n",
                 "type" : "LevelData",
-                "url" : "/data/8658f07396c8d4a6667842ad7283eb6611c02c8d"
+                "url" : "/data/8658f07396c8d4a6667842ad7283eb6611c02c8d\n"
             },
             "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
             "engine" : 
@@ -2330,9 +2330,9 @@
             "name" : "sirius-65-olivier",
             "preview" : 
             {
-                "hash" : "b903797276ce31d38e1382acf380fa1fb0e02182",
+                "hash" : "b903797276ce31d38e1382acf380fa1fb0e02182\n",
                 "type" : "LevelPreview",
-                "url" : "/data/b903797276ce31d38e1382acf380fa1fb0e02182"
+                "url" : "/data/b903797276ce31d38e1382acf380fa1fb0e02182\n"
             },
             "rating" : 33,
             "title" : "adrenaline!!!",
@@ -2473,21 +2473,21 @@
             "author" : "ワールドダイスター 夢のステラリウム",
             "bgm" : 
             {
-                "hash" : "14d00d03e5103e0d0163d998f2a7be1f9fc48daf",
+                "hash" : "14d00d03e5103e0d0163d998f2a7be1f9fc48daf\n",
                 "type" : "LevelBgm",
-                "url" : "/data/14d00d03e5103e0d0163d998f2a7be1f9fc48daf"
+                "url" : "/data/14d00d03e5103e0d0163d998f2a7be1f9fc48daf\n"
             },
             "cover" : 
             {
-                "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb",
+                "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n",
                 "type" : "LevelCover",
-                "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb"
+                "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n"
             },
             "data" : 
             {
-                "hash" : "1abbcf43e627e0494e60e7fed586f4639568ed15",
+                "hash" : "1abbcf43e627e0494e60e7fed586f4639568ed15\n",
                 "type" : "LevelData",
-                "url" : "/data/1abbcf43e627e0494e60e7fed586f4639568ed15"
+                "url" : "/data/1abbcf43e627e0494e60e7fed586f4639568ed15\n"
             },
             "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
             "engine" : 
@@ -2652,9 +2652,9 @@
             "name" : "sirius-65-stella",
             "preview" : 
             {
-                "hash" : "b903797276ce31d38e1382acf380fa1fb0e02182",
+                "hash" : "b903797276ce31d38e1382acf380fa1fb0e02182\n",
                 "type" : "LevelPreview",
-                "url" : "/data/b903797276ce31d38e1382acf380fa1fb0e02182"
+                "url" : "/data/b903797276ce31d38e1382acf380fa1fb0e02182\n"
             },
             "rating" : 25,
             "title" : "adrenaline!!!",
@@ -2795,21 +2795,21 @@
             "author" : "ワールドダイスター 夢のステラリウム",
             "bgm" : 
             {
-                "hash" : "14d00d03e5103e0d0163d998f2a7be1f9fc48daf",
+                "hash" : "14d00d03e5103e0d0163d998f2a7be1f9fc48daf\n",
                 "type" : "LevelBgm",
-                "url" : "/data/14d00d03e5103e0d0163d998f2a7be1f9fc48daf"
+                "url" : "/data/14d00d03e5103e0d0163d998f2a7be1f9fc48daf\n"
             },
             "cover" : 
             {
-                "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb",
+                "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n",
                 "type" : "LevelCover",
-                "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb"
+                "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n"
             },
             "data" : 
             {
-                "hash" : "09361ec85d15536159d3ad2caea36a55fd536f07",
+                "hash" : "09361ec85d15536159d3ad2caea36a55fd536f07\n",
                 "type" : "LevelData",
-                "url" : "/data/09361ec85d15536159d3ad2caea36a55fd536f07"
+                "url" : "/data/09361ec85d15536159d3ad2caea36a55fd536f07\n"
             },
             "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
             "engine" : 
@@ -2974,9 +2974,9 @@
             "name" : "sirius-65-extra",
             "preview" : 
             {
-                "hash" : "b903797276ce31d38e1382acf380fa1fb0e02182",
+                "hash" : "b903797276ce31d38e1382acf380fa1fb0e02182\n",
                 "type" : "LevelPreview",
-                "url" : "/data/b903797276ce31d38e1382acf380fa1fb0e02182"
+                "url" : "/data/b903797276ce31d38e1382acf380fa1fb0e02182\n"
             },
             "rating" : 21,
             "title" : "adrenaline!!!",
@@ -3117,21 +3117,21 @@
             "author" : "ワールドダイスター 夢のステラリウム",
             "bgm" : 
             {
-                "hash" : "14d00d03e5103e0d0163d998f2a7be1f9fc48daf",
+                "hash" : "14d00d03e5103e0d0163d998f2a7be1f9fc48daf\n",
                 "type" : "LevelBgm",
-                "url" : "/data/14d00d03e5103e0d0163d998f2a7be1f9fc48daf"
+                "url" : "/data/14d00d03e5103e0d0163d998f2a7be1f9fc48daf\n"
             },
             "cover" : 
             {
-                "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb",
+                "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n",
                 "type" : "LevelCover",
-                "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb"
+                "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n"
             },
             "data" : 
             {
-                "hash" : "92453aa181cff84bc5d4925942493528c83623fd",
+                "hash" : "92453aa181cff84bc5d4925942493528c83623fd\n",
                 "type" : "LevelData",
-                "url" : "/data/92453aa181cff84bc5d4925942493528c83623fd"
+                "url" : "/data/92453aa181cff84bc5d4925942493528c83623fd\n"
             },
             "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
             "engine" : 
@@ -3296,9 +3296,9 @@
             "name" : "sirius-65-hard",
             "preview" : 
             {
-                "hash" : "b903797276ce31d38e1382acf380fa1fb0e02182",
+                "hash" : "b903797276ce31d38e1382acf380fa1fb0e02182\n",
                 "type" : "LevelPreview",
-                "url" : "/data/b903797276ce31d38e1382acf380fa1fb0e02182"
+                "url" : "/data/b903797276ce31d38e1382acf380fa1fb0e02182\n"
             },
             "rating" : 14,
             "title" : "adrenaline!!!",
@@ -3439,21 +3439,21 @@
             "author" : "ワールドダイスター 夢のステラリウム",
             "bgm" : 
             {
-                "hash" : "14d00d03e5103e0d0163d998f2a7be1f9fc48daf",
+                "hash" : "14d00d03e5103e0d0163d998f2a7be1f9fc48daf\n",
                 "type" : "LevelBgm",
-                "url" : "/data/14d00d03e5103e0d0163d998f2a7be1f9fc48daf"
+                "url" : "/data/14d00d03e5103e0d0163d998f2a7be1f9fc48daf\n"
             },
             "cover" : 
             {
-                "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb",
+                "hash" : "ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n",
                 "type" : "LevelCover",
-                "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb"
+                "url" : "/data/ab0e5dd50ccf14066c43caddd2d147b18cf4cffb\n"
             },
             "data" : 
             {
-                "hash" : "940c1c02391b239c59d0a5e50d712ecb9b0c0d44",
+                "hash" : "940c1c02391b239c59d0a5e50d712ecb9b0c0d44\n",
                 "type" : "LevelData",
-                "url" : "/data/940c1c02391b239c59d0a5e50d712ecb9b0c0d44"
+                "url" : "/data/940c1c02391b239c59d0a5e50d712ecb9b0c0d44\n"
             },
             "description" : "Pronounce Name: adrenaline\nArranger: -\nComposer: 中野領太\nLyric Writer: 中野領太\nSinger: 新妻八恵、本巣叶羽\nApp Version: 1.6.0\nAssets Version: 1.1.3\nMaster Data Version: 1697098770_1697098770\n",
             "engine" : 
@@ -3618,9 +3618,9 @@
             "name" : "sirius-65-normal",
             "preview" : 
             {
-                "hash" : "b903797276ce31d38e1382acf380fa1fb0e02182",
+                "hash" : "b903797276ce31d38e1382acf380fa1fb0e02182\n",
                 "type" : "LevelPreview",
-                "url" : "/data/b903797276ce31d38e1382acf380fa1fb0e02182"
+                "url" : "/data/b903797276ce31d38e1382acf380fa1fb0e02182\n"
             },
             "rating" : 7,
             "title" : "adrenaline!!!",
@@ -3761,15 +3761,15 @@
             "author" : "ワールドダイスター 夢のステラリウム",
             "bgm" : 
             {
-                "hash" : "b5384f38a54cce44e311832f5dc1f6d71396fdbf",
+                "hash" : "b5384f38a54cce44e311832f5dc1f6d71396fdbf\n",
                 "type" : "LevelBgm",
-                "url" : "/data/b5384f38a54cce44e311832f5dc1f6d71396fdbf"
+                "url" : "/data/b5384f38a54cce44e311832f5dc1f6d71396fdbf\n"
             },
             "cover" : 
             {
-                "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a",
+                "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a\n",
                 "type" : "LevelCover",
-                "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a"
+                "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a\n"
             },
             "data" : 
             {
@@ -3940,9 +3940,9 @@
             "name" : "sirius-62-olivier",
             "preview" : 
             {
-                "hash" : "a6b9041a4ac6f4f8e6415a46c3708e1eaee1c28d",
+                "hash" : "a6b9041a4ac6f4f8e6415a46c3708e1eaee1c28d\n",
                 "type" : "LevelPreview",
-                "url" : "/data/a6b9041a4ac6f4f8e6415a46c3708e1eaee1c28d"
+                "url" : "/data/a6b9041a4ac6f4f8e6415a46c3708e1eaee1c28d\n"
             },
             "rating" : 35,
             "title" : "革命ダンス",
@@ -4083,15 +4083,15 @@
             "author" : "ワールドダイスター 夢のステラリウム",
             "bgm" : 
             {
-                "hash" : "b5384f38a54cce44e311832f5dc1f6d71396fdbf",
+                "hash" : "b5384f38a54cce44e311832f5dc1f6d71396fdbf\n",
                 "type" : "LevelBgm",
-                "url" : "/data/b5384f38a54cce44e311832f5dc1f6d71396fdbf"
+                "url" : "/data/b5384f38a54cce44e311832f5dc1f6d71396fdbf\n"
             },
             "cover" : 
             {
-                "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a",
+                "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a\n",
                 "type" : "LevelCover",
-                "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a"
+                "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a\n"
             },
             "data" : 
             {
@@ -4262,9 +4262,9 @@
             "name" : "sirius-62-stella",
             "preview" : 
             {
-                "hash" : "a6b9041a4ac6f4f8e6415a46c3708e1eaee1c28d",
+                "hash" : "a6b9041a4ac6f4f8e6415a46c3708e1eaee1c28d\n",
                 "type" : "LevelPreview",
-                "url" : "/data/a6b9041a4ac6f4f8e6415a46c3708e1eaee1c28d"
+                "url" : "/data/a6b9041a4ac6f4f8e6415a46c3708e1eaee1c28d\n"
             },
             "rating" : 27,
             "title" : "革命ダンス",
@@ -4405,15 +4405,15 @@
             "author" : "ワールドダイスター 夢のステラリウム",
             "bgm" : 
             {
-                "hash" : "b5384f38a54cce44e311832f5dc1f6d71396fdbf",
+                "hash" : "b5384f38a54cce44e311832f5dc1f6d71396fdbf\n",
                 "type" : "LevelBgm",
-                "url" : "/data/b5384f38a54cce44e311832f5dc1f6d71396fdbf"
+                "url" : "/data/b5384f38a54cce44e311832f5dc1f6d71396fdbf\n"
             },
             "cover" : 
             {
-                "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a",
+                "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a\n",
                 "type" : "LevelCover",
-                "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a"
+                "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a\n"
             },
             "data" : 
             {
@@ -4584,9 +4584,9 @@
             "name" : "sirius-62-extra",
             "preview" : 
             {
-                "hash" : "a6b9041a4ac6f4f8e6415a46c3708e1eaee1c28d",
+                "hash" : "a6b9041a4ac6f4f8e6415a46c3708e1eaee1c28d\n",
                 "type" : "LevelPreview",
-                "url" : "/data/a6b9041a4ac6f4f8e6415a46c3708e1eaee1c28d"
+                "url" : "/data/a6b9041a4ac6f4f8e6415a46c3708e1eaee1c28d\n"
             },
             "rating" : 24,
             "title" : "革命ダンス",
@@ -4727,15 +4727,15 @@
             "author" : "ワールドダイスター 夢のステラリウム",
             "bgm" : 
             {
-                "hash" : "b5384f38a54cce44e311832f5dc1f6d71396fdbf",
+                "hash" : "b5384f38a54cce44e311832f5dc1f6d71396fdbf\n",
                 "type" : "LevelBgm",
-                "url" : "/data/b5384f38a54cce44e311832f5dc1f6d71396fdbf"
+                "url" : "/data/b5384f38a54cce44e311832f5dc1f6d71396fdbf\n"
             },
             "cover" : 
             {
-                "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a",
+                "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a\n",
                 "type" : "LevelCover",
-                "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a"
+                "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a\n"
             },
             "data" : 
             {
@@ -4906,9 +4906,9 @@
             "name" : "sirius-62-hard",
             "preview" : 
             {
-                "hash" : "a6b9041a4ac6f4f8e6415a46c3708e1eaee1c28d",
+                "hash" : "a6b9041a4ac6f4f8e6415a46c3708e1eaee1c28d\n",
                 "type" : "LevelPreview",
-                "url" : "/data/a6b9041a4ac6f4f8e6415a46c3708e1eaee1c28d"
+                "url" : "/data/a6b9041a4ac6f4f8e6415a46c3708e1eaee1c28d\n"
             },
             "rating" : 17,
             "title" : "革命ダンス",
@@ -5049,15 +5049,15 @@
             "author" : "ワールドダイスター 夢のステラリウム",
             "bgm" : 
             {
-                "hash" : "b5384f38a54cce44e311832f5dc1f6d71396fdbf",
+                "hash" : "b5384f38a54cce44e311832f5dc1f6d71396fdbf\n",
                 "type" : "LevelBgm",
-                "url" : "/data/b5384f38a54cce44e311832f5dc1f6d71396fdbf"
+                "url" : "/data/b5384f38a54cce44e311832f5dc1f6d71396fdbf\n"
             },
             "cover" : 
             {
-                "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a",
+                "hash" : "815c43c76ed0bec376cb72d855eafe75e9c41c2a\n",
                 "type" : "LevelCover",
-                "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a"
+                "url" : "/data/815c43c76ed0bec376cb72d855eafe75e9c41c2a\n"
             },
             "data" : 
             {
@@ -5228,9 +5228,9 @@
             "name" : "sirius-62-normal",
             "preview" : 
             {
-                "hash" : "a6b9041a4ac6f4f8e6415a46c3708e1eaee1c28d",
+                "hash" : "a6b9041a4ac6f4f8e6415a46c3708e1eaee1c28d\n",
                 "type" : "LevelPreview",
-                "url" : "/data/a6b9041a4ac6f4f8e6415a46c3708e1eaee1c28d"
+                "url" : "/data/a6b9041a4ac6f4f8e6415a46c3708e1eaee1c28d\n"
             },
             "rating" : 10,
             "title" : "革命ダンス",
