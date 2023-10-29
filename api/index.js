@@ -1,3 +1,4 @@
+const inject = require("@vercel/analytics");
 const sonolus = require("sonolus-express");
 const express = require("express");
 const fs = require("fs");
@@ -6,6 +7,8 @@ const path = require("path");
 const port = 3000;
 var app = new express();
 var config = JSON.parse(fs.readFileSync(path.join(__dirname, "../config.json")));
+
+inject();
 
 function DFS(json, dep) {
     if (!isObject(json)) {
