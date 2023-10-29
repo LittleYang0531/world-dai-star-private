@@ -1,4 +1,4 @@
-const inject = require("@vercel/analytics");
+import { inject } from "@vercel/analytics";
 const sonolus = require("sonolus-express");
 const express = require("express");
 const fs = require("fs");
