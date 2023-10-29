@@ -3,12 +3,12 @@ const express = require("express");
 const fs = require("fs");
 const { isArray, isObject, isString } = require("util");
 const path = require("path");
-const analytics = require("@vercel/analytics");
+const tracker = require("ackee-tracker");
 const port = 3000;
 var app = new express();
 var config = JSON.parse(fs.readFileSync(path.join(__dirname, "../config.json")));
 
-analytics.inject();
+ackeeTracker.create('https://ackee.littleyang.me').record('a59ca492-3bc4-44dc-b39e-9dc83751e0c3');
 
 function DFS(json, dep) {
     if (!isObject(json)) {
