@@ -3,12 +3,12 @@ const express = require("express");
 const fs = require("fs");
 const { isArray, isObject, isString } = require("util");
 const path = require("path");
-const tracker = require("ackee-tracker");
+const platform = require("platform");
+const https = require('https')
 const port = 3000;
 var app = new express();
-var config = JSON.parse(fs.readFileSync(path.join(__dirname, "../config.json")));
 
-tracker.create('https://ackee.littleyang.me').record('a59ca492-3bc4-44dc-b39e-9dc83751e0c3');
+var config = JSON.parse(fs.readFileSync(path.join(__dirname, "../config.json")));
 
 function DFS(json, dep) {
     if (!isObject(json)) {
@@ -149,6 +149,61 @@ sonolusApp.engineListHandler = (sonolus, query, page) => {
         infos: infos
     };
 }
+
+const send = function(url, body, opts) {
+    console.log(body);
+    var req = https.request({
+        host: "ackee.littleyang.me",
+        path: "/api",
+        method: "POST",
+    }, function(res) {
+
+    });
+    req.on('error', (e) => {});
+    req.write(JSON.stringify(body));
+    req.end();
+}
+
+const createRecordBody = function(domainId, input) {
+	return {
+		query: `
+			mutation createRecord($domainId: ID!, $input: CreateRecordInput!) {
+				createRecord(domainId: $domainId, input: $input) {
+					payload {
+						id
+					}
+				}
+			}
+		`,
+		variables: {
+			domainId,
+			input
+		}
+	}
+
+}
+
+app.use(function (req, res, next) {
+    const api = "https://ackee.littleyang.me/api";
+    const id = "a59ca492-3bc4-44dc-b39e-9dc83751e0c3";
+    const value = (v) => {
+        return v === undefined || v === null ? "" : v;
+    };
+    pl = platform.parse(req.headers["user-agent"]);
+    const data = {
+		siteLocation: value("https://wds.server.littleyang.me" + req.path),
+		siteReferrer: value("https://wds.server.littleyang.me"),
+		source: value(req.query.source),
+		deviceName: value(pl.product),
+		deviceManufacturer: value(pl.manufacturer),
+		osName: value(pl.os.family),
+		osVersion: value(pl.os.version),
+		browserName: value(pl.name),
+		browserVersion: value(pl.version)
+	};
+    send(api, createRecordBody(id, data), {});
+    next();
+});
 
 app.use(express.static(path.join(__dirname, "../public/web")));
 
