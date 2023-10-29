@@ -205,7 +205,7 @@ app.use(function (req, res, next) {
     pl = platform.parse(req.headers["user-agent"]);
     const data = {
 		siteLocation: value("https://wds.server.littleyang.me" + req.path),
-		siteReferrer: value("https://wds.server.littleyang.me"),
+		siteReferrer: value(req.headers.referer),
 		source: value(req.query.source),
 		deviceName: value(pl.product),
 		deviceManufacturer: value(pl.manufacturer),
