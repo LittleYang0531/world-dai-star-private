@@ -157,13 +157,12 @@ const send = function(url, body, opts) {
         path: "/api",
         method: "POST",
         headers: {
-            Authorization: "bearer 3e2eff9e-fe52-4462-a11b-f3cdeb2e1850",
+            Authorization: "Bearer 3e2eff9e-fe52-4462-a11b-f3cdeb2e1850",
             "Content-Type": "application/json",
             "Content-Length": JSON.stringify(body).length,
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.76",
             Accept: "*/*",
             "Accept-Encoding": "gzip, deflate, br",
-            "Cookie": "ackee_ignore=1",
             "Origin": "https://ackee.littleyang.me",
             "Referer": "https://ackee.littleyang.me/",
             "Time-Zone": "Asia/Shanghai",
@@ -205,7 +204,7 @@ app.use(function (req, res, next) {
     };
     pl = platform.parse(req.headers["user-agent"]);
     const data = {
-		siteLocation: value("https://wds.server.littleyang.me" + req.path),
+		siteLocation: value("https://wds.server.littleyang.me"),
 		siteReferrer: value("https://wds.server.littleyang.me"),
 		source: value(req.query.source),
 		deviceName: value(pl.product),
