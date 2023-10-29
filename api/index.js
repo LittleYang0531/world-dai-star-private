@@ -1,14 +1,14 @@
-import { inject } from "@vercel/analytics";
 const sonolus = require("sonolus-express");
 const express = require("express");
 const fs = require("fs");
 const { isArray, isObject, isString } = require("util");
 const path = require("path");
+const analytics = require("@vercel/analytics");
 const port = 3000;
 var app = new express();
 var config = JSON.parse(fs.readFileSync(path.join(__dirname, "../config.json")));
 
-inject();
+analytics.inject();
 
 function DFS(json, dep) {
     if (!isObject(json)) {

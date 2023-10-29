@@ -1,5 +1,4 @@
 {
-  "type": "module",
   "dependencies": {
     "@vercel/analytics": "^1.1.1",
     "express": "^4.18.2",
