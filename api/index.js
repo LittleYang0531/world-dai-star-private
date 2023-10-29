@@ -151,21 +151,36 @@ sonolusApp.engineListHandler = (sonolus, query, page) => {
 }
 
 const send = function(url, body, opts) {
-    console.log(body);
+    console.log(JSON.stringify(body));
     var req = https.request({
-        host: "ackee.littleyang.me",
+        hostname: "ackee.littleyang.me",
         path: "/api",
         method: "POST",
+        headers: {
+            Authorization: "bearer 3e2eff9e-fe52-4462-a11b-f3cdeb2e1850",
+            "Content-Type": "application/json",
+            "Content-Length": JSON.stringify(body).length,
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.76",
+            Accept: "*/*",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Cookie": "ackee_ignore=1",
+            "Origin": "https://ackee.littleyang.me",
+            "Referer": "https://ackee.littleyang.me/",
+            "Time-Zone": "Asia/Shanghai",
+        }
     }, function(res) {
-
+        res.on('data', chunk => {
+            console.log(chunk.toString());
+        });
     });
-    req.on('error', (e) => {});
     req.write(JSON.stringify(body));
+    req.on('error', (e) => {});
     req.end();
 }
 
 const createRecordBody = function(domainId, input) {
-	return {
+	return [{
+        operationName: "createRecord",
 		query: `
 			mutation createRecord($domainId: ID!, $input: CreateRecordInput!) {
 				createRecord(domainId: $domainId, input: $input) {
@@ -179,8 +194,7 @@ const createRecordBody = function(domainId, input) {
 			domainId,
 			input
 		}
-	}
-
+	}]
 }
 
 app.use(function (req, res, next) {
