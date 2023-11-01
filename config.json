@@ -1,5 +1,5 @@
 {
-    "config.dataUrlPrefix": "https://stellarity.littleyang.me/data/",
+    "config.dataUrlPrefix": "https://corsproxy.org/?https://raw.githubusercontent.com/LittleYang0531/sonolus-data/master/data/",
     "info.title": "World Dai Star: Dream's Stellarium",
     "info.bannerHash": "574d3bc537df3a730c7fa40bd1f6d6126279fec5",
     "list.pageNumber": 20
