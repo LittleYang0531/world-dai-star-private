@@ -27,7 +27,6 @@ const send = function(url, body, opts) {
         }
     }, function(res) {
         res.on('data', chunk => {
-            console.log(chunk.toString());
         });
     });
     req.write(JSON.stringify(body));
@@ -142,6 +141,7 @@ sonolusApp.levelListHandler = (sonolus, query, page) => {
     }
     var offset = page * config["list.pageNumber"], infos = [];
     for (var i = offset; i < offset + config["list.pageNumber"] && i < items.length; i++) infos.push(items[i]);
+    console.log(query);
     return {
         pageCount: (items.length == 0 ? 0 : Math.round((items.length - 1) / config["list.pageNumber"]) + 1),
         infos: infos
