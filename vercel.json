@@ -1,4 +1,6 @@
-"routes": [
+{
+  "routes": [
     { "src": "/sonolus/(.*)",  "dest": "/api" },
-	{ "src": "/(.*)", "dest": "/public/web/index.html" }
+    { "src": "/(.*)", "dest": "/public/web/index.html" }
   ]
+}
