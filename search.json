@@ -19,6 +19,13 @@
             "type": "text"
         },
         {
+        	"name": "#DIFFICULTY",
+        	"query": "difficulty",
+        	"type": "select",
+        	"def": 0,
+        	"values": [ "All", "Normal", "Hard", "Extra", "Stella", "Olivier" ]
+        },
+        {
             "def": 5,
             "max": 40,
             "min": 5,
@@ -37,6 +44,12 @@
             "step": 1,
             "type": "slider",
             "unit": ""
+        },
+        {
+        	"name": "random",
+        	"query": "#RANDOM",
+        	"type": "toggle",
+        	"def": 0
         }
     ],
     "skins": [
