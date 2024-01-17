@@ -128,7 +128,7 @@ sonolusApp.db.effects = DFS2(data["effects"]);
 sonolusApp.db.particles = DFS2(data["particles"]);
 sonolusApp.db.engines = DFS2(data["engines"]);
 
-var difficulties = [ "normal", "hard",  "extra",  "stella", "olivier" ];
+var difficulties = { '1': "normal", '2': "hard", '3': "extra", '4': "stella", '5': "olivier" };
 function getRandomInt(min, max) {
 	min = Math.ceil(min);
 	max = Math.floor(max);
@@ -137,13 +137,13 @@ function getRandomInt(min, max) {
 
 sonolusApp.levelListHandler = (sonolus, query, page) => {
     var dataSet = sonolus.db.levels, items = [];
-    console.log(query[3], query[3] != 0, dataSet[0]["name"]);
+    console.log(query[3], query[3] != '0', dataSet[0]["name"]);
     for (var i = 0; i < dataSet.length; i++) {
         var ok = true;
         if (query[0] != '' && dataSet[i]["title"][0].indexOf(query[0]) == -1) ok = false;
         if (query[1] != '' && dataSet[i]["artists"][0].indexOf(query[1]) == -1) ok = false;
         if (query[2] != '' && dataSet[i]["author"][0].indexOf(query[2]) == -1) ok = false;
-        if (query[3] != 0 && dataSet[i]["name"].indexOf(difficulties[query[3] - 1]) == -1) ok = false;
+        if (query[3] != '0' && dataSet[i]["name"].indexOf(difficulties[query[3]]) == -1) ok = false;
         if (query[4] != '' && dataSet[i]["rating"] < query[3]) ok = false;
         if (query[5] != '' && dataSet[i]["rating"] > query[4]) ok = false;
         if (ok) items.push(dataSet[i]); 
