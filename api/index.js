@@ -144,7 +144,7 @@ sonolusApp.levelListHandler = (sonolus, query, page) => {
         if (query[2] != '' && dataSet[i]["author"][0].indexOf(query[2]) == -1) ok = false;
         if (query[3] != 0 && dataSet[i]["name"][0].indexOf(difficulties[query[3]]) == -1) ok = false;
         if (query[4] != '' && dataSet[i]["rating"] < query[3]) ok = false;
-        if (query[5] != '' && dataSet[i]["rating"] > query[4]) ok = false;l
+        if (query[5] != '' && dataSet[i]["rating"] > query[4]) ok = false;
         if (ok) items.push(dataSet[i]); 
     }
     if (query[6] == 1) items = [ items[getRandomInt(0, items.length)] ];
