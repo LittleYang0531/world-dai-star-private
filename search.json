@@ -46,8 +46,8 @@
             "unit": ""
         },
         {
-        	"name": "random",
-        	"query": "#RANDOM",
+        	"name": "#RANDOM",
+        	"query": "random",
         	"type": "toggle",
         	"def": 0
         }
