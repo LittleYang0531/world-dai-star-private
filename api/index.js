@@ -147,9 +147,9 @@ sonolusApp.levelListHandler = (sonolus, query, page) => {
         if (query[5] != '' && dataSet[i]["rating"] > query[4]) ok = false;l
         if (ok) items.push(dataSet[i]); 
     }
+    if (query[6] == 1) items = [ items[getRandomInt(0, items.length)] ];
     var offset = page * config["list.pageNumber"], infos = [];
     for (var i = offset; i < offset + config["list.pageNumber"] && i < items.length; i++) infos.push(items[i]);
-    if (query[6] == 1) infos = [ infos[getRandomInt(0, infos.length)] ];
     return {
         pageCount: (items.length == 0 ? 0 : Math.round((items.length - 1) / config["list.pageNumber"]) + 1),
         infos: infos
