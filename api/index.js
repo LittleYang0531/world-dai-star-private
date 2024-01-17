@@ -137,7 +137,7 @@ function getRandomInt(min, max) {
 
 sonolusApp.levelListHandler = (sonolus, query, page) => {
     var dataSet = sonolus.db.levels, items = [];
-    // console.log(query, difficulties[query[3]]);
+    console.log(query, dataSet[0]["name"]);
     for (var i = 0; i < dataSet.length; i++) {
         var ok = true;
         if (query[0] != '' && dataSet[i]["title"][0].indexOf(query[0]) == -1) ok = false;
@@ -149,6 +149,7 @@ sonolusApp.levelListHandler = (sonolus, query, page) => {
         if (ok) items.push(dataSet[i]); 
     }
     if (query[6] == 1) items = [ items[getRandomInt(0, items.length)] ];
+    
     var offset = page * config["list.pageNumber"], infos = [];
     for (var i = offset; i < offset + config["list.pageNumber"] && i < items.length; i++) infos.push(items[i]);
     return {
