@@ -1,0 +1,18 @@
+[    
+    {
+        "options": [
+        	{
+                "query": "title",
+                "name": "#TITLE",
+                "type": "text",
+                "placeholder": "#TITLE_PLACEHOLDER"
+        	},
+            {
+                "query": "subtitle",
+                "name": "#SUBTITLE",
+                "type": "text",
+                "placeholder": "#SUBTITLE_PLACEHOLDER"
+            }
+        ]
+    }
+]

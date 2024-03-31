@@ -1,0 +1,17 @@
+<div class="fixed top-0" style="width: 100%; z-index: 10000">
+    <script>
+        var searchConfig = new Object();
+        var enableResetClass = "flex select-none space-x-2 p-2 transition-colors sm:space-x-3 sm:p-3 cursor-pointer bg-sonolus-ui-button-normal hover:bg-sonolus-ui-button-highlighted active:bg-sonolus-ui-button-pressed";
+        var disableResetClass = "flex select-none space-x-2 p-2 transition-colors sm:space-x-3 sm:p-3 pointer-events-none bg-sonolus-ui-button-disabled text-sonolus-ui-text-disabled";
+    </script>
+    <nav class="z-10 flex items-center bg-sonolus-ui-surface w-full transition-transform v-transition:-translate-y-full">
+        <a href="/" class="cursor-pointer select-none p-2 transition-colors hover:bg-sonolus-ui-button-highlighted active:bg-sonolus-ui-button-pressed sm:p-3">{{icon.home}}</a>
+        <div class="flex-grow overflow-hidden text-ellipsis whitespace-nowrap px-2 text-center text-xl font-bold sm:px-3 sm:text-3xl">{{title}}</div>
+
+        <button class="cursor-pointer select-none p-2 transition-colors hover:bg-sonolus-ui-button-highlighted active:bg-sonolus-ui-button-pressed sm:p-3" onclick="displayLanguage()">{{icon.global}}</button>
+        <ul class="fixed top-0 left-0 z-50 flex h-[100vh] w-[100vw] select-none flex-col items-center justify-center bg-sonolus-main bg-opacity-90 transition-opacity" style="opacity: 0; display: none;" id="languageOptions" onclick="hideLanguage()">
+            {{html.language}}
+        </ul>
+    </nav>
+    <div class="uploader-progress"><div id="uploader-progress"></div></div>
+</div>

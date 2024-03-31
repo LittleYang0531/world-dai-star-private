@@ -1,7 +1,5 @@
 {
   "routes": [
-    { "src": "/sonolus/(.*)",  "dest": "/api" },
-    { "src": "/assets/(.*)", "dest": "/public/web/assets/$1" },
-    { "src": "/(.*)", "dest": "/public/web/index.html" }
+    { "src": "/(.*)", "dest": "/api" }
   ]
 }
