@@ -1,8 +1,8 @@
 const express = require('express');
 const sqlite3 = require("better-sqlite3");
-console.log(__dirname + "/../public/sonolus.db")
-const db = new sqlite3(__dirname + "/../public/sonolus.db", { readonly: true });
-console.log(db.prepare("SELECT * FROM sqlite_master WHERE type='table'").all());
+// console.log(__dirname + "/../public/sonolus.db")
+// const db = new sqlite3(__dirname + "/../public/sonolus.db", { readonly: true });
+// console.log(db.prepare("SELECT * FROM sqlite_master WHERE type='table'").all());
 const factory = require('../public/libsonolus.js');
 const app = express();
 
