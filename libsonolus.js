@@ -176,7 +176,7 @@ Module['FS_createPath']("/web", "studios", true, true);
         },
         send: function() {},
         onload: function() {
-          var byteArray = new Uint8Array(require('fs').readFileSync(__dirname + '/' + this.name));
+          var byteArray = new Uint8Array(require('fs').readFileSync(__dirname + this.name));
           this.finish(byteArray);
         },
         finish: function(byteArray) {
