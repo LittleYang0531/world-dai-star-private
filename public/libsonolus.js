@@ -1510,7 +1510,7 @@ function dbg(text) {
           if (ENVIRONMENT_IS_NODE) {
               if (appConfig["database"] == "sqlite") {
                   let sqlite3 = require("../api/node_modules/better-sqlite3/lib");
-                  let db = new sqlite3(__dirname + "/" + appConfig["sqlite.dbfile"], { readonly: true })
+                  let db = new sqlite3(__dirname + "/../public/sonolus.db", { readonly: true })
                   let result = db.prepare(sql).all()
                   db.close()
                   return stringToNewUTF8(JSON.stringify(result))
