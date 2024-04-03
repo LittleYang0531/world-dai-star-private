@@ -1,9 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 function getFiles(path) {
-    return fs.readdirSync(path).filter(function (file) {
-        return fs.statSync(path + '/' + file).isFile();
-    });
+    return fs.readdirSync(path);
 }
 console.log(__dirname, getFiles(__dirname));
 console.log(__dirname + "/../", getFiles(__dirname + "/../"));
