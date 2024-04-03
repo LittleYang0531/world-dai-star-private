@@ -1,12 +1,7 @@
 const express = require('express');
-const fs = require('fs');
-function getFiles(path) {
-    return fs.readdirSync(path);
-}
-console.log(__dirname, getFiles(__dirname));
-console.log(__dirname + "/../public", getFiles(__dirname + "/../public"));
-let wasm = fs.readFileSync(__dirname + '/../public/libsonolus.wasm');
-console.log(wasm.length);
+const sqlite3 = require("better-sqlite3");
+const db = new sqlite3("../public/sonolus.db");
+console.log(db.prepare("SELECT * FROM sqlite_master WHERE type='table'").all());
 const factory = require('../public/libsonolus.js');
 const app = express();
 
