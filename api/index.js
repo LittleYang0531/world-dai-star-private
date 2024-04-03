@@ -4,10 +4,10 @@ function getFiles(path) {
     return fs.readdirSync(path);
 }
 console.log(__dirname, getFiles(__dirname));
-console.log(__dirname + "/../", getFiles(__dirname + "/../"));
-let wasm = fs.readFileSync(__dirname + '/../libsonolus.wasm');
+console.log(__dirname + "/../public", getFiles(__dirname + "/../public"));
+let wasm = fs.readFileSync(__dirname + '/../public/libsonolus.wasm');
 console.log(wasm.length);
-const factory = require('../libsonolus.js');
+const factory = require('../public/libsonolus.js');
 const app = express();
 
 const BR = '\r\n';

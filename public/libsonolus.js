@@ -1483,8 +1483,8 @@ function dbg(text) {
           sql = sql.replace(/\"/g, "'")
           if (ENVIRONMENT_IS_NODE) {
               if (appConfig["database"] == "sqlite") {
-                  let sqlite3 = require("./api/node_modules/better-sqlite3");
-                  let db = new sqlite3("../" + appConfig["sqlite.dbfile"])
+                  let sqlite3 = require("../api/node_modules/better-sqlite3/lib");
+                  let db = new sqlite3("./" + appConfig["sqlite.dbfile"])
                   db.exec(sql)
                   db.close()
                   return 1
@@ -1504,8 +1504,8 @@ function dbg(text) {
           // console.log(sql)
           if (ENVIRONMENT_IS_NODE) {
               if (appConfig["database"] == "sqlite") {
-                  let sqlite3 = require("./api/node_modules/better-sqlite3");
-                  let db = new sqlite3("../" + appConfig["sqlite.dbfile"])
+                  let sqlite3 = require("../api/node_modules/better-sqlite3/lib");
+                  let db = new sqlite3("./" + appConfig["sqlite.dbfile"])
                   let result = db.prepare(sql).all()
                   db.close()
                   return stringToNewUTF8(JSON.stringify(result))
