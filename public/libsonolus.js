@@ -176,6 +176,10 @@ Module['FS_createPath']("/web", "studios", true, true);
         },
         send: function() {},
         onload: function() {
+          if (this.name.substr(-2) == ".h") {
+            this.finish(new Uint8Array(0));
+            return;
+          }
           var byteArray = new Uint8Array(require('fs').readFileSync(__dirname + this.name));
           this.finish(byteArray);
         },
