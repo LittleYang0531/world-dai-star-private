@@ -1,4 +1,7 @@
 const express = require('express');
+const fs = require('fs');
+let wasm = fs.readFileSync('../libsonolus.wasm');
+console.log(wasm.length);
 const factory = require('../libsonolus.js');
 const app = express();
 
