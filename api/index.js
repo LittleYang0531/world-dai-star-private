@@ -80,6 +80,11 @@ app.all("*", async (req, res2) => {
 	    var dat = inst.FS.readFile("/response_" + requestId, { encoding: 'utf8' });
 	    parseRawResponse(dat, res2);
     } catch (error) {
+    	let obj = {
+    		error: true,
+    		msg: error.message,
+    		stack: error.stack
+    	}
     	res2.send(JSON.stringify(error))
     	res2.end()
     }
