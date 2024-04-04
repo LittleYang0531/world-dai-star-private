@@ -85,7 +85,7 @@ app.all("*", async (req, res2) => {
     		msg: error.message,
     		stack: error.stack
     	}
-    	res2.send(JSON.stringify(error))
+    	res2.send(obj)
     	res2.end()
     }
 });
