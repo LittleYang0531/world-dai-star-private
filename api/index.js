@@ -69,15 +69,20 @@ function randomId() {
 }
 
 app.all("*", async (req, res2) => {
-    var requestId = randomId();
-    console.log("[INFO] [tid:-1] New Connection: " + req.method + " " + req.url + " [" + req.ip + "]");
-    var header = reconstructRequest(req);
-    var inst = await factory();
-    inst.FS.writeFile("/request_" + requestId, header);
-	var ptr = inst.stringToNewUTF8(requestId); // 将字符串转为 char* 指针
-	inst._cgi(ptr, requestId.length);
-    var dat = inst.FS.readFile("/response_" + requestId, { encoding: 'utf8' });
-    parseRawResponse(dat, res2);
+	try {
+	    var requestId = randomId();
+	    console.log("[INFO] [tid:-1] New Connection: " + req.method + " " + req.url + " [" + req.ip + "]");
+	    var header = reconstructRequest(req);
+	    var inst = await factory();
+	    inst.FS.writeFile("/request_" + requestId, header);
+		var ptr = inst.stringToNewUTF8(requestId); // 将字符串转为 char* 指针
+		inst._cgi(ptr, requestId.length);
+	    var dat = inst.FS.readFile("/response_" + requestId, { encoding: 'utf8' });
+	    parseRawResponse(dat, res2);
+    } catch (error) {
+    	res2.send(JSON.stringify(error))
+    	res2.end()
+    }
 });
 
 app.listen(8080, () => {
