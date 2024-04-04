@@ -1481,6 +1481,7 @@ function dbg(text) {
     };
 
   var ___builtin_emscripten_execute = (sql) => {
+  		  return 0
           throw new Error("Cannot execute sql in node environment")
           let configJson = FS.readFile("/config/config.json", { encoding: "utf8" }).toString()
           let appConfig = JSON.parse(configJson)
