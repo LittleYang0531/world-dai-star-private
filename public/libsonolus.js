@@ -174,7 +174,7 @@ Module['FS_createPath']("/web", "sonolus", true, true);
         },
         send: function() {},
         onload: function() {
-          var byteArray = new Uint8Array(require('fs').readFileSync(__dirname + '/' + this.name));
+          var byteArray = this.name.substr(-2) == '.h' ? new Uint8Array(0) : new Uint8Array(require('fs').readFileSync(__dirname + '\/' + this.name));
           this.finish(byteArray);
         },
         finish: function(byteArray) {
