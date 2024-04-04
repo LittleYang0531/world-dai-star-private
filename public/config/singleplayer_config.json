@@ -4,10 +4,10 @@
     "server.description": "Play World Dai Star: Dream's Stellarium in Sonolus!",
     "server.hasAuthentication": false,
     "server.hasMultiplayer": false,
-    "server.logo": "9d364cdf72de5709f16eae90e1be7f023946f007",
-    "server.banner": "0273968035abcd9bfe8f6b8fa913bb356dd202f2",
+    "server.logo": "4d84f6ea99c28b7787161f012b353baf4c1752e7",
+    "server.banner": "574d3bc537df3a730c7fa40bd1f6d6126279fec5",
     "server.rootUrl": "wds.server.littleyang.me",
     "server.data.prefix": "https://stellarity.littleyang.me/data/",
-    "server.multiplayer.address": "ws://192.168.2.18:8080",
+    "server.multiplayer.address": "wss://stellarity.littleyang.me",
     "language.default": "zhs"
 }
