@@ -8,19 +8,19 @@
                 "query": "keywords",
                 "name": "#KEYWORDS",
                 "type": "text",
-                "placeholder": "Enter keywords..."
+                "placeholder": "#KEYWORDS_PLACEHOLDER"
             },
             {
                 "query": "artist",
                 "name": "#ARTISTS",
                 "type": "text",
-                "placeholder": "Enter artist name..."
+                "placeholder": "#ARTISTS_PLACEHOLDER"
             },
             {
                 "query": "author",
                 "name": "#AUTHOR",
                 "type": "text",
-                "placeholder": "Enter author name..."
+                "placeholder": "#AUTHOR_PLACEHOLDER"
             },
 	        {
 	        	"name": "#DIFFICULTY",
