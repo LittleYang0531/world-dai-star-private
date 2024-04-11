@@ -1,1 +1,24 @@
-[]
+[
+	{
+		"title": "#ADVANCED",
+		"icon": "search",
+		"type": "advanced",
+		"options": [
+			{
+                "query": "keywords",
+                "name": "#KEYWORDS",
+                "type": "text",
+                "placeholder": "#KEYWORDS_PLACEHOLDER"
+			}, 
+	        {
+	        	"name": "Type",
+	        	"query": "t",
+	        	"type": "select",
+	        	"def": 0,
+	        	"values": [ "All", "更新情報", "不具合情報", "#ANNOUNCEMENT" ]
+	        }
+		],
+        "filter": "title LIKE \"%{{keywords}}%\" AND tags LIKE (CASE \"{{t}}\" WHEN \"All\" THEN \"%\" ELSE \"%{{t}}%\" END)",
+        "order": "id DESC"
+	}
+]

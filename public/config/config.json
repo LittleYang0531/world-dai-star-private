@@ -103,6 +103,12 @@
             "icon": "playlist",
             "filter": "",
             "order": "id DESC"
+        },
+        {
+            "title": "#RANDOM",
+            "icon": "playlist",
+            "filter": "",
+            "order": "RANDOM() ASC"
         }
     ],
     "rooms.info.sections": [

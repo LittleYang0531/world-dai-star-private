@@ -1,1 +1,29 @@
-[]
+[    
+    {
+        "title": "#ADVANCED",
+        "icon": "search",
+        "type": "advanced",
+        "options": [
+            {
+                "query": "keywords",
+                "name": "#KEYWORDS",
+                "type": "text",
+                "placeholder": "#KEYWORDS_PLACEHOLDER"
+            },
+            {
+                "query": "artists",
+                "name": "#ARTISTS",
+                "type": "text",
+                "placeholder": "#ARTISTS_PLACEHOLDER"
+            },
+            {
+                "query": "random",
+                "name": "#RANDOM",
+                "type": "toggle",
+                "def": 0
+            }
+        ],
+        "filter": "title LIKE \"%{{keywords}}%\" AND subtitle LIKE \"%{{artists}}%\"",
+        "order": "CASE {{random}} WHEN 0 THEN id WHEN 1 THEN RANDOM() END DESC"
+    }
+]
