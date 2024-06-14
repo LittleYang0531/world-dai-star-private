@@ -9,7 +9,6 @@ let wasm = fs.readFileSync(__dirname + '/../public/libsonolus.wasm');
 console.log(wasm.length);
 var bodyParser = require('body-parser')
 const factory = require('../public/libsonolus.js');
-const { Module } = require('module');
 const app = express();
 
 const BR = '\r\n';
