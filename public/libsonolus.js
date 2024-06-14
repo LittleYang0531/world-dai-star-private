@@ -1398,6 +1398,7 @@ function dbg(...args) {
     };
 
   var ___builtin_emscripten_execute = async (sql) => {
+          return 0;
           let configJson = FS.readFile("/config/config.json", { encoding: "utf8" }).toString()
           let appConfig = JSON.parse(configJson)
           sql = UTF8ToString(sql)
