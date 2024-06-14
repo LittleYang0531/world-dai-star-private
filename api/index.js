@@ -9,6 +9,7 @@ let wasm = fs.readFileSync(__dirname + '/../public/libsonolus.wasm');
 console.log(wasm.length);
 var bodyParser = require('body-parser')
 const factory = require('../public/libsonolus.js');
+const { Module } = require('module');
 const app = express();
 
 const BR = '\r\n';
@@ -93,12 +94,15 @@ app.all("*", async (req, res2) => {
         while (inst.FS.readFile("/response_" + requestId) == "") await new Promise(r => setTimeout(r, 100));
 	    var dat = inst.FS.readFile("/response_" + requestId, { encoding: 'utf8' });
 	    parseRawResponse(dat, res2);
+        inst.db.close();
+        inst.connection.end();
     } catch (error) {
     	let obj = {
     		error: true,
     		msg: error.message,
     		stack: error.stack
     	}
+        console.log(obj)
     	res2.send(obj)
     	res2.end()
     }
