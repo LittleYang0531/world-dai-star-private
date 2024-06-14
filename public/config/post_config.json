@@ -1,0 +1,33 @@
+{
+    "posts.enableLike": true,
+    "posts.enableComment": true,
+    "posts.enableRating": true,
+    "posts.enableGUICreate": true,
+    "posts.enableSonolusCreate": true,
+    "posts.pageSize.info": 5,
+    "posts.pageSize.list": 20,
+    "posts.pageSize.recommends": 5,
+    "posts.pageSize.community": 5,
+    "posts.info.sections": [
+        {
+            "title": "更新情報",
+            "icon": "post",
+            "filter": "tags LIKE \"%更新情報%\"",
+            "order": ""
+        }, {
+            "title": "不具合情報",
+            "icon": "post",
+            "filter": "tags LIKE \"%不具合情報%\"",
+            "order": ""
+        }
+    ],
+    "posts.details.sections": [
+        
+    ],
+    "posts.searches": [
+        
+    ],
+    "posts.creates": [
+        
+    ]
+}

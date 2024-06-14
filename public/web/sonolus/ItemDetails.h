@@ -1,12 +1,16 @@
 #define quickSonolusDetails(name1, name2) {\
     auto items = name2##List( \
-    	"name = \"" + argv[1] + "\" AND (localization == \"" + $_GET["localization"] + "\" OR localization == \"default\")", \
-    	"CASE WHEN localization == \"default\" THEN 1 WHEN localization != \"default\" THEN 0 END ASC"); \
+    	"name = \"" + argv[1] + "\" AND (localization = \"" + $_GET["localization"] + "\" OR localization = \"default\")", \
+    	"CASE WHEN localization = \"default\" THEN 1 WHEN localization != \"default\" THEN 0 END ASC"); \
     if (items.size() == 0) { quickSendMsg(404); } \
     auto item = items[0]; \
     ItemDetails["item"] = item.toJsonObject(); \
     ItemDetails["description"] = item.description; \
     ItemDetails["sections"].resize(0); \
+    ItemDetails["hasCommunity"] = \
+        appConfig[defineToString(name2)".enableLike"].asBool() || \
+        appConfig[defineToString(name2)".enableComment"].asBool() || \
+        appConfig[defineToString(name2)".enableRating"].asBool(); \
     argvar args = item.fetchParamList(); \
     for (auto v : args) args[v.first] = str_replace("\"", "\\\"", v.second); \
     for (int i = 0; i < appConfig[defineToString(name2)".details.sections"].size(); i++) { \
@@ -17,7 +21,7 @@
         order = str_replace(order, args); \
         ItemDetails["sections"].append(ItemSection<name1##Item>( \
             obj["title"].asString(), obj["icon"].asString(), \
-            name2##List(filter, order, 1, 5) \
+            name2##List(filter, order, 1, appConfig[defineToString(name2)".pageSize.recommends"].asInt()) \
         ).toJsonObject()); \
     } \
     auto recommended = name2##List("author = \"" + item.author + "\"", "id DESC", 1, 5); \

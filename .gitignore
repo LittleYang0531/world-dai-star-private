@@ -30,3 +30,4 @@ package-lock.json
 
 src/i18n/generated-*
 .vercel
+package

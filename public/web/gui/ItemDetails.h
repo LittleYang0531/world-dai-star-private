@@ -1,7 +1,7 @@
 #define quickGUIDetails(name) {\
     auto items = name##List( \
-    	"name = \"" + argv[1] + "\" AND (localization == \"" + $_GET["localization"] + "\" OR localization == \"default\")", \
-    	"CASE WHEN localization == \"default\" THEN 1 WHEN localization != \"default\" THEN 0 END ASC"); \
+    	"name = \"" + argv[1] + "\" AND (localization = \"" + $_GET["localization"] + "\" OR localization = \"default\")", \
+    	"CASE WHEN localization = \"default\" THEN 1 WHEN localization != \"default\" THEN 0 END ASC"); \
     if (items.size() == 0) { quickSendMsg(404); } \
     auto item = items[0]; argList = merge(argList, item.fetchParamList()); \
     argList["html.open_in_sonolus"] = fetchOpenInSonolus(item.fetchParamList()["sonolus.url"]).output(); \
@@ -9,6 +9,7 @@
     argList["page.title"] = item.title + " | " + appConfig["server.title"].asString(); \
     argList["html.navbar"] = fetchNavBar(item.title).output(); \
     argList["editUrl"] = "/" + argv[0] + "/" + argv[1] + "/edit"; \
+    quickGUICommunity(request, argv[0], argv[1], argList, detailsIcon); \
     string detailsSection = ""; \
     argvar args = item.fetchParamList(); \
     for (auto v : args) args[v.first] = str_replace("\"", "\\\"", v.second); \
@@ -16,12 +17,12 @@
         auto section = appConfig[argv[0] + ".details.sections"][i]; \
         detailsSection += "<a style=\"height:0px;margin:0px;\" name=\"" + section["title"].asString() + "\"></a>"; \
         detailsSection += "<div class=\"flex flex-col space-y-2 sm:space-y-3\"><h2 class=\"py-1 text-xl font-bold sm:py-1.5 sm:text-3xl\">" + section["title"].asString() + "</h2>"; \
-        auto list = name##List(str_replace(section["filter"].asString(), args), str_replace(section["order"].asString(), args), 1, 5); \
+        auto list = name##List(str_replace(section["filter"].asString(), args), str_replace(section["order"].asString(), args), 1, appConfig[string(argv[0]) + ".pageSize.recommends"].asInt()); \
         for (int j = 0; j < list.size(); j++) detailsSection += list[j].toHTMLObject().output(); \
         detailsSection += "</div>"; \
         detailsIcon += fetchIconButton("#" + section["title"].asString(), "{{icon." + section["icon"].asString() + "}}").output(); \
     } argList["html.detailsSection"] = detailsSection; \
-    argList["html.icons"] = detailsIcon; \
+    argList["html.icons"] += detailsIcon; \
 }
 
 auto GUIDetails = [](client_conn conn, http_request request, param argv) {
