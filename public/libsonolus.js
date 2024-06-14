@@ -62,7 +62,7 @@ if (ENVIRONMENT_IS_NODE) {
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /tmp/tmp1jsp7k2w.js
+// include: /tmp/tmp1m3f_4kp.js
 
   if (!Module.expectedDataFileDownloads) {
     Module.expectedDataFileDownloads = 0;
@@ -174,7 +174,6 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
 Module['FS_createPath']("/", "config", true, true);
 Module['FS_createPath']("/", "i18n", true, true);
 Module['FS_createPath']("/", "web", true, true);
-Module['FS_createPath']("/web", "auth", true, true);
 Module['FS_createPath']("/web", "css", true, true);
 Module['FS_createPath']("/web", "gui", true, true);
 Module['FS_createPath']("/web", "html", true, true);
@@ -251,25 +250,25 @@ Module['FS_createPath']("/web", "sonolus", true, true);
     }
 
     }
-    loadPackage({"files": [{"filename": "/config/background_config.json", "start": 0, "end": 2954}, {"filename": "/config/config.json", "start": 2954, "end": 3665}, {"filename": "/config/effect_config.json", "start": 3665, "end": 6395}, {"filename": "/config/engine_config.json", "start": 6395, "end": 11110}, {"filename": "/config/level_config.json", "start": 11110, "end": 17846}, {"filename": "/config/multiplayer_config.json", "start": 17846, "end": 17931}, {"filename": "/config/particle_config.json", "start": 17931, "end": 20696}, {"filename": "/config/playlist_config.json", "start": 20696, "end": 21347}, {"filename": "/config/post_config.json", "start": 21347, "end": 21950}, {"filename": "/config/replay_config.json", "start": 21950, "end": 24862}, {"filename": "/config/room_config.json", "start": 24862, "end": 25933}, {"filename": "/config/singleplayer_config.json", "start": 25933, "end": 26409}, {"filename": "/config/skin_config.json", "start": 26409, "end": 29102}, {"filename": "/i18n/en-us.json", "start": 29102, "end": 42553}, {"filename": "/i18n/index.json", "start": 42553, "end": 42899}, {"filename": "/i18n/ja-jp.json", "start": 42899, "end": 58501}, {"filename": "/i18n/zh-cn.json", "start": 58501, "end": 71624}, {"filename": "/sonolus.db", "start": 71624, "end": 137160}, {"filename": "/web/auth/auth.h", "start": 137160, "end": 137290}, {"filename": "/web/auth/sonolus_authenticate.h", "start": 137290, "end": 139394}, {"filename": "/web/auth/sonolus_info.h", "start": 139394, "end": 141021}, {"filename": "/web/auth/sonolus_levels.h", "start": 141021, "end": 145383}, {"filename": "/web/auth/sonolus_list.h", "start": 145383, "end": 146533}, {"filename": "/web/css/import.h", "start": 146533, "end": 147077}, {"filename": "/web/css/index.css", "start": 147077, "end": 175307}, {"filename": "/web/downloader.h", "start": 175307, "end": 176966}, {"filename": "/web/gui/Index.h", "start": 176966, "end": 180310}, {"filename": "/web/gui/ItemCommunity.h", "start": 180310, "end": 183367}, {"filename": "/web/gui/ItemCommunityCommentJump.h", "start": 183367, "end": 184899}, {"filename": "/web/gui/ItemCommunityCommentList.h", "start": 184899, "end": 187589}, {"filename": "/web/gui/ItemCreate.h", "start": 187589, "end": 192404}, {"filename": "/web/gui/ItemDetails.h", "start": 192404, "end": 196883}, {"filename": "/web/gui/ItemEdit.h", "start": 196883, "end": 202994}, {"filename": "/web/gui/ItemInfo.h", "start": 202994, "end": 207121}, {"filename": "/web/gui/ItemJump.h", "start": 207121, "end": 208635}, {"filename": "/web/gui/ItemList.h", "start": 208635, "end": 215052}, {"filename": "/web/gui/ItemSearch.h", "start": 215052, "end": 219692}, {"filename": "/web/html/components/backgrounds.html", "start": 219692, "end": 220818}, {"filename": "/web/html/components/bottomBar.html", "start": 220818, "end": 230718}, {"filename": "/web/html/components/comments.html", "start": 230718, "end": 236782}, {"filename": "/web/html/components/effects.html", "start": 236782, "end": 237908}, {"filename": "/web/html/components/engines.html", "start": 237908, "end": 239034}, {"filename": "/web/html/components/header.html", "start": 239034, "end": 239914}, {"filename": "/web/html/components/iconButton.html", "start": 239914, "end": 240194}, {"filename": "/web/html/components/iconTextButton.html", "start": 240194, "end": 240570}, {"filename": "/web/html/components/indexButton.html", "start": 240570, "end": 241015}, {"filename": "/web/html/components/language.html", "start": 241015, "end": 242480}, {"filename": "/web/html/components/levels.html", "start": 242480, "end": 244610}, {"filename": "/web/html/components/navbar.html", "start": 244610, "end": 246190}, {"filename": "/web/html/components/open_in_sonolus.html", "start": 246190, "end": 252808}, {"filename": "/web/html/components/particles.html", "start": 252808, "end": 253934}, {"filename": "/web/html/components/playlists.html", "start": 253934, "end": 255060}, {"filename": "/web/html/components/posts.html", "start": 255060, "end": 256182}, {"filename": "/web/html/components/replays.html", "start": 256182, "end": 258314}, {"filename": "/web/html/components/searchColor.html", "start": 258314, "end": 264758}, {"filename": "/web/html/components/searchFile.html", "start": 264758, "end": 271794}, {"filename": "/web/html/components/searchSelect.html", "start": 271794, "end": 274566}, {"filename": "/web/html/components/searchSlider.html", "start": 274566, "end": 281478}, {"filename": "/web/html/components/searchText.html", "start": 281478, "end": 286427}, {"filename": "/web/html/components/searchTitle.html", "start": 286427, "end": 286568}, {"filename": "/web/html/components/searchToggle.html", "start": 286568, "end": 289688}, {"filename": "/web/html/components/sectionSearch.html", "start": 289688, "end": 290759}, {"filename": "/web/html/components/skins.html", "start": 290759, "end": 291885}, {"filename": "/web/html/icons/advanced.svg", "start": 291885, "end": 292692}, {"filename": "/web/html/icons/award.svg", "start": 292692, "end": 294158}, {"filename": "/web/html/icons/background.svg", "start": 294158, "end": 294624}, {"filename": "/web/html/icons/bookmark.svg", "start": 294624, "end": 294891}, {"filename": "/web/html/icons/comment.svg", "start": 294891, "end": 295450}, {"filename": "/web/html/icons/community.svg", "start": 295450, "end": 296245}, {"filename": "/web/html/icons/crown.svg", "start": 296245, "end": 296871}, {"filename": "/web/html/icons/description.svg", "start": 296871, "end": 297321}, {"filename": "/web/html/icons/effect.svg", "start": 297321, "end": 298116}, {"filename": "/web/html/icons/engine.svg", "start": 298116, "end": 298699}, {"filename": "/web/html/icons/global.svg", "start": 298699, "end": 299894}, {"filename": "/web/html/icons/heart.svg", "start": 299894, "end": 300266}, {"filename": "/web/html/icons/heartHollow.svg", "start": 300266, "end": 301058}, {"filename": "/web/html/icons/home.svg", "start": 301058, "end": 301689}, {"filename": "/web/html/icons/level.svg", "start": 301689, "end": 302030}, {"filename": "/web/html/icons/login.svg", "start": 302030, "end": 302518}, {"filename": "/web/html/icons/logout.svg", "start": 302518, "end": 303009}, {"filename": "/web/html/icons/medal.svg", "start": 303009, "end": 303753}, {"filename": "/web/html/icons/more.svg", "start": 303753, "end": 303964}, {"filename": "/web/html/icons/particle.svg", "start": 303964, "end": 304611}, {"filename": "/web/html/icons/playlist.svg", "start": 304611, "end": 305185}, {"filename": "/web/html/icons/post.svg", "start": 305185, "end": 305899}, {"filename": "/web/html/icons/ranking.svg", "start": 305899, "end": 306563}, {"filename": "/web/html/icons/replay.svg", "start": 306563, "end": 307556}, {"filename": "/web/html/icons/reply.svg", "start": 307556, "end": 307916}, {"filename": "/web/html/icons/search.svg", "start": 307916, "end": 308228}, {"filename": "/web/html/icons/shuffle.svg", "start": 308228, "end": 308901}, {"filename": "/web/html/icons/skin.svg", "start": 308901, "end": 309122}, {"filename": "/web/html/icons/star.svg", "start": 309122, "end": 309613}, {"filename": "/web/html/icons/tags.svg", "start": 309613, "end": 309892}, {"filename": "/web/html/icons/thumbsDown.svg", "start": 309892, "end": 310607}, {"filename": "/web/html/icons/thumbsUp.svg", "start": 310607, "end": 311313}, {"filename": "/web/html/icons/trophy.svg", "start": 311313, "end": 312239}, {"filename": "/web/html/pages/Index.html", "start": 312239, "end": 316752}, {"filename": "/web/html/pages/ItemCommunityCommentList.html", "start": 316752, "end": 328322}, {"filename": "/web/html/pages/ItemCreate.html", "start": 328322, "end": 329826}, {"filename": "/web/html/pages/ItemDetails.html", "start": 329826, "end": 349905}, {"filename": "/web/html/pages/ItemDetails/backgrounds.html", "start": 349905, "end": 351667}, {"filename": "/web/html/pages/ItemDetails/effects.html", "start": 351667, "end": 353425}, {"filename": "/web/html/pages/ItemDetails/engines.html", "start": 353425, "end": 355183}, {"filename": "/web/html/pages/ItemDetails/levels.html", "start": 355183, "end": 357368}, {"filename": "/web/html/pages/ItemDetails/particles.html", "start": 357368, "end": 359128}, {"filename": "/web/html/pages/ItemDetails/playlists.html", "start": 359128, "end": 360888}, {"filename": "/web/html/pages/ItemDetails/posts.html", "start": 360888, "end": 362640}, {"filename": "/web/html/pages/ItemDetails/replays.html", "start": 362640, "end": 364828}, {"filename": "/web/html/pages/ItemDetails/skins.html", "start": 364828, "end": 366578}, {"filename": "/web/html/pages/ItemInfo.html", "start": 366578, "end": 373219}, {"filename": "/web/html/pages/ItemJump.html", "start": 373219, "end": 381110}, {"filename": "/web/html/pages/ItemList.html", "start": 381110, "end": 382906}, {"filename": "/web/html/pages/ItemSearch.html", "start": 382906, "end": 383340}, {"filename": "/web/import.h", "start": 383340, "end": 383800}, {"filename": "/web/js/QRCode.js", "start": 383800, "end": 407268}, {"filename": "/web/js/community.js", "start": 407268, "end": 409646}, {"filename": "/web/js/import.h", "start": 409646, "end": 410187}, {"filename": "/web/js/index.js", "start": 410187, "end": 423187}, {"filename": "/web/js/jQuery.js", "start": 423187, "end": 513133}, {"filename": "/web/sonolus/Authentication.h", "start": 513133, "end": 516292}, {"filename": "/web/sonolus/CheckLogin.h", "start": 516292, "end": 516466}, {"filename": "/web/sonolus/ItemCommunity.h", "start": 516466, "end": 523437}, {"filename": "/web/sonolus/ItemCommunityCommentList.h", "start": 523437, "end": 524337}, {"filename": "/web/sonolus/ItemCreate.h", "start": 524337, "end": 531318}, {"filename": "/web/sonolus/ItemDetails.h", "start": 531318, "end": 534002}, {"filename": "/web/sonolus/ItemInfo.h", "start": 534002, "end": 536261}, {"filename": "/web/sonolus/ItemList.h", "start": 536261, "end": 540218}, {"filename": "/web/sonolus/RoomConnection.h", "start": 540218, "end": 558796}, {"filename": "/web/sonolus/RoomJoin.h", "start": 558796, "end": 561055}, {"filename": "/web/sonolus/ServerInfo.h", "start": 561055, "end": 562852}, {"filename": "/web/sonolus/sonolus.h", "start": 562852, "end": 566638}, {"filename": "/web/uploader.h", "start": 566638, "end": 567405}], "remote_package_size": 567405});
+    loadPackage({"files": [{"filename": "/config/background_config.json", "start": 0, "end": 2954}, {"filename": "/config/config.json", "start": 2954, "end": 3767}, {"filename": "/config/database.json", "start": 3767, "end": 4063}, {"filename": "/config/effect_config.json", "start": 4063, "end": 6793}, {"filename": "/config/engine_config.json", "start": 6793, "end": 11508}, {"filename": "/config/level_config.json", "start": 11508, "end": 18244}, {"filename": "/config/multiplayer_config.json", "start": 18244, "end": 18329}, {"filename": "/config/particle_config.json", "start": 18329, "end": 21094}, {"filename": "/config/playlist_config.json", "start": 21094, "end": 21745}, {"filename": "/config/post_config.json", "start": 21745, "end": 22348}, {"filename": "/config/replay_config.json", "start": 22348, "end": 25260}, {"filename": "/config/room_config.json", "start": 25260, "end": 26331}, {"filename": "/config/singleplayer_config.json", "start": 26331, "end": 26807}, {"filename": "/config/skin_config.json", "start": 26807, "end": 29500}, {"filename": "/i18n/en-us.json", "start": 29500, "end": 42951}, {"filename": "/i18n/index.json", "start": 42951, "end": 43297}, {"filename": "/i18n/ja-jp.json", "start": 43297, "end": 58899}, {"filename": "/i18n/zh-cn.json", "start": 58899, "end": 72022}, {"filename": "/sonolus.db", "start": 72022, "end": 137558}, {"filename": "/web/css/import.h", "start": 137558, "end": 138102}, {"filename": "/web/css/index.css", "start": 138102, "end": 166332}, {"filename": "/web/downloader.h", "start": 166332, "end": 167991}, {"filename": "/web/gui/Index.h", "start": 167991, "end": 171350}, {"filename": "/web/gui/ItemCommunity.h", "start": 171350, "end": 174463}, {"filename": "/web/gui/ItemCommunityCommentJump.h", "start": 174463, "end": 175995}, {"filename": "/web/gui/ItemCommunityCommentList.h", "start": 175995, "end": 178685}, {"filename": "/web/gui/ItemCreate.h", "start": 178685, "end": 183554}, {"filename": "/web/gui/ItemDetails.h", "start": 183554, "end": 188033}, {"filename": "/web/gui/ItemEdit.h", "start": 188033, "end": 194198}, {"filename": "/web/gui/ItemInfo.h", "start": 194198, "end": 198325}, {"filename": "/web/gui/ItemJump.h", "start": 198325, "end": 199839}, {"filename": "/web/gui/ItemList.h", "start": 199839, "end": 206256}, {"filename": "/web/gui/ItemSearch.h", "start": 206256, "end": 210896}, {"filename": "/web/html/components/backgrounds.html", "start": 210896, "end": 212022}, {"filename": "/web/html/components/bottomBar.html", "start": 212022, "end": 221922}, {"filename": "/web/html/components/comments.html", "start": 221922, "end": 227986}, {"filename": "/web/html/components/effects.html", "start": 227986, "end": 229112}, {"filename": "/web/html/components/engines.html", "start": 229112, "end": 230238}, {"filename": "/web/html/components/header.html", "start": 230238, "end": 231118}, {"filename": "/web/html/components/iconButton.html", "start": 231118, "end": 231398}, {"filename": "/web/html/components/iconTextButton.html", "start": 231398, "end": 231774}, {"filename": "/web/html/components/indexButton.html", "start": 231774, "end": 232219}, {"filename": "/web/html/components/language.html", "start": 232219, "end": 233684}, {"filename": "/web/html/components/levels.html", "start": 233684, "end": 235814}, {"filename": "/web/html/components/navbar.html", "start": 235814, "end": 237394}, {"filename": "/web/html/components/open_in_sonolus.html", "start": 237394, "end": 244012}, {"filename": "/web/html/components/particles.html", "start": 244012, "end": 245138}, {"filename": "/web/html/components/playlists.html", "start": 245138, "end": 246264}, {"filename": "/web/html/components/posts.html", "start": 246264, "end": 247386}, {"filename": "/web/html/components/replays.html", "start": 247386, "end": 249518}, {"filename": "/web/html/components/searchColor.html", "start": 249518, "end": 255962}, {"filename": "/web/html/components/searchFile.html", "start": 255962, "end": 262998}, {"filename": "/web/html/components/searchSelect.html", "start": 262998, "end": 265770}, {"filename": "/web/html/components/searchSlider.html", "start": 265770, "end": 272682}, {"filename": "/web/html/components/searchText.html", "start": 272682, "end": 277631}, {"filename": "/web/html/components/searchTitle.html", "start": 277631, "end": 277772}, {"filename": "/web/html/components/searchToggle.html", "start": 277772, "end": 280892}, {"filename": "/web/html/components/sectionSearch.html", "start": 280892, "end": 281963}, {"filename": "/web/html/components/skins.html", "start": 281963, "end": 283089}, {"filename": "/web/html/icons/advanced.svg", "start": 283089, "end": 283896}, {"filename": "/web/html/icons/award.svg", "start": 283896, "end": 285362}, {"filename": "/web/html/icons/background.svg", "start": 285362, "end": 285828}, {"filename": "/web/html/icons/bookmark.svg", "start": 285828, "end": 286095}, {"filename": "/web/html/icons/comment.svg", "start": 286095, "end": 286654}, {"filename": "/web/html/icons/community.svg", "start": 286654, "end": 287449}, {"filename": "/web/html/icons/crown.svg", "start": 287449, "end": 288075}, {"filename": "/web/html/icons/description.svg", "start": 288075, "end": 288525}, {"filename": "/web/html/icons/effect.svg", "start": 288525, "end": 289320}, {"filename": "/web/html/icons/engine.svg", "start": 289320, "end": 289903}, {"filename": "/web/html/icons/global.svg", "start": 289903, "end": 291098}, {"filename": "/web/html/icons/heart.svg", "start": 291098, "end": 291470}, {"filename": "/web/html/icons/heartHollow.svg", "start": 291470, "end": 292262}, {"filename": "/web/html/icons/home.svg", "start": 292262, "end": 292893}, {"filename": "/web/html/icons/level.svg", "start": 292893, "end": 293234}, {"filename": "/web/html/icons/login.svg", "start": 293234, "end": 293722}, {"filename": "/web/html/icons/logout.svg", "start": 293722, "end": 294213}, {"filename": "/web/html/icons/medal.svg", "start": 294213, "end": 294957}, {"filename": "/web/html/icons/more.svg", "start": 294957, "end": 295168}, {"filename": "/web/html/icons/particle.svg", "start": 295168, "end": 295815}, {"filename": "/web/html/icons/playlist.svg", "start": 295815, "end": 296389}, {"filename": "/web/html/icons/post.svg", "start": 296389, "end": 297103}, {"filename": "/web/html/icons/ranking.svg", "start": 297103, "end": 297767}, {"filename": "/web/html/icons/replay.svg", "start": 297767, "end": 298760}, {"filename": "/web/html/icons/reply.svg", "start": 298760, "end": 299120}, {"filename": "/web/html/icons/search.svg", "start": 299120, "end": 299432}, {"filename": "/web/html/icons/shuffle.svg", "start": 299432, "end": 300105}, {"filename": "/web/html/icons/skin.svg", "start": 300105, "end": 300326}, {"filename": "/web/html/icons/star.svg", "start": 300326, "end": 300817}, {"filename": "/web/html/icons/tags.svg", "start": 300817, "end": 301096}, {"filename": "/web/html/icons/thumbsDown.svg", "start": 301096, "end": 301811}, {"filename": "/web/html/icons/thumbsUp.svg", "start": 301811, "end": 302517}, {"filename": "/web/html/icons/trophy.svg", "start": 302517, "end": 303443}, {"filename": "/web/html/pages/Index.html", "start": 303443, "end": 307956}, {"filename": "/web/html/pages/ItemCommunityCommentList.html", "start": 307956, "end": 319526}, {"filename": "/web/html/pages/ItemCreate.html", "start": 319526, "end": 321030}, {"filename": "/web/html/pages/ItemDetails.html", "start": 321030, "end": 341109}, {"filename": "/web/html/pages/ItemDetails/backgrounds.html", "start": 341109, "end": 342871}, {"filename": "/web/html/pages/ItemDetails/effects.html", "start": 342871, "end": 344629}, {"filename": "/web/html/pages/ItemDetails/engines.html", "start": 344629, "end": 346387}, {"filename": "/web/html/pages/ItemDetails/levels.html", "start": 346387, "end": 348572}, {"filename": "/web/html/pages/ItemDetails/particles.html", "start": 348572, "end": 350332}, {"filename": "/web/html/pages/ItemDetails/playlists.html", "start": 350332, "end": 352092}, {"filename": "/web/html/pages/ItemDetails/posts.html", "start": 352092, "end": 353844}, {"filename": "/web/html/pages/ItemDetails/replays.html", "start": 353844, "end": 356032}, {"filename": "/web/html/pages/ItemDetails/skins.html", "start": 356032, "end": 357782}, {"filename": "/web/html/pages/ItemInfo.html", "start": 357782, "end": 364423}, {"filename": "/web/html/pages/ItemJump.html", "start": 364423, "end": 372314}, {"filename": "/web/html/pages/ItemList.html", "start": 372314, "end": 374110}, {"filename": "/web/html/pages/ItemSearch.html", "start": 374110, "end": 374544}, {"filename": "/web/import.h", "start": 374544, "end": 375004}, {"filename": "/web/js/QRCode.js", "start": 375004, "end": 398472}, {"filename": "/web/js/community.js", "start": 398472, "end": 400850}, {"filename": "/web/js/import.h", "start": 400850, "end": 401391}, {"filename": "/web/js/index.js", "start": 401391, "end": 414391}, {"filename": "/web/js/jQuery.js", "start": 414391, "end": 504337}, {"filename": "/web/sonolus/Authentication.h", "start": 504337, "end": 507526}, {"filename": "/web/sonolus/CheckLogin.h", "start": 507526, "end": 507700}, {"filename": "/web/sonolus/ItemCommunity.h", "start": 507700, "end": 514818}, {"filename": "/web/sonolus/ItemCommunityCommentList.h", "start": 514818, "end": 515718}, {"filename": "/web/sonolus/ItemCreate.h", "start": 515718, "end": 522707}, {"filename": "/web/sonolus/ItemDetails.h", "start": 522707, "end": 525391}, {"filename": "/web/sonolus/ItemInfo.h", "start": 525391, "end": 527650}, {"filename": "/web/sonolus/ItemList.h", "start": 527650, "end": 531607}, {"filename": "/web/sonolus/RoomConnection.h", "start": 531607, "end": 550313}, {"filename": "/web/sonolus/RoomJoin.h", "start": 550313, "end": 552595}, {"filename": "/web/sonolus/ServerInfo.h", "start": 552595, "end": 554392}, {"filename": "/web/sonolus/sonolus.h", "start": 554392, "end": 558208}, {"filename": "/web/uploader.h", "start": 558208, "end": 558975}], "remote_package_size": 558975});
 
   })();
 
-// end include: /tmp/tmp1jsp7k2w.js
-// include: /tmp/tmpdcopj1wy.js
+// end include: /tmp/tmp1m3f_4kp.js
+// include: /tmp/tmphr935hxy.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if (Module['$ww'] || (typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD)) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: /tmp/tmpdcopj1wy.js
-// include: /tmp/tmpe5bem053.js
+  // end include: /tmp/tmphr935hxy.js
+// include: /tmp/tmpmcgn3t8c.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach((task) => {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: /tmp/tmpe5bem053.js
+  // end include: /tmp/tmpmcgn3t8c.js
 
 
 // Sometimes an existing Module object exists with properties
@@ -1397,84 +1396,20 @@ function dbg(...args) {
       abort(`Assertion failed: ${UTF8ToString(condition)}, at: ` + [filename ? UTF8ToString(filename) : 'unknown filename', line, func ? UTF8ToString(func) : 'unknown function']);
     };
 
-  var ___builtin_emscripten_execute = async (sql) => {
-          return 0;
-          let configJson = FS.readFile("/config/config.json", { encoding: "utf8" }).toString()
-          let appConfig = JSON.parse(configJson)
-          sql = UTF8ToString(sql)
-          sql = sql.replace(/\'/g, "\'\'")
-          sql = sql.replace(/\"/g, "'")
-          if (ENVIRONMENT_IS_NODE) {
-              if (appConfig["database"] == "sqlite") {
-                  let sqlite3 = require("../api/node_modules/better-sqlite3/lib");
-                  let db = new sqlite3(__dirname + "/../public/" + appConfig["sqlite.dbfile"])
-                  db.exec(sql)
-                  db.close()
-                  return 1
-              } else if (appConfig['database'] == "mysql") {
-                  let mysql = require("../api/node_modules/mysql")
-                  let connection = mysql.createConnection({
-                      host: appConfig["mysql.hostname"],
-                      user: appConfig["mysql.username"],
-                      password: appConfig["mysql.password"],
-                      database: appConfig["mysql.database"],
-                      port: appConfig["mysql.port"]
-                  })
-                  connection.connect();
-                  await new Promise((resolve, reject) => {
-                      connection.query("set sql_mode=\"NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION\";", (err) => {
-                          if (err) {
-                              reject(err)
-                          }
-                          resolve()
-                      })
-                  });
-                  let result = await new Promise((resolve, reject) => {
-                      connection.query(sql, (err, result) => {
-                          if (err) {
-                              reject(err)
-                          } else {
-                              resolve(result)
-                          }
-                      })
-                  })
-                  connection.end()
-                  return stringToNewUTF8(JSON.stringify(result))
-              }
-          } else {
-              console.error("Database query is only supported in node environment")
-              return 0
-          }
-          return 0
-      };
-  ___builtin_emscripten_execute.isAsync = true;
-
-  var ___builtin_emscripten_query = (sql) => {
+  var ___builtin_emscripten_execute = (sql, config) => {
           return Asyncify.handleAsync(async () => {
-              let configJson = FS.readFile("/config/config.json", { encoding: "utf8" }).toString()
+              let configJson = UTF8ToString(config)
               let appConfig = JSON.parse(configJson)
               sql = UTF8ToString(sql)
               sql = sql.replace(/\'/g, "\'\'")
               sql = sql.replace(/\"/g, "'")
               if (ENVIRONMENT_IS_NODE) {
                   if (appConfig["database"] == "sqlite") {
-                      let sqlite3 = require("../api/node_modules/better-sqlite3/lib");
-                      let db = new sqlite3(__dirname + "/../public/" + appConfig["sqlite.dbfile"], { readonly: true })
-                      let result = db.prepare(sql).all()
-                      db.close()
-                      return stringToNewUTF8(JSON.stringify(result))
+                      Module.db.exec(sql)
+                      return 1
                   } else if (appConfig['database'] == "mysql") {
-                      let mysql = require("../api/node_modules/mysql")
-                      let connection = mysql.createConnection({
-                          host: appConfig["mysql.hostname"],
-                          user: appConfig["mysql.username"],
-                          password: appConfig["mysql.password"],
-                          database: appConfig["mysql.database"],
-                          port: appConfig["mysql.port"]
-                      })
-                      connection.connect();
                       await new Promise((resolve, reject) => {
-                          connection.query("set sql_mode=\"NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION\";", (err) => {
+                          Module.connection.query("set sql_mode=\"NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION\";", (err) => {
                               if (err) {
                                   reject(err)
                               }
@@ -1482,7 +1417,7 @@ function dbg(...args) {
                           })
                       });
                       let result = await new Promise((resolve, reject) => {
-                          connection.query(sql, (err, result) => {
+                          Module.connection.query(sql, (err, result) => {
                               if (err) {
                                   reject(err)
                               } else {
@@ -1490,7 +1425,68 @@ function dbg(...args) {
                               }
                           })
                       })
-                      connection.end()
+                      return stringToNewUTF8(JSON.stringify(result))
+                  }
+              } else {
+                  console.error("Database query is only supported in node environment")
+                  return 0
+              }
+              return 0
+          })
+      };
+
+  var ___builtin_emscripten_prepare = (config) => {
+          let configJson = UTF8ToString(config)
+          let appConfig = JSON.parse(configJson)
+          if (ENVIRONMENT_IS_NODE) {
+              if (appConfig["database"] == "sqlite") {
+                  let sqlite3 = require("../api/node_modules/better-sqlite3/lib");
+                  Module.db = new sqlite3(__dirname + "/../public/" + appConfig["sqlite.dbfile"])
+              } else if (appConfig['database'] == "mysql") {
+                  let mysql = require("../api/node_modules/mysql")
+                  Module.connection = mysql.createConnection({
+                      host: appConfig["mysql.hostname"],
+                      user: appConfig["mysql.username"],
+                      password: appConfig["mysql.password"],
+                      database: appConfig["mysql.database"],
+                      port: appConfig["mysql.port"]
+                  })
+                  Module.connection.connect();
+              }
+          } else {
+              console.error("Database function is only supported in node environment")
+          }
+      };
+
+  var ___builtin_emscripten_query = (sql, config) => {
+          return Asyncify.handleAsync(async () => {
+              let configJson = UTF8ToString(config)
+              let appConfig = JSON.parse(configJson)
+              sql = UTF8ToString(sql)
+              sql = sql.replace(/\'/g, "\'\'")
+              sql = sql.replace(/\"/g, "'")
+              if (ENVIRONMENT_IS_NODE) {
+                  if (appConfig["database"] == "sqlite") {
+                      let result = Module.db.prepare(sql).all()
+                      return stringToNewUTF8(JSON.stringify(result))
+                  } else if (appConfig['database'] == "mysql") {
+                      await new Promise((resolve, reject) => {
+                          Module.connection.query("set sql_mode=\"NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION\";", (err) => {
+                              if (err) {
+                                  reject(err)
+                              }
+                              resolve()
+                          })
+                      });
+                      let result = await new Promise((resolve, reject) => {
+                          Module.connection.query(sql, (err, result) => {
+                              if (err) {
+                                  reject(err)
+                              } else {
+                                  resolve(result)
+                              }
+                          })
+                      })
                       return stringToNewUTF8(JSON.stringify(result))
                   }
               } else {
@@ -5119,36 +5115,6 @@ function dbg(...args) {
       return 0;
     };
 
-  
-  var runtimeKeepaliveCounter = 0;
-  var keepRuntimeAlive = () => noExitRuntime || runtimeKeepaliveCounter > 0;
-  var _proc_exit = (code) => {
-      EXITSTATUS = code;
-      if (!keepRuntimeAlive()) {
-        Module['onExit']?.(code);
-        ABORT = true;
-      }
-      quit_(code, new ExitStatus(code));
-    };
-  
-  /** @suppress {duplicate } */
-  /** @param {boolean|number=} implicit */
-  var exitJS = (status, implicit) => {
-      EXITSTATUS = status;
-  
-      checkUnflushedContent();
-  
-      // if exit() was called explicitly, warn the user if the runtime isn't actually being shut down
-      if (keepRuntimeAlive() && !implicit) {
-        var msg = `program exited (with status: ${status}), but keepRuntimeAlive() is set (counter=${runtimeKeepaliveCounter}) due to an async operation, so halting execution but not exiting the runtime or preventing further async execution (you can use emscripten_force_exit, if you want to force a true shutdown)`;
-        readyPromiseReject(msg);
-        err(msg);
-      }
-  
-      _proc_exit(status);
-    };
-  var _exit = exitJS;
-
   function _fd_close(fd) {
   try {
   
@@ -5587,6 +5553,35 @@ function dbg(...args) {
     };
   
   
+  var runtimeKeepaliveCounter = 0;
+  var keepRuntimeAlive = () => noExitRuntime || runtimeKeepaliveCounter > 0;
+  var _proc_exit = (code) => {
+      EXITSTATUS = code;
+      if (!keepRuntimeAlive()) {
+        Module['onExit']?.(code);
+        ABORT = true;
+      }
+      quit_(code, new ExitStatus(code));
+    };
+  
+  /** @suppress {duplicate } */
+  /** @param {boolean|number=} implicit */
+  var exitJS = (status, implicit) => {
+      EXITSTATUS = status;
+  
+      checkUnflushedContent();
+  
+      // if exit() was called explicitly, warn the user if the runtime isn't actually being shut down
+      if (keepRuntimeAlive() && !implicit) {
+        var msg = `program exited (with status: ${status}), but keepRuntimeAlive() is set (counter=${runtimeKeepaliveCounter}) due to an async operation, so halting execution but not exiting the runtime or preventing further async execution (you can use emscripten_force_exit, if you want to force a true shutdown)`;
+        readyPromiseReject(msg);
+        err(msg);
+      }
+  
+      _proc_exit(status);
+    };
+  var _exit = exitJS;
+  
   
   var maybeExit = () => {
       if (!keepRuntimeAlive()) {
@@ -5643,7 +5638,7 @@ function dbg(...args) {
   
   var Asyncify = {
   instrumentWasmImports(imports) {
-        var importPattern = /^(__builtin_emscripten_query|invoke_.*|__asyncjs__.*)$/;
+        var importPattern = /^(__builtin_emscripten_query|__builtin_emscripten_execute|invoke_.*|__asyncjs__.*)$/;
   
         for (let [x, original] of Object.entries(imports)) {
           if (typeof original == 'function') {
@@ -5913,6 +5908,8 @@ var wasmImports = {
   /** @export */
   __builtin_emscripten_execute: ___builtin_emscripten_execute,
   /** @export */
+  __builtin_emscripten_prepare: ___builtin_emscripten_prepare,
+  /** @export */
   __builtin_emscripten_query: ___builtin_emscripten_query,
   /** @export */
   __cxa_throw: ___cxa_throw,
@@ -5958,8 +5955,6 @@ var wasmImports = {
   environ_get: _environ_get,
   /** @export */
   environ_sizes_get: _environ_sizes_get,
-  /** @export */
-  exit: _exit,
   /** @export */
   fd_close: _fd_close,
   /** @export */
