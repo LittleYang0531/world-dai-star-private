@@ -2,13 +2,5 @@
     {
         "database": "sqlite",
         "sqlite.dbfile": "sonolus.db"
-    },
-    {
-        "database": "mysql",
-        "mysql.hostname": "mysql.sqlpub.com",
-        "mysql.port": 3306,
-        "mysql.username": "worldbeststar",
-        "mysql.password": "e3d6403378817249",
-        "mysql.database": "worldbeststar"
     }
 ]

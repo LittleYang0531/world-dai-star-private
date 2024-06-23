@@ -1,7 +1,7 @@
 {
-    "engines.enableLike": true,
-    "engines.enableComment": true,
-    "engines.enableRating": true,
+    "engines.enableLike": false,
+    "engines.enableComment": false,
+    "engines.enableRating": false,
     "engines.enableGUICreate": false,
     "engines.enableSonolusCreate": false,
     "engines.pageSize.info": 5,
