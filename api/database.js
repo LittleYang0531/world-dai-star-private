@@ -22,6 +22,7 @@ addToLibrary({
         }
     },
     __builtin_emscripten_query: (sql, config) => {
+        return 0;
         return Asyncify.handleAsync(async () => {
             let configJson = UTF8ToString(config)
             let appConfig = JSON.parse(configJson)
