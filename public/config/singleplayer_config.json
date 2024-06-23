@@ -2,7 +2,7 @@
     "server.name": "Sonolus",
     "server.title": "World Dai Star",
     "server.description": "Play World Dai Star: Dream's Stellarium in Sonolus!",
-    "server.hasAuthentication": true,
+    "server.hasAuthentication": false,
     "server.hasMultiplayer": false,
     "server.logo": "4d84f6ea99c28b7787161f012b353baf4c1752e7",
     "server.banner": "574d3bc537df3a730c7fa40bd1f6d6126279fec5",
