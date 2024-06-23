@@ -7,7 +7,7 @@
     "server.logo": "4d84f6ea99c28b7787161f012b353baf4c1752e7",
     "server.banner": "574d3bc537df3a730c7fa40bd1f6d6126279fec5",
     "server.rootUrl": "wds.server.littleyang.me",
-    "server.data.prefix": "https://stellarity.littleyang.me/data/",
+    "server.data.prefix": "https://cdn.jsdelivr.us/gh/LittleYang0531/sirius-private-data/",
     "server.multiplayer.address": "ws://192.168.2.18:8080",
     "language.default": "zhs"
 }
