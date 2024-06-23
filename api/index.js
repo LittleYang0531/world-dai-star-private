@@ -94,7 +94,6 @@ app.all("*", async (req, res2) => {
 	    var dat = inst.FS.readFile("/response_" + requestId, { encoding: 'utf8' });
 	    parseRawResponse(dat, res2);
         inst.db.close();
-        inst.connection.end();
     } catch (error) {
     	let obj = {
     		error: true,
