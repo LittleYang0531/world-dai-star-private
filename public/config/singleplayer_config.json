@@ -2,8 +2,16 @@
     "server.name": "Sonolus",
     "server.title": "World Dai Star",
     "server.description": "Play World Dai Star: Dream's Stellarium in Sonolus!",
-    "server.hasAuthentication": false,
-    "server.hasMultiplayer": false,
+    "server.buttons": [
+        { "type": "post" },
+        { "type": "playlist" },
+        { "type": "level" },
+        { "type": "skin" },
+        { "type": "background" },
+        { "type": "effect" },
+        { "type": "particle" },
+        { "type": "engine" }
+    ],
     "server.logo": "4d84f6ea99c28b7787161f012b353baf4c1752e7",
     "server.banner": "574d3bc537df3a730c7fa40bd1f6d6126279fec5",
     "server.rootUrl": "wds.server.littleyang.me",

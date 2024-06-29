@@ -24,12 +24,16 @@
     ],
     "rooms.creates": [
         {
+            "title": "#ADVANCED",
+            "icon": "plus",
+            "type": "advanced",
             "options": [
                 {
                     "query": "title",
                     "name": "#TITLE",
                     "type": "text",
-                    "placeholder": "#TITLE_PLACEHOLDER"
+                    "placeholder": "#TITLE_PLACEHOLDER",
+                    "required": true
                 },
                 {
                     "query": "subtitle",
@@ -37,7 +41,16 @@
                     "type": "text",
                     "placeholder": "#SUBTITLE_PLACEHOLDER"
                 }
-            ]
+            ],
+            "values": {
+                "title": "{{title}}",
+                "subtitle": "{{subtitle}}"
+            },
+            "constructs": {
+                "title": "\"{{title}}\"",
+                "subtitle": "\"{{subtitle}}\""
+            }
         }
-    ]
+    ],
+    "rooms.leaderboards": []
 }

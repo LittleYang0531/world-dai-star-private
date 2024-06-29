@@ -4,6 +4,8 @@
     "posts.enableRating": false,
     "posts.enableGUICreate": false,
     "posts.enableSonolusCreate": false,
+    "posts.exceptGUICreate": [],
+    "posts.exceptSonolusCreate": [],
     "posts.pageSize.info": 5,
     "posts.pageSize.list": 20,
     "posts.pageSize.recommends": 5,
@@ -28,6 +30,74 @@
         
     ],
     "posts.creates": [
-        
-    ]
+        {
+            "title": "#ADVANCED",
+            "icon": "plus",
+            "type": "advanced",
+            "options": [
+                {
+                    "query": "name",
+                    "name": "#NAME",
+                    "type": "text",
+                    "placeholder": "#NAME_PLACEHOLDER",
+                    "required": true
+                },
+                {
+                    "query": "title",
+                    "name": "#TITLE",
+                    "type": "text",
+                    "placeholder": "#TITLE_PLACEHOLDER",
+                    "required": true
+                },
+                {
+                    "query": "author",
+                    "name": "#AUTHOR",
+                    "type": "text",
+                    "placeholder": "#AUTHOR_PLACEHOLDER"
+                },
+                {
+                    "query": "description",
+                    "name": "Description",
+                    "type": "textArea",
+                    "placeholder": "Enter description..."
+                },
+                {
+                    "query": "tags",
+                    "name": "Tags",
+                    "type": "text",
+                    "placeholder": "Enter tags..."
+                },
+                {
+                    "query": "localization",
+                    "name": "Localization",
+                    "type": "localizationItem"
+                }, 
+                {
+                    "query": "thumbnail",
+                    "name": "Thumbnail",
+                    "type": "file",
+                    "required": true
+                }
+            ],
+            "values": {
+                "name": "{{name}}",
+                "title": "{{title}}",
+                "author": "{{author}}",
+                "description": "{{description}}",
+                "tags": "{{tags}}",
+                "localization": "{{localization}}",
+                "thumbnail": "{{thumbnail}}"
+            },
+            "constructs": {
+                "name": "\"{{name}}\"",
+                "title": "\"{{title}}\"",
+                "author": "\"{{author}}\"",
+                "description": "\"{{description}}\"",
+                "tags": "\"{{tags}}\"",
+                "localization": "\"{{localization}}\"",
+                "thumbnail": "\"{{thumbnail.hash}}\""
+            }
+        }
+    ],
+    "posts.leaderboards": []
 }
