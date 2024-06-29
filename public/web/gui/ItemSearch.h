@@ -43,13 +43,13 @@ auto GUISearch = [](client_conn conn, http_request request, param argv) {
             if (item["type"].asString() == "text") sections += fetchSearchText(
                 type + "_" + query, item["name"].asString(), item["placeholder"].asString(), "\"" + args[type + "_" + query] + "\"", "", 0, 0).output();
             if (item["type"].asString() == "toggle") sections += fetchSearchToggle(
-                type + "_" + query, item["name"].asString(), args[type + "_" + query].c_str(), "", 0, 0).output();
+                type + "_" + query, item["name"].asString(), args[type + "_" + query].c_str(), item["def"].asString(), 0, 0).output();
             if (item["type"].asString() == "slider") sections += fetchSearchSlider(
-                type + "_" + query, item["name"].asString(), args[type + "_" + query].c_str(), "", item["min"].asInt(), item["max"].asInt(), item["step"].asInt(), 0, 0).output();
+                type + "_" + query, item["name"].asString(), args[type + "_" + query].c_str(), item["def"].asString(), item["min"].asInt(), item["max"].asInt(), item["step"].asInt(), 0, 0).output();
             if (item["type"].asString() == "select") {
                 vector<string> values = {};
                 for (int k = 0; k < item["values"].size(); k++) values.push_back(item["values"][k].asString());
-                sections += fetchSearchSelect(type + "_" + query, item["name"].asString(), values, args[type + "_" + query].c_str(), "", 0, 0).output();
+                sections += fetchSearchSelect(type + "_" + query, item["name"].asString(), values, args[type + "_" + query].c_str(), item["def"].asString(), 0, 0).output();
             }
         } searchOptions += fetchSectionSearch(sections, "/" + argv[0] + "/list", type).output();
     } argList["html.searchOptions"] = searchOptions;
