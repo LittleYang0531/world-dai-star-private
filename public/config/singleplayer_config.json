@@ -12,8 +12,8 @@
         { "type": "particle" },
         { "type": "engine" }
     ],
-    "server.logo": "4d84f6ea99c28b7787161f012b353baf4c1752e7",
-    "server.banner": "574d3bc537df3a730c7fa40bd1f6d6126279fec5",
+    "server.logo": "ebe6ea992d7a66d4e61c0341a8fb22ab367ee1b1",
+    "server.banner": "ff4aeb7f818d14508dd98699d71102fc57547c44",
     "server.rootUrl": "wds.server.littleyang.icu",
     "server.data.prefix": "https://cdn.jsdelivr.net/gh/LittleYang0531/sirius-private-data/",
     "server.multiplayer.address": "ws://192.168.2.18:8080",
