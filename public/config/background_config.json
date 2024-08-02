@@ -1,7 +1,7 @@
 {
-    "backgrounds.enableLike": true,
-    "backgrounds.enableComment": true,
-    "backgrounds.enableRating": true,
+    "backgrounds.enableLike": false,
+    "backgrounds.enableComment": false,
+    "backgrounds.enableRating": false,
     "backgrounds.enableGUICreate": false,
     "backgrounds.enableSonolusCreate": false,
     "backgrounds.exceptGUICreate": [],

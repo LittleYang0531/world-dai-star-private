@@ -1,7 +1,7 @@
 {
-    "effects.enableLike": true,
-    "effects.enableComment": true,
-    "effects.enableRating": true,
+    "effects.enableLike": false,
+    "effects.enableComment": false,
+    "effects.enableRating": false,
     "effects.enableGUICreate": false,
     "effects.enableSonolusCreate": false,
     "effects.exceptGUICreate": [],

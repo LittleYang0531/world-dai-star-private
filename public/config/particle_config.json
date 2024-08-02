@@ -1,7 +1,7 @@
 {
-    "particles.enableLike": true,
-    "particles.enableComment": true,
-    "particles.enableRating": true,
+    "particles.enableLike": false,
+    "particles.enableComment": false,
+    "particles.enableRating": false,
     "particles.enableGUICreate": false,
     "particles.enableSonolusCreate": false,
     "particles.exceptGUICreate": [],

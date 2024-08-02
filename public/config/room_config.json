@@ -1,9 +1,9 @@
 {
-    "rooms.enableLike": true,
-    "rooms.enableComment": true,
-    "rooms.enableRating": true,
+    "rooms.enableLike": false,
+    "rooms.enableComment": false,
+    "rooms.enableRating": false,
     "rooms.enableGUICreate": false,
-    "rooms.enableSonolusCreate": true,
+    "rooms.enableSonolusCreate": false,
     "rooms.exceptGUICreate": [],
     "rooms.exceptSonolusCreate": [],
     "rooms.pageSize.info": 5,

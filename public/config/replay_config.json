@@ -1,7 +1,7 @@
 {
-    "replays.enableLike": true,
-    "replays.enableComment": true,
-    "replays.enableRating": true,
+    "replays.enableLike": false,
+    "replays.enableComment": false,
+    "replays.enableRating": false,
     "replays.enableGUICreate": false,
     "replays.enableSonolusCreate": false,
     "replays.exceptGUICreate": [],

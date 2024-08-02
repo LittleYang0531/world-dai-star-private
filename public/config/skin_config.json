@@ -1,7 +1,7 @@
 {
-    "skins.enableLike": true,
-    "skins.enableComment": true,
-    "skins.enableRating": true,
+    "skins.enableLike": false,
+    "skins.enableComment": false,
+    "skins.enableRating": false,
     "skins.enableGUICreate": false,
     "skins.enableSonolusCreate": false,
     "skins.exceptGUICreate": [],
