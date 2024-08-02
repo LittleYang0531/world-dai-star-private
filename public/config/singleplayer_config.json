@@ -13,9 +13,14 @@
         { "type": "engine" }
     ],
     "server.logo": "ebe6ea992d7a66d4e61c0341a8fb22ab367ee1b1",
-    "server.banner": "ff4aeb7f818d14508dd98699d71102fc57547c44",
+    "server.banner": [
+        { "name": "Sirius 1st Anniversary", "hash": "ff4aeb7f818d14508dd98699d71102fc57547c44" }
+    ],
     "server.rootUrl": "wds.server.littleyang.icu",
-    "server.data.prefix": "https://cdn.jsdelivr.net/gh/LittleYang0531/sirius-private-data/",
+    "server.data.prefix": [
+        { "name": "cdn.jsdelivr.net(For global users)", "url": "https://cdn.jsdelivr.net/gh/LittleYang0531/sirius-private-data/" },
+        { "name": "cdn.jsdmirror.com(中国大陆用户使用)", "url": "https://cdn.jsdmirror.com/gh/LittleYang0531/sirius-private-data/" }
+    ],
     "server.multiplayer.address": "ws://192.168.2.18:8080",
     "language.default": "zhs"
 }

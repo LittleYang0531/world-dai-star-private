@@ -5,6 +5,7 @@ auto SonolusCreate = [](client_conn conn, http_request request, param argv){
 	Json::Value CreateItemResponse;
     if (request.postdata[0] == '{') request.postdata = json_decode(request.postdata)["values"].asString();
 	auto $_POST = postParam(request);
+	auto $_GET = getParam(request);
 	for (auto v : $_POST) $_POST[v.first] = urldecode(v.second);
 	int id = -1;
 	for (int i = 0; i < appConfig[argv[0] + ".creates"].size(); i++)
@@ -18,12 +19,13 @@ auto SonolusCreate = [](client_conn conn, http_request request, param argv){
 		if ($_POST[CreateItem["options"][i]["query"].asString()] != "")
 			CreateItemResponse["hashes"].append($_POST[CreateItem["options"][i]["query"].asString()]);
 	
-	argvar argList = argResolver($_POST, CreateItem["options"]);
+	string localization = $_GET["localization"] == "" ? appConfig["language.default"].asString() : $_GET["localization"];
+	argvar argList = argResolver($_POST, CreateItem["options"], localization);
 
 	Json::Value::Members members = CreateItem["values"].getMemberNames();
 	argvar args = argvar();
 	for (int i = 0; i < members.size(); i++) args[members[i]] = str_replace(CreateItem["values"][members[i]].asString(), argList);
-	for (auto v : args) args[v.first] = quote_encode(v.second);
+	for (auto v : args) if (v.first != "levels") args[v.first] = quote_encode(v.second);
 
     int raws = 0;
 	id = args["id"] == "" ? -1 : atoi(args["id"].c_str());
@@ -41,10 +43,9 @@ auto SonolusCreate = [](client_conn conn, http_request request, param argv){
     string particle = args["particle"];
     string level = args["level"];
     vector<Tag> tags = deserializeTagString(args["tags"]);
-    // cout << tags.size() << endl;
     Json::Value levels; json_decode(args["levels"] == "" ? "[]" : args["levels"], levels);
     string description = args["description"];
-    string localization = args["localization"];
+    localization = args["localization"];
     
 	if (engine != "" && enginesNumber("name = \"" + engine + "\"") == 0) quickSendMsg(404);
 	if (skin != "" && skinsNumber("name = \"" + skin + "\"") == 0) quickSendMsg(404);

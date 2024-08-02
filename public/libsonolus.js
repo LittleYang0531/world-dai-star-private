@@ -28,7 +28,7 @@ var readyPromise = new Promise((resolve, reject) => {
   readyPromiseResolve = resolve;
   readyPromiseReject = reject;
 });
-["_memory","_cgi","___indirect_function_table","onRuntimeInitialized"].forEach((prop) => {
+["getExceptionMessage","incrementExceptionRefcount","decrementExceptionRefcount","_memory","___indirect_function_table","_cgi","onRuntimeInitialized"].forEach((prop) => {
   if (!Object.getOwnPropertyDescriptor(readyPromise, prop)) {
     Object.defineProperty(readyPromise, prop, {
       get: () => abort('You are getting ' + prop + ' on the Promise object, instead of the instance. Use .then() to get called back with the instance, see the MODULARIZE docs in src/settings.js'),
@@ -62,7 +62,7 @@ if (ENVIRONMENT_IS_NODE) {
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /tmp/tmpp46nnyte.js
+// include: /tmp/tmpwrdacdpx.js
 
   if (!Module.expectedDataFileDownloads) {
     Module.expectedDataFileDownloads = 0;
@@ -131,9 +131,9 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
               num++;
             }
             total = Math.ceil(total * Module.expectedDataFileDownloads/num);
-            if (Module['setStatus']) Module['setStatus'](`Downloading data... (${loaded}/${total})`);
+            Module['setStatus']?.(`Downloading data... (${loaded}/${total})`);
           } else if (!Module.dataFileDownloads) {
-            if (Module['setStatus']) Module['setStatus']('Downloading data...');
+            Module['setStatus']?.('Downloading data...');
           }
         };
         xhr.onerror = function(event) {
@@ -166,7 +166,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
         }
       }, handleError);
 
-    function runWithFS() {
+    function runWithFS(Module) {
 
       function assert(check, msg) {
         if (!check) throw msg + new Error().stack;
@@ -243,32 +243,32 @@ Module['FS_createPath']("/web", "sonolus", true, true);
 
     }
     if (Module['calledRun']) {
-      runWithFS();
+      runWithFS(Module);
     } else {
       if (!Module['preRun']) Module['preRun'] = [];
       Module["preRun"].push(runWithFS); // FS is not initialized yet, wait for it
     }
 
     }
-    loadPackage({"files": [{"filename": "/config/background_config.json", "start": 0, "end": 4285}, {"filename": "/config/config.json", "start": 4285, "end": 5098}, {"filename": "/config/database.json", "start": 5098, "end": 5181}, {"filename": "/config/effect_config.json", "start": 5181, "end": 9091}, {"filename": "/config/engine_config.json", "start": 9091, "end": 15513}, {"filename": "/config/level_config.json", "start": 15513, "end": 23615}, {"filename": "/config/multiplayer_config.json", "start": 23615, "end": 23700}, {"filename": "/config/particle_config.json", "start": 23700, "end": 27653}, {"filename": "/config/playlist_config.json", "start": 27653, "end": 31338}, {"filename": "/config/post_config.json", "start": 31338, "end": 34372}, {"filename": "/config/replay_config.json", "start": 34372, "end": 38350}, {"filename": "/config/room_config.json", "start": 38350, "end": 39907}, {"filename": "/config/singleplayer_config.json", "start": 39907, "end": 40708}, {"filename": "/config/skin_config.json", "start": 40708, "end": 44593}, {"filename": "/i18n/en-us.json", "start": 44593, "end": 58044}, {"filename": "/i18n/ko.json", "start": 44593, "end": 58044}, {"filename": "/i18n/index.json", "start": 58044, "end": 58390}, {"filename": "/i18n/ja-jp.json", "start": 58390, "end": 73992}, {"filename": "/i18n/zh-cn.json", "start": 73992, "end": 87115}, {"filename": "/sonolus.db", "start": 87115, "end": 152651}, {"filename": "/web/css/import.h", "start": 152651, "end": 153195}, {"filename": "/web/css/index.css", "start": 153195, "end": 181565}, {"filename": "/web/downloader.h", "start": 181565, "end": 183224}, {"filename": "/web/gui/Index.h", "start": 183224, "end": 186447}, {"filename": "/web/gui/ItemCommunity.h", "start": 186447, "end": 189560}, {"filename": "/web/gui/ItemCommunityCommentJump.h", "start": 189560, "end": 191092}, {"filename": "/web/gui/ItemCommunityCommentList.h", "start": 191092, "end": 193782}, {"filename": "/web/gui/ItemCreate.h", "start": 193782, "end": 198390}, {"filename": "/web/gui/ItemDetails.h", "start": 198390, "end": 203385}, {"filename": "/web/gui/ItemEdit.h", "start": 203385, "end": 210343}, {"filename": "/web/gui/ItemInfo.h", "start": 210343, "end": 215000}, {"filename": "/web/gui/ItemJump.h", "start": 215000, "end": 216514}, {"filename": "/web/gui/ItemList.h", "start": 216514, "end": 222831}, {"filename": "/web/gui/ItemSearch.h", "start": 222831, "end": 227481}, {"filename": "/web/html/components/backgrounds.html", "start": 227481, "end": 228607}, {"filename": "/web/html/components/bottomBar.html", "start": 228607, "end": 238507}, {"filename": "/web/html/components/comments.html", "start": 238507, "end": 244571}, {"filename": "/web/html/components/effects.html", "start": 244571, "end": 245697}, {"filename": "/web/html/components/engines.html", "start": 245697, "end": 246823}, {"filename": "/web/html/components/header.html", "start": 246823, "end": 247703}, {"filename": "/web/html/components/iconButton.html", "start": 247703, "end": 247983}, {"filename": "/web/html/components/iconTextButton.html", "start": 247983, "end": 248359}, {"filename": "/web/html/components/indexButton.html", "start": 248359, "end": 248804}, {"filename": "/web/html/components/language.html", "start": 248804, "end": 250269}, {"filename": "/web/html/components/levels.html", "start": 250269, "end": 252399}, {"filename": "/web/html/components/navbar.html", "start": 252399, "end": 253979}, {"filename": "/web/html/components/open_in_sonolus.html", "start": 253979, "end": 260597}, {"filename": "/web/html/components/particles.html", "start": 260597, "end": 261723}, {"filename": "/web/html/components/playlists.html", "start": 261723, "end": 262849}, {"filename": "/web/html/components/posts.html", "start": 262849, "end": 263971}, {"filename": "/web/html/components/replays.html", "start": 263971, "end": 266103}, {"filename": "/web/html/components/searchColor.html", "start": 266103, "end": 272628}, {"filename": "/web/html/components/searchFile.html", "start": 272628, "end": 280737}, {"filename": "/web/html/components/searchSelect.html", "start": 280737, "end": 285037}, {"filename": "/web/html/components/searchSlider.html", "start": 285037, "end": 292786}, {"filename": "/web/html/components/searchText.html", "start": 292786, "end": 298817}, {"filename": "/web/html/components/searchTextArea.html", "start": 298817, "end": 303328}, {"filename": "/web/html/components/searchTitle.html", "start": 303328, "end": 303469}, {"filename": "/web/html/components/searchToggle.html", "start": 303469, "end": 307359}, {"filename": "/web/html/components/sectionCreate.html", "start": 307359, "end": 308270}, {"filename": "/web/html/components/sectionSearch.html", "start": 308270, "end": 309341}, {"filename": "/web/html/components/skins.html", "start": 309341, "end": 310467}, {"filename": "/web/html/icons/advanced.svg", "start": 310467, "end": 311274}, {"filename": "/web/html/icons/award.svg", "start": 311274, "end": 312740}, {"filename": "/web/html/icons/background.svg", "start": 312740, "end": 313206}, {"filename": "/web/html/icons/bookmark.svg", "start": 313206, "end": 313473}, {"filename": "/web/html/icons/comment.svg", "start": 313473, "end": 314032}, {"filename": "/web/html/icons/community.svg", "start": 314032, "end": 314827}, {"filename": "/web/html/icons/crown.svg", "start": 314827, "end": 315453}, {"filename": "/web/html/icons/description.svg", "start": 315453, "end": 315903}, {"filename": "/web/html/icons/effect.svg", "start": 315903, "end": 316698}, {"filename": "/web/html/icons/engine.svg", "start": 316698, "end": 317281}, {"filename": "/web/html/icons/global.svg", "start": 317281, "end": 318476}, {"filename": "/web/html/icons/heart.svg", "start": 318476, "end": 318848}, {"filename": "/web/html/icons/heartHollow.svg", "start": 318848, "end": 319640}, {"filename": "/web/html/icons/home.svg", "start": 319640, "end": 320271}, {"filename": "/web/html/icons/level.svg", "start": 320271, "end": 320612}, {"filename": "/web/html/icons/login.svg", "start": 320612, "end": 321100}, {"filename": "/web/html/icons/logout.svg", "start": 321100, "end": 321591}, {"filename": "/web/html/icons/medal.svg", "start": 321591, "end": 322335}, {"filename": "/web/html/icons/more.svg", "start": 322335, "end": 322546}, {"filename": "/web/html/icons/particle.svg", "start": 322546, "end": 323193}, {"filename": "/web/html/icons/playlist.svg", "start": 323193, "end": 323767}, {"filename": "/web/html/icons/post.svg", "start": 323767, "end": 324481}, {"filename": "/web/html/icons/ranking.svg", "start": 324481, "end": 325145}, {"filename": "/web/html/icons/replay.svg", "start": 325145, "end": 326138}, {"filename": "/web/html/icons/reply.svg", "start": 326138, "end": 326498}, {"filename": "/web/html/icons/search.svg", "start": 326498, "end": 326810}, {"filename": "/web/html/icons/shuffle.svg", "start": 326810, "end": 327483}, {"filename": "/web/html/icons/skin.svg", "start": 327483, "end": 327704}, {"filename": "/web/html/icons/star.svg", "start": 327704, "end": 328195}, {"filename": "/web/html/icons/tags.svg", "start": 328195, "end": 328474}, {"filename": "/web/html/icons/thumbsDown.svg", "start": 328474, "end": 329189}, {"filename": "/web/html/icons/thumbsUp.svg", "start": 329189, "end": 329895}, {"filename": "/web/html/icons/trophy.svg", "start": 329895, "end": 330821}, {"filename": "/web/html/pages/Index.html", "start": 330821, "end": 335334}, {"filename": "/web/html/pages/ItemCommunityCommentList.html", "start": 335334, "end": 346904}, {"filename": "/web/html/pages/ItemCreate.html", "start": 346904, "end": 347338}, {"filename": "/web/html/pages/ItemDetails.html", "start": 347338, "end": 367417}, {"filename": "/web/html/pages/ItemDetails/backgrounds.html", "start": 367417, "end": 369273}, {"filename": "/web/html/pages/ItemDetails/effects.html", "start": 369273, "end": 371125}, {"filename": "/web/html/pages/ItemDetails/engines.html", "start": 371125, "end": 372977}, {"filename": "/web/html/pages/ItemDetails/levels.html", "start": 372977, "end": 375256}, {"filename": "/web/html/pages/ItemDetails/particles.html", "start": 375256, "end": 377110}, {"filename": "/web/html/pages/ItemDetails/playlists.html", "start": 377110, "end": 378964}, {"filename": "/web/html/pages/ItemDetails/posts.html", "start": 378964, "end": 380810}, {"filename": "/web/html/pages/ItemDetails/replays.html", "start": 380810, "end": 383092}, {"filename": "/web/html/pages/ItemDetails/skins.html", "start": 383092, "end": 384936}, {"filename": "/web/html/pages/ItemInfo.html", "start": 384936, "end": 391695}, {"filename": "/web/html/pages/ItemJump.html", "start": 391695, "end": 399586}, {"filename": "/web/html/pages/ItemList.html", "start": 399586, "end": 401382}, {"filename": "/web/html/pages/ItemSearch.html", "start": 401382, "end": 401816}, {"filename": "/web/import.h", "start": 401816, "end": 402276}, {"filename": "/web/js/QRCode.js", "start": 402276, "end": 425744}, {"filename": "/web/js/community.js", "start": 425744, "end": 428122}, {"filename": "/web/js/import.h", "start": 428122, "end": 428663}, {"filename": "/web/js/index.js", "start": 428663, "end": 441919}, {"filename": "/web/js/jQuery.js", "start": 441919, "end": 531865}, {"filename": "/web/sonolus/Authentication.h", "start": 531865, "end": 535054}, {"filename": "/web/sonolus/CheckLogin.h", "start": 535054, "end": 535228}, {"filename": "/web/sonolus/ItemCommunity.h", "start": 535228, "end": 535554}, {"filename": "/web/sonolus/ItemCommunityCommentList.h", "start": 535554, "end": 536454}, {"filename": "/web/sonolus/ItemCommunityInfo.h", "start": 536454, "end": 539304}, {"filename": "/web/sonolus/ItemCommunitySubmit.h", "start": 539304, "end": 543242}, {"filename": "/web/sonolus/ItemCreate.h", "start": 543242, "end": 550755}, {"filename": "/web/sonolus/ItemDetails.h", "start": 550755, "end": 553485}, {"filename": "/web/sonolus/ItemInfo.h", "start": 553485, "end": 556412}, {"filename": "/web/sonolus/ItemLeaderboardDetails.h", "start": 556412, "end": 556638}, {"filename": "/web/sonolus/ItemLeaderboardRecordDetails.h", "start": 556638, "end": 556885}, {"filename": "/web/sonolus/ItemLeaderboardRecordList.h", "start": 556885, "end": 557168}, {"filename": "/web/sonolus/ItemList.h", "start": 557168, "end": 561025}, {"filename": "/web/sonolus/ItemUpload.h", "start": 561025, "end": 561841}, {"filename": "/web/sonolus/RoomConnection.h", "start": 561841, "end": 580444}, {"filename": "/web/sonolus/RoomJoin.h", "start": 580444, "end": 582726}, {"filename": "/web/sonolus/ServerInfo.h", "start": 582726, "end": 584303}, {"filename": "/web/sonolus/sonolus.h", "start": 584303, "end": 588318}, {"filename": "/web/uploader.h", "start": 588318, "end": 589085}], "remote_package_size": 589085});
+    loadPackage({"files": [{"filename": "/config/background_config.json", "start": 0, "end": 4365}, {"filename": "/config/config.json", "start": 4365, "end": 5178}, {"filename": "/config/database.json", "start": 5178, "end": 5433}, {"filename": "/config/effect_config.json", "start": 5433, "end": 9419}, {"filename": "/config/engine_config.json", "start": 9419, "end": 15921}, {"filename": "/config/level_config.json", "start": 15921, "end": 25055}, {"filename": "/config/multiplayer_config.json", "start": 25055, "end": 25140}, {"filename": "/config/particle_config.json", "start": 25140, "end": 29171}, {"filename": "/config/playlist_config.json", "start": 29171, "end": 32934}, {"filename": "/config/post_config.json", "start": 32934, "end": 36042}, {"filename": "/config/replay_config.json", "start": 36042, "end": 40097}, {"filename": "/config/room_config.json", "start": 40097, "end": 41727}, {"filename": "/config/singleplayer_config.json", "start": 41727, "end": 42769}, {"filename": "/config/skin_config.json", "start": 42769, "end": 46728}, {"filename": "/i18n/en.json", "start": 46728, "end": 60472}, {"filename": "/i18n/index.json", "start": 60472, "end": 60911}, {"filename": "/i18n/ja.json", "start": 60911, "end": 76991}, {"filename": "/i18n/ko.json", "start": 76991, "end": 91346}, {"filename": "/i18n/sync.cpp", "start": 91346, "end": 94779}, {"filename": "/i18n/zhs.json", "start": 94779, "end": 108215}, {"filename": "/sonolus.db", "start": 108215, "end": 173751}, {"filename": "/web/css/import.h", "start": 173751, "end": 174295}, {"filename": "/web/css/index.css", "start": 174295, "end": 203589}, {"filename": "/web/downloader.h", "start": 203589, "end": 205248}, {"filename": "/web/gui/Index.h", "start": 205248, "end": 209814}, {"filename": "/web/gui/ItemCommunity.h", "start": 209814, "end": 212927}, {"filename": "/web/gui/ItemCommunityCommentJump.h", "start": 212927, "end": 214757}, {"filename": "/web/gui/ItemCommunityCommentList.h", "start": 214757, "end": 217745}, {"filename": "/web/gui/ItemCreate.h", "start": 217745, "end": 222880}, {"filename": "/web/gui/ItemDetails.h", "start": 222880, "end": 231287}, {"filename": "/web/gui/ItemEdit.h", "start": 231287, "end": 239375}, {"filename": "/web/gui/ItemInfo.h", "start": 239375, "end": 245003}, {"filename": "/web/gui/ItemJump.h", "start": 245003, "end": 246815}, {"filename": "/web/gui/ItemList.h", "start": 246815, "end": 252924}, {"filename": "/web/gui/ItemSearch.h", "start": 252924, "end": 259044}, {"filename": "/web/html/components/backgrounds.html", "start": 259044, "end": 260170}, {"filename": "/web/html/components/bottomBar.html", "start": 260170, "end": 270070}, {"filename": "/web/html/components/comments.html", "start": 270070, "end": 276134}, {"filename": "/web/html/components/effects.html", "start": 276134, "end": 277260}, {"filename": "/web/html/components/engines.html", "start": 277260, "end": 278386}, {"filename": "/web/html/components/header.html", "start": 278386, "end": 279266}, {"filename": "/web/html/components/iconButton.html", "start": 279266, "end": 279546}, {"filename": "/web/html/components/iconTextButton.html", "start": 279546, "end": 279922}, {"filename": "/web/html/components/indexButton.html", "start": 279922, "end": 280367}, {"filename": "/web/html/components/language.html", "start": 280367, "end": 281832}, {"filename": "/web/html/components/levels.html", "start": 281832, "end": 283962}, {"filename": "/web/html/components/navbar.html", "start": 283962, "end": 285542}, {"filename": "/web/html/components/open_in_sonolus.html", "start": 285542, "end": 292160}, {"filename": "/web/html/components/particles.html", "start": 292160, "end": 293286}, {"filename": "/web/html/components/playlists.html", "start": 293286, "end": 294412}, {"filename": "/web/html/components/posts.html", "start": 294412, "end": 295534}, {"filename": "/web/html/components/replays.html", "start": 295534, "end": 297666}, {"filename": "/web/html/components/searchColor.html", "start": 297666, "end": 304191}, {"filename": "/web/html/components/searchFile.html", "start": 304191, "end": 312300}, {"filename": "/web/html/components/searchMulti.html", "start": 312300, "end": 318269}, {"filename": "/web/html/components/searchMultiOption.html", "start": 318269, "end": 320187}, {"filename": "/web/html/components/searchSelect.html", "start": 320187, "end": 324487}, {"filename": "/web/html/components/searchSlider.html", "start": 324487, "end": 332236}, {"filename": "/web/html/components/searchText.html", "start": 332236, "end": 338298}, {"filename": "/web/html/components/searchTextArea.html", "start": 338298, "end": 343141}, {"filename": "/web/html/components/searchTitle.html", "start": 343141, "end": 343282}, {"filename": "/web/html/components/searchToggle.html", "start": 343282, "end": 347172}, {"filename": "/web/html/components/sectionBottom.html", "start": 347172, "end": 348844}, {"filename": "/web/html/components/sectionCreate.html", "start": 348844, "end": 349755}, {"filename": "/web/html/components/sectionSearch.html", "start": 349755, "end": 350826}, {"filename": "/web/html/components/sectionTitle.html", "start": 350826, "end": 352368}, {"filename": "/web/html/components/skins.html", "start": 352368, "end": 353494}, {"filename": "/web/html/icons/advanced.svg", "start": 353494, "end": 354301}, {"filename": "/web/html/icons/award.svg", "start": 354301, "end": 355767}, {"filename": "/web/html/icons/background.svg", "start": 355767, "end": 356233}, {"filename": "/web/html/icons/bookmark.svg", "start": 356233, "end": 356500}, {"filename": "/web/html/icons/comment.svg", "start": 356500, "end": 357059}, {"filename": "/web/html/icons/community.svg", "start": 357059, "end": 357854}, {"filename": "/web/html/icons/configuration.svg", "start": 357854, "end": 358969}, {"filename": "/web/html/icons/crown.svg", "start": 358969, "end": 359595}, {"filename": "/web/html/icons/description.svg", "start": 359595, "end": 360045}, {"filename": "/web/html/icons/effect.svg", "start": 360045, "end": 360840}, {"filename": "/web/html/icons/engine.svg", "start": 360840, "end": 361423}, {"filename": "/web/html/icons/global.svg", "start": 361423, "end": 362618}, {"filename": "/web/html/icons/heart.svg", "start": 362618, "end": 362990}, {"filename": "/web/html/icons/heartHollow.svg", "start": 362990, "end": 363782}, {"filename": "/web/html/icons/home.svg", "start": 363782, "end": 364413}, {"filename": "/web/html/icons/level.svg", "start": 364413, "end": 364754}, {"filename": "/web/html/icons/login.svg", "start": 364754, "end": 365242}, {"filename": "/web/html/icons/logout.svg", "start": 365242, "end": 365733}, {"filename": "/web/html/icons/medal.svg", "start": 365733, "end": 366477}, {"filename": "/web/html/icons/more.svg", "start": 366477, "end": 366688}, {"filename": "/web/html/icons/particle.svg", "start": 366688, "end": 367335}, {"filename": "/web/html/icons/playlist.svg", "start": 367335, "end": 367909}, {"filename": "/web/html/icons/post.svg", "start": 367909, "end": 368623}, {"filename": "/web/html/icons/ranking.svg", "start": 368623, "end": 369287}, {"filename": "/web/html/icons/replay.svg", "start": 369287, "end": 370280}, {"filename": "/web/html/icons/reply.svg", "start": 370280, "end": 370640}, {"filename": "/web/html/icons/search.svg", "start": 370640, "end": 370952}, {"filename": "/web/html/icons/shuffle.svg", "start": 370952, "end": 371625}, {"filename": "/web/html/icons/skin.svg", "start": 371625, "end": 371846}, {"filename": "/web/html/icons/star.svg", "start": 371846, "end": 372337}, {"filename": "/web/html/icons/tags.svg", "start": 372337, "end": 372616}, {"filename": "/web/html/icons/thumbsDown.svg", "start": 372616, "end": 373331}, {"filename": "/web/html/icons/thumbsUp.svg", "start": 373331, "end": 374037}, {"filename": "/web/html/icons/trophy.svg", "start": 374037, "end": 374963}, {"filename": "/web/html/pages/Index.html", "start": 374963, "end": 389392}, {"filename": "/web/html/pages/ItemCommunityCommentList.html", "start": 389392, "end": 400962}, {"filename": "/web/html/pages/ItemCreate.html", "start": 400962, "end": 401396}, {"filename": "/web/html/pages/ItemDetails.html", "start": 401396, "end": 421475}, {"filename": "/web/html/pages/ItemDetails/backgrounds.html", "start": 421475, "end": 423446}, {"filename": "/web/html/pages/ItemDetails/effects.html", "start": 423446, "end": 425413}, {"filename": "/web/html/pages/ItemDetails/engines.html", "start": 425413, "end": 427380}, {"filename": "/web/html/pages/ItemDetails/levels.html", "start": 427380, "end": 429774}, {"filename": "/web/html/pages/ItemDetails/particles.html", "start": 429774, "end": 431743}, {"filename": "/web/html/pages/ItemDetails/playlists.html", "start": 431743, "end": 433712}, {"filename": "/web/html/pages/ItemDetails/posts.html", "start": 433712, "end": 435673}, {"filename": "/web/html/pages/ItemDetails/replays.html", "start": 435673, "end": 438070}, {"filename": "/web/html/pages/ItemDetails/skins.html", "start": 438070, "end": 440019}, {"filename": "/web/html/pages/ItemInfo.html", "start": 440019, "end": 446778}, {"filename": "/web/html/pages/ItemJump.html", "start": 446778, "end": 454669}, {"filename": "/web/html/pages/ItemList.html", "start": 454669, "end": 456465}, {"filename": "/web/html/pages/ItemSearch.html", "start": 456465, "end": 456899}, {"filename": "/web/import.h", "start": 456899, "end": 457359}, {"filename": "/web/js/QRCode.js", "start": 457359, "end": 480827}, {"filename": "/web/js/community.js", "start": 480827, "end": 483205}, {"filename": "/web/js/import.h", "start": 483205, "end": 483746}, {"filename": "/web/js/index.js", "start": 483746, "end": 497743}, {"filename": "/web/js/jQuery.js", "start": 497743, "end": 587689}, {"filename": "/web/sonolus/Authentication.h", "start": 587689, "end": 590878}, {"filename": "/web/sonolus/CheckLogin.h", "start": 590878, "end": 591052}, {"filename": "/web/sonolus/ItemCommunity.h", "start": 591052, "end": 591378}, {"filename": "/web/sonolus/ItemCommunityCommentList.h", "start": 591378, "end": 592278}, {"filename": "/web/sonolus/ItemCommunityCommentSubmit.h", "start": 592278, "end": 593828}, {"filename": "/web/sonolus/ItemCommunityInfo.h", "start": 593828, "end": 596895}, {"filename": "/web/sonolus/ItemCommunitySubmit.h", "start": 596895, "end": 599772}, {"filename": "/web/sonolus/ItemCreate.h", "start": 599772, "end": 607433}, {"filename": "/web/sonolus/ItemDetails.h", "start": 607433, "end": 612605}, {"filename": "/web/sonolus/ItemDetailsSubmit.h", "start": 612605, "end": 614793}, {"filename": "/web/sonolus/ItemDetailsUpload.h", "start": 614793, "end": 614835}, {"filename": "/web/sonolus/ItemInfo.h", "start": 614835, "end": 618735}, {"filename": "/web/sonolus/ItemLeaderboardDetails.h", "start": 618735, "end": 618961}, {"filename": "/web/sonolus/ItemLeaderboardRecordDetails.h", "start": 618961, "end": 619208}, {"filename": "/web/sonolus/ItemLeaderboardRecordList.h", "start": 619208, "end": 619491}, {"filename": "/web/sonolus/ItemList.h", "start": 619491, "end": 622658}, {"filename": "/web/sonolus/ItemUpload.h", "start": 622658, "end": 623474}, {"filename": "/web/sonolus/RoomConnection.h", "start": 623474, "end": 642077}, {"filename": "/web/sonolus/RoomJoin.h", "start": 642077, "end": 644359}, {"filename": "/web/sonolus/ServerInfo.h", "start": 644359, "end": 646882}, {"filename": "/web/sonolus/sonolus.h", "start": 646882, "end": 651228}, {"filename": "/web/uploader.h", "start": 651228, "end": 652008}], "remote_package_size": 652008});
 
   })();
 
-// end include: /tmp/tmpp46nnyte.js
-// include: /tmp/tmpjcw3dk12.js
+// end include: /tmp/tmpwrdacdpx.js
+// include: /tmp/tmp4dz5qq9d.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if (Module['$ww'] || (typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD)) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: /tmp/tmpjcw3dk12.js
-// include: /tmp/tmp9tg6la35.js
+  // end include: /tmp/tmp4dz5qq9d.js
+// include: /tmp/tmpj6lhyakm.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach((task) => {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: /tmp/tmp9tg6la35.js
+  // end include: /tmp/tmpj6lhyakm.js
 
 
 // Sometimes an existing Module object exists with properties
@@ -294,9 +294,7 @@ function locateFile(path) {
 }
 
 // Hooks that are implemented differently in different runtime environments.
-var read_,
-    readAsync,
-    readBinary;
+var readAsync, readBinary;
 
 if (ENVIRONMENT_IS_NODE) {
   if (typeof process == 'undefined' || !process.release || process.release.name !== 'node') throw new Error('not compiled for this environment (did you build to HTML and try to run it not on the web, or set ENVIRONMENT to something - like node - and run it someplace else - like on the web?)');
@@ -317,28 +315,23 @@ if (ENVIRONMENT_IS_NODE) {
   scriptDirectory = __dirname + '/';
 
 // include: node_shell_read.js
-read_ = (filename, binary) => {
+readBinary = (filename) => {
   // We need to re-wrap `file://` strings to URLs. Normalizing isn't
   // necessary in that case, the path should already be absolute.
   filename = isFileURI(filename) ? new URL(filename) : nodePath.normalize(filename);
-  return fs.readFileSync(filename, binary ? undefined : 'utf8');
-};
-
-readBinary = (filename) => {
-  var ret = read_(filename, true);
-  if (!ret.buffer) {
-    ret = new Uint8Array(ret);
-  }
+  var ret = fs.readFileSync(filename);
   assert(ret.buffer);
   return ret;
 };
 
-readAsync = (filename, onload, onerror, binary = true) => {
-  // See the comment in the `read_` function.
+readAsync = (filename, binary = true) => {
+  // See the comment in the `readBinary` function.
   filename = isFileURI(filename) ? new URL(filename) : nodePath.normalize(filename);
-  fs.readFile(filename, binary ? undefined : 'utf8', (err, data) => {
-    if (err) onerror(err);
-    else onload(binary ? data.buffer : data);
+  return new Promise((resolve, reject) => {
+    fs.readFile(filename, binary ? undefined : 'utf8', (err, data) => {
+      if (err) reject(err);
+      else resolve(binary ? data.buffer : data);
+    });
   });
 };
 // end include: node_shell_read.js
@@ -392,14 +385,7 @@ if (ENVIRONMENT_IS_WEB || ENVIRONMENT_IS_WORKER) {
 
   {
 // include: web_or_worker_shell_read.js
-read_ = (url) => {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, false);
-    xhr.send(null);
-    return xhr.responseText;
-  }
-
-  if (ENVIRONMENT_IS_WORKER) {
+if (ENVIRONMENT_IS_WORKER) {
     readBinary = (url) => {
       var xhr = new XMLHttpRequest();
       xhr.open('GET', url, false);
@@ -409,34 +395,33 @@ read_ = (url) => {
     };
   }
 
-  readAsync = (url, onload, onerror) => {
+  readAsync = (url) => {
     // Fetch has some additional restrictions over XHR, like it can't be used on a file:// url.
     // See https://github.com/github/fetch/pull/92#issuecomment-140665932
     // Cordova or Electron apps are typically loaded from a file:// url.
     // So use XHR on webview if URL is a file URL.
     if (isFileURI(url)) {
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', url, true);
-      xhr.responseType = 'arraybuffer';
-      xhr.onload = () => {
-        if (xhr.status == 200 || (xhr.status == 0 && xhr.response)) { // file URLs can return 0
-          onload(xhr.response);
-          return;
-        }
-        onerror();
-      };
-      xhr.onerror = onerror;
-      xhr.send(null);
-      return;
+      return new Promise((reject, resolve) => {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.responseType = 'arraybuffer';
+        xhr.onload = () => {
+          if (xhr.status == 200 || (xhr.status == 0 && xhr.response)) { // file URLs can return 0
+            resolve(xhr.response);
+          }
+          reject(xhr.status);
+        };
+        xhr.onerror = reject;
+        xhr.send(null);
+      });
     }
-    fetch(url, { credentials: 'same-origin' })
-    .then((response) => {
-      if (response.ok) {
-        return response.arrayBuffer();
-      }
-      return Promise.reject(new Error(response.status + ' : ' + response.url));
-    })
-    .then(onload, onerror)
+    return fetch(url, { credentials: 'same-origin' })
+      .then((response) => {
+        if (response.ok) {
+          return response.arrayBuffer();
+        }
+        return Promise.reject(new Error(response.status + ' : ' + response.url));
+      })
   };
 // end include: web_or_worker_shell_read.js
   }
@@ -472,13 +457,12 @@ assert(typeof Module['memoryInitializerPrefixURL'] == 'undefined', 'Module.memor
 assert(typeof Module['pthreadMainPrefixURL'] == 'undefined', 'Module.pthreadMainPrefixURL option was removed, use Module.locateFile instead');
 assert(typeof Module['cdInitializerPrefixURL'] == 'undefined', 'Module.cdInitializerPrefixURL option was removed, use Module.locateFile instead');
 assert(typeof Module['filePackagePrefixURL'] == 'undefined', 'Module.filePackagePrefixURL option was removed, use Module.locateFile instead');
-assert(typeof Module['read'] == 'undefined', 'Module.read option was removed (modify read_ in JS)');
+assert(typeof Module['read'] == 'undefined', 'Module.read option was removed');
 assert(typeof Module['readAsync'] == 'undefined', 'Module.readAsync option was removed (modify readAsync in JS)');
 assert(typeof Module['readBinary'] == 'undefined', 'Module.readBinary option was removed (modify readBinary in JS)');
 assert(typeof Module['setWindowTitle'] == 'undefined', 'Module.setWindowTitle option was removed (modify emscripten_set_window_title in JS)');
 assert(typeof Module['TOTAL_MEMORY'] == 'undefined', 'Module.TOTAL_MEMORY has been renamed Module.INITIAL_MEMORY');
 legacyModuleProp('asm', 'wasmExports');
-legacyModuleProp('read', 'read_');
 legacyModuleProp('readAsync', 'readAsync');
 legacyModuleProp('readBinary', 'readBinary');
 legacyModuleProp('setWindowTitle', 'setWindowTitle');
@@ -882,6 +866,20 @@ function createExportWrapper(name, nargs) {
 }
 
 // include: runtime_exceptions.js
+// Base Emscripten EH error class
+class EmscriptenEH extends Error {}
+
+class EmscriptenSjLj extends EmscriptenEH {}
+
+class CppException extends EmscriptenEH {
+  constructor(excPtr) {
+    super(excPtr);
+    this.excPtr = excPtr;
+    const excInfo = getExceptionMessage(excPtr);
+    this.name = excInfo[0];
+    this.message = excInfo[1];
+  }
+}
 // end include: runtime_exceptions.js
 function findWasmBinary() {
     var f = 'libsonolus.wasm';
@@ -907,15 +905,12 @@ function getBinaryPromise(binaryFile) {
   // If we don't have the binary yet, load it asynchronously using readAsync.
   if (!wasmBinary
       ) {
-    // Fetch the binary use readAsync
-    return new Promise((resolve, reject) => {
-      readAsync(binaryFile,
-        (response) => resolve(new Uint8Array(/** @type{!ArrayBuffer} */(response))),
-        (error) => {
-          try { resolve(getBinarySync(binaryFile)); }
-          catch (e) { reject(e); }
-        });
-    });
+    // Fetch the binary using readAsync
+    return readAsync(binaryFile).then(
+      (response) => new Uint8Array(/** @type{!ArrayBuffer} */(response)),
+      // Fall back to getBinarySync if readAsync fails
+      () => getBinarySync(binaryFile)
+    );
   }
 
   // Otherwise, getBinarySync should be able to get it synchronously
@@ -1168,7 +1163,7 @@ function dbg(...args) {
       this.status = status;
     }
 
-  var UTF8Decoder = typeof TextDecoder != 'undefined' ? new TextDecoder('utf8') : undefined;
+  var UTF8Decoder = typeof TextDecoder != 'undefined' ? new TextDecoder() : undefined;
   
     /**
      * Given a pointer 'idx' to a null-terminated UTF8-encoded string in the given
@@ -1397,7 +1392,6 @@ function dbg(...args) {
     };
 
   var ___builtin_emscripten_execute = (sql, config) => {
-    return 0;
           return Asyncify.handleAsync(async () => {
               let configJson = UTF8ToString(config)
               let appConfig = JSON.parse(configJson)
@@ -1498,6 +1492,38 @@ function dbg(...args) {
           })
       };
 
+  var exceptionCaught =  [];
+  
+  
+  var uncaughtExceptionCount = 0;
+  var ___cxa_begin_catch = (ptr) => {
+      var info = new ExceptionInfo(ptr);
+      if (!info.get_caught()) {
+        info.set_caught(true);
+        uncaughtExceptionCount--;
+      }
+      info.set_rethrown(false);
+      exceptionCaught.push(info);
+      ___cxa_increment_exception_refcount(info.excPtr);
+      return info.get_exception_ptr();
+    };
+
+  
+  var exceptionLast = 0;
+  
+  
+  var ___cxa_end_catch = () => {
+      // Clear state flag.
+      _setThrew(0, 0);
+      assert(exceptionCaught.length > 0);
+      // Call destructor if one is registered then clear it.
+      var info = exceptionCaught.pop();
+  
+      ___cxa_decrement_exception_refcount(info.excPtr);
+      exceptionLast = 0; // XXX in decRef?
+    };
+
+  
   class ExceptionInfo {
       // excPtr - Thrown object pointer to wrap. Metadata pointer is calculated from it.
       constructor(excPtr) {
@@ -1571,17 +1597,87 @@ function dbg(...args) {
       }
     }
   
-  var exceptionLast = 0;
+  var ___resumeException = (ptr) => {
+      if (!exceptionLast) {
+        exceptionLast = new CppException(ptr);
+      }
+      throw exceptionLast;
+    };
   
-  var uncaughtExceptionCount = 0;
+  
+  var setTempRet0 = (val) => __emscripten_tempret_set(val);
+  var findMatchingCatch = (args) => {
+      var thrown =
+        exceptionLast?.excPtr;
+      if (!thrown) {
+        // just pass through the null ptr
+        setTempRet0(0);
+        return 0;
+      }
+      var info = new ExceptionInfo(thrown);
+      info.set_adjusted_ptr(thrown);
+      var thrownType = info.get_type();
+      if (!thrownType) {
+        // just pass through the thrown ptr
+        setTempRet0(0);
+        return thrown;
+      }
+  
+      // can_catch receives a **, add indirection
+      // The different catch blocks are denoted by different types.
+      // Due to inheritance, those types may not precisely match the
+      // type of the thrown object. Find one which matches, and
+      // return the type of the catch block which should be called.
+      for (var caughtType of args) {
+        if (caughtType === 0 || caughtType === thrownType) {
+          // Catch all clause matched or exactly the same type is caught
+          break;
+        }
+        var adjusted_ptr_addr = info.ptr + 16;
+        if (___cxa_can_catch(caughtType, thrownType, adjusted_ptr_addr)) {
+          setTempRet0(caughtType);
+          return thrown;
+        }
+      }
+      setTempRet0(thrownType);
+      return thrown;
+    };
+  var ___cxa_find_matching_catch_2 = () => findMatchingCatch([]);
+
+  var ___cxa_find_matching_catch_3 = (arg0) => findMatchingCatch([arg0]);
+
+  
+  
+  var ___cxa_rethrow = () => {
+      var info = exceptionCaught.pop();
+      if (!info) {
+        abort('no exception to throw');
+      }
+      var ptr = info.excPtr;
+      if (!info.get_rethrown()) {
+        // Only pop if the corresponding push was through rethrow_primary_exception
+        exceptionCaught.push(info);
+        info.set_rethrown(true);
+        info.set_caught(false);
+        uncaughtExceptionCount++;
+      }
+      exceptionLast = new CppException(ptr);
+      throw exceptionLast;
+    };
+
+  
+  
   var ___cxa_throw = (ptr, type, destructor) => {
       var info = new ExceptionInfo(ptr);
       // Initialize ExceptionInfo content after it was allocated in __cxa_allocate_exception.
       info.init(type, destructor);
-      exceptionLast = ptr;
+      exceptionLast = new CppException(ptr);
       uncaughtExceptionCount++;
-      assert(false, 'Exception thrown, but exception catching is not enabled. Compile with -sNO_DISABLE_EXCEPTION_CATCHING or -sEXCEPTION_CATCHING_ALLOWED=[..] to catch.');
+      throw exceptionLast;
     };
+
+  var ___cxa_uncaught_exceptions = () => uncaughtExceptionCount;
+
 
   /** @suppress {duplicate } */
   function syscallGetVarargI() {
@@ -2303,17 +2399,20 @@ function dbg(...args) {
   /** @param {boolean=} noRunDep */
   var asyncLoad = (url, onload, onerror, noRunDep) => {
       var dep = !noRunDep ? getUniqueRunDependency(`al ${url}`) : '';
-      readAsync(url, (arrayBuffer) => {
-        assert(arrayBuffer, `Loading data file "${url}" failed (no arrayBuffer).`);
-        onload(new Uint8Array(arrayBuffer));
-        if (dep) removeRunDependency(dep);
-      }, (event) => {
-        if (onerror) {
-          onerror();
-        } else {
-          throw `Loading data file "${url}" failed.`;
+      readAsync(url).then(
+        (arrayBuffer) => {
+          assert(arrayBuffer, `Loading data file "${url}" failed (no arrayBuffer).`);
+          onload(new Uint8Array(arrayBuffer));
+          if (dep) removeRunDependency(dep);
+        },
+        (err) => {
+          if (onerror) {
+            onerror();
+          } else {
+            throw `Loading data file "${url}" failed.`;
+          }
         }
-      });
+      );
       if (dep) addRunDependency(dep);
     };
   
@@ -2779,127 +2878,11 @@ function dbg(...args) {
   },
   };
   
-  var ERRNO_MESSAGES = {
-  0:"Success",
-  1:"Arg list too long",
-  2:"Permission denied",
-  3:"Address already in use",
-  4:"Address not available",
-  5:"Address family not supported by protocol family",
-  6:"No more processes",
-  7:"Socket already connected",
-  8:"Bad file number",
-  9:"Trying to read unreadable message",
-  10:"Mount device busy",
-  11:"Operation canceled",
-  12:"No children",
-  13:"Connection aborted",
-  14:"Connection refused",
-  15:"Connection reset by peer",
-  16:"File locking deadlock error",
-  17:"Destination address required",
-  18:"Math arg out of domain of func",
-  19:"Quota exceeded",
-  20:"File exists",
-  21:"Bad address",
-  22:"File too large",
-  23:"Host is unreachable",
-  24:"Identifier removed",
-  25:"Illegal byte sequence",
-  26:"Connection already in progress",
-  27:"Interrupted system call",
-  28:"Invalid argument",
-  29:"I/O error",
-  30:"Socket is already connected",
-  31:"Is a directory",
-  32:"Too many symbolic links",
-  33:"Too many open files",
-  34:"Too many links",
-  35:"Message too long",
-  36:"Multihop attempted",
-  37:"File or path name too long",
-  38:"Network interface is not configured",
-  39:"Connection reset by network",
-  40:"Network is unreachable",
-  41:"Too many open files in system",
-  42:"No buffer space available",
-  43:"No such device",
-  44:"No such file or directory",
-  45:"Exec format error",
-  46:"No record locks available",
-  47:"The link has been severed",
-  48:"Not enough core",
-  49:"No message of desired type",
-  50:"Protocol not available",
-  51:"No space left on device",
-  52:"Function not implemented",
-  53:"Socket is not connected",
-  54:"Not a directory",
-  55:"Directory not empty",
-  56:"State not recoverable",
-  57:"Socket operation on non-socket",
-  59:"Not a typewriter",
-  60:"No such device or address",
-  61:"Value too large for defined data type",
-  62:"Previous owner died",
-  63:"Not super-user",
-  64:"Broken pipe",
-  65:"Protocol error",
-  66:"Unknown protocol",
-  67:"Protocol wrong type for socket",
-  68:"Math result not representable",
-  69:"Read only file system",
-  70:"Illegal seek",
-  71:"No such process",
-  72:"Stale file handle",
-  73:"Connection timed out",
-  74:"Text file busy",
-  75:"Cross-device link",
-  100:"Device not a stream",
-  101:"Bad font file fmt",
-  102:"Invalid slot",
-  103:"Invalid request code",
-  104:"No anode",
-  105:"Block device required",
-  106:"Channel number out of range",
-  107:"Level 3 halted",
-  108:"Level 3 reset",
-  109:"Link number out of range",
-  110:"Protocol driver not attached",
-  111:"No CSI structure available",
-  112:"Level 2 halted",
-  113:"Invalid exchange",
-  114:"Invalid request descriptor",
-  115:"Exchange full",
-  116:"No data (for no delay io)",
-  117:"Timer expired",
-  118:"Out of streams resources",
-  119:"Machine is not on the network",
-  120:"Package not installed",
-  121:"The object is remote",
-  122:"Advertise error",
-  123:"Srmount error",
-  124:"Communication error on send",
-  125:"Cross mount point (not really error)",
-  126:"Given log. name not unique",
-  127:"f.d. invalid for this operation",
-  128:"Remote address changed",
-  129:"Can   access a needed shared lib",
-  130:"Accessing a corrupted shared lib",
-  131:".lib section in a.out corrupted",
-  132:"Attempting to link in too many libs",
-  133:"Attempting to exec a shared library",
-  135:"Streams pipe error",
-  136:"Too many users",
-  137:"Socket type not supported",
-  138:"Not supported",
-  139:"Protocol family not supported",
-  140:"Can't send after socket shutdown",
-  141:"Too many references",
-  142:"Host is down",
-  148:"No medium (in tape drive)",
-  156:"Level 2 not synchronized",
-  };
+  
+  
+  var strError = (errno) => {
+      return UTF8ToString(_strerror(errno));
+    };
   
   var FS = {
   root:null,
@@ -2920,7 +2903,7 @@ function dbg(...args) {
         // the test `err instanceof FS.ErrnoError` won't detect an error coming from another filesystem, causing bugs.
         // we'll use the reliable test `err.name == "ErrnoError"` instead
         constructor(errno) {
-          super(ERRNO_MESSAGES[errno]);
+          super(runtimeInitialized ? strError(errno) : '');
           // TODO(sbc): Use the inline member declaration syntax once we
           // support it in acorn and closure.
           this.name = 'ErrnoError';
@@ -3252,6 +3235,7 @@ function dbg(...args) {
       },
   getStream:(fd) => FS.streams[fd],
   createStream(stream, fd = -1) {
+        assert(fd >= -1);
   
         // clone it, so we can return an instance of FSStream
         stream = Object.assign(new FS.FSStream(), stream);
@@ -4309,18 +4293,13 @@ function dbg(...args) {
         if (obj.isDevice || obj.isFolder || obj.link || obj.contents) return true;
         if (typeof XMLHttpRequest != 'undefined') {
           throw new Error("Lazy loading should have been performed (contents set) in createLazyFile, but it was not. Lazy loading only works in web workers. Use --embed-file or --preload-file in emcc on the main thread.");
-        } else if (read_) {
-          // Command-line.
+        } else { // Command-line.
           try {
-            // WARNING: Can't read binary files in V8's d8 or tracemonkey's js, as
-            //          read() will try to parse UTF8.
-            obj.contents = intArrayFromString(read_(obj.url), true);
+            obj.contents = readBinary(obj.url);
             obj.usedBytes = obj.contents.length;
           } catch (e) {
             throw new FS.ErrnoError(29);
           }
-        } else {
-          throw new Error('Cannot load without read() or XMLHttpRequest.');
         }
       },
   createLazyFile(parent, name, url, canRead, canWrite) {
@@ -4840,7 +4819,7 @@ function dbg(...args) {
   var __emscripten_memcpy_js = (dest, src, num) => HEAPU8.copyWithin(dest, src, src + num);
 
   var __emscripten_throw_longjmp = () => {
-      throw Infinity;
+      throw new EmscriptenSjLj;
     };
 
   var convertI32PairToI53Checked = (lo, hi) => {
@@ -4949,9 +4928,20 @@ function dbg(...args) {
   
       HEAP32[((daylight)>>2)] = Number(winterOffset != summerOffset);
   
-      var extractZone = (date) => date.toLocaleTimeString(undefined, {hour12:false, timeZoneName:'short'}).split(' ')[1];
-      var winterName = extractZone(winter);
-      var summerName = extractZone(summer);
+      var extractZone = (timezoneOffset) => {
+        // Why inverse sign?
+        // Read here https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
+        var sign = timezoneOffset >= 0 ? "-" : "+";
+  
+        var absOffset = Math.abs(timezoneOffset)
+        var hours = String(Math.floor(absOffset / 60)).padStart(2, "0");
+        var minutes = String(absOffset % 60).padStart(2, "0");
+  
+        return `UTC${sign}${hours}${minutes}`;
+      }
+  
+      var winterName = extractZone(winterOffset);
+      var summerName = extractZone(summerOffset);
       assert(winterName);
       assert(summerName);
       assert(lengthBytesUTF8(winterName) <= 16, `timezone name truncated to fit in TZNAME_MAX (${winterName})`);
@@ -5208,309 +5198,6 @@ function dbg(...args) {
     return e.errno;
   }
   }
-
-  
-  var arraySum = (array, index) => {
-      var sum = 0;
-      for (var i = 0; i <= index; sum += array[i++]) {
-        // no-op
-      }
-      return sum;
-    };
-  
-  
-  var MONTH_DAYS_LEAP = [31,29,31,30,31,30,31,31,30,31,30,31];
-  
-  var MONTH_DAYS_REGULAR = [31,28,31,30,31,30,31,31,30,31,30,31];
-  var addDays = (date, days) => {
-      var newDate = new Date(date.getTime());
-      while (days > 0) {
-        var leap = isLeapYear(newDate.getFullYear());
-        var currentMonth = newDate.getMonth();
-        var daysInCurrentMonth = (leap ? MONTH_DAYS_LEAP : MONTH_DAYS_REGULAR)[currentMonth];
-  
-        if (days > daysInCurrentMonth-newDate.getDate()) {
-          // we spill over to next month
-          days -= (daysInCurrentMonth-newDate.getDate()+1);
-          newDate.setDate(1);
-          if (currentMonth < 11) {
-            newDate.setMonth(currentMonth+1)
-          } else {
-            newDate.setMonth(0);
-            newDate.setFullYear(newDate.getFullYear()+1);
-          }
-        } else {
-          // we stay in current month
-          newDate.setDate(newDate.getDate()+days);
-          return newDate;
-        }
-      }
-  
-      return newDate;
-    };
-  
-  
-  
-  
-  var writeArrayToMemory = (array, buffer) => {
-      assert(array.length >= 0, 'writeArrayToMemory array must have a length (should be an array or typed array)')
-      HEAP8.set(array, buffer);
-    };
-  
-  var _strftime = (s, maxsize, format, tm) => {
-      // size_t strftime(char *restrict s, size_t maxsize, const char *restrict format, const struct tm *restrict timeptr);
-      // http://pubs.opengroup.org/onlinepubs/009695399/functions/strftime.html
-  
-      var tm_zone = HEAPU32[(((tm)+(40))>>2)];
-  
-      var date = {
-        tm_sec: HEAP32[((tm)>>2)],
-        tm_min: HEAP32[(((tm)+(4))>>2)],
-        tm_hour: HEAP32[(((tm)+(8))>>2)],
-        tm_mday: HEAP32[(((tm)+(12))>>2)],
-        tm_mon: HEAP32[(((tm)+(16))>>2)],
-        tm_year: HEAP32[(((tm)+(20))>>2)],
-        tm_wday: HEAP32[(((tm)+(24))>>2)],
-        tm_yday: HEAP32[(((tm)+(28))>>2)],
-        tm_isdst: HEAP32[(((tm)+(32))>>2)],
-        tm_gmtoff: HEAP32[(((tm)+(36))>>2)],
-        tm_zone: tm_zone ? UTF8ToString(tm_zone) : ''
-      };
-      
-  
-      var pattern = UTF8ToString(format);
-  
-      // expand format
-      var EXPANSION_RULES_1 = {
-        '%c': '%a %b %d %H:%M:%S %Y',     // Replaced by the locale's appropriate date and time representation - e.g., Mon Aug  3 14:02:01 2013
-        '%D': '%m/%d/%y',                 // Equivalent to %m / %d / %y
-        '%F': '%Y-%m-%d',                 // Equivalent to %Y - %m - %d
-        '%h': '%b',                       // Equivalent to %b
-        '%r': '%I:%M:%S %p',              // Replaced by the time in a.m. and p.m. notation
-        '%R': '%H:%M',                    // Replaced by the time in 24-hour notation
-        '%T': '%H:%M:%S',                 // Replaced by the time
-        '%x': '%m/%d/%y',                 // Replaced by the locale's appropriate date representation
-        '%X': '%H:%M:%S',                 // Replaced by the locale's appropriate time representation
-        // Modified Conversion Specifiers
-        '%Ec': '%c',                      // Replaced by the locale's alternative appropriate date and time representation.
-        '%EC': '%C',                      // Replaced by the name of the base year (period) in the locale's alternative representation.
-        '%Ex': '%m/%d/%y',                // Replaced by the locale's alternative date representation.
-        '%EX': '%H:%M:%S',                // Replaced by the locale's alternative time representation.
-        '%Ey': '%y',                      // Replaced by the offset from %EC (year only) in the locale's alternative representation.
-        '%EY': '%Y',                      // Replaced by the full alternative year representation.
-        '%Od': '%d',                      // Replaced by the day of the month, using the locale's alternative numeric symbols, filled as needed with leading zeros if there is any alternative symbol for zero; otherwise, with leading <space> characters.
-        '%Oe': '%e',                      // Replaced by the day of the month, using the locale's alternative numeric symbols, filled as needed with leading <space> characters.
-        '%OH': '%H',                      // Replaced by the hour (24-hour clock) using the locale's alternative numeric symbols.
-        '%OI': '%I',                      // Replaced by the hour (12-hour clock) using the locale's alternative numeric symbols.
-        '%Om': '%m',                      // Replaced by the month using the locale's alternative numeric symbols.
-        '%OM': '%M',                      // Replaced by the minutes using the locale's alternative numeric symbols.
-        '%OS': '%S',                      // Replaced by the seconds using the locale's alternative numeric symbols.
-        '%Ou': '%u',                      // Replaced by the weekday as a number in the locale's alternative representation (Monday=1).
-        '%OU': '%U',                      // Replaced by the week number of the year (Sunday as the first day of the week, rules corresponding to %U ) using the locale's alternative numeric symbols.
-        '%OV': '%V',                      // Replaced by the week number of the year (Monday as the first day of the week, rules corresponding to %V ) using the locale's alternative numeric symbols.
-        '%Ow': '%w',                      // Replaced by the number of the weekday (Sunday=0) using the locale's alternative numeric symbols.
-        '%OW': '%W',                      // Replaced by the week number of the year (Monday as the first day of the week) using the locale's alternative numeric symbols.
-        '%Oy': '%y',                      // Replaced by the year (offset from %C ) using the locale's alternative numeric symbols.
-      };
-      for (var rule in EXPANSION_RULES_1) {
-        pattern = pattern.replace(new RegExp(rule, 'g'), EXPANSION_RULES_1[rule]);
-      }
-  
-      var WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-      var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  
-      function leadingSomething(value, digits, character) {
-        var str = typeof value == 'number' ? value.toString() : (value || '');
-        while (str.length < digits) {
-          str = character[0]+str;
-        }
-        return str;
-      }
-  
-      function leadingNulls(value, digits) {
-        return leadingSomething(value, digits, '0');
-      }
-  
-      function compareByDay(date1, date2) {
-        function sgn(value) {
-          return value < 0 ? -1 : (value > 0 ? 1 : 0);
-        }
-  
-        var compare;
-        if ((compare = sgn(date1.getFullYear()-date2.getFullYear())) === 0) {
-          if ((compare = sgn(date1.getMonth()-date2.getMonth())) === 0) {
-            compare = sgn(date1.getDate()-date2.getDate());
-          }
-        }
-        return compare;
-      }
-  
-      function getFirstWeekStartDate(janFourth) {
-          switch (janFourth.getDay()) {
-            case 0: // Sunday
-              return new Date(janFourth.getFullYear()-1, 11, 29);
-            case 1: // Monday
-              return janFourth;
-            case 2: // Tuesday
-              return new Date(janFourth.getFullYear(), 0, 3);
-            case 3: // Wednesday
-              return new Date(janFourth.getFullYear(), 0, 2);
-            case 4: // Thursday
-              return new Date(janFourth.getFullYear(), 0, 1);
-            case 5: // Friday
-              return new Date(janFourth.getFullYear()-1, 11, 31);
-            case 6: // Saturday
-              return new Date(janFourth.getFullYear()-1, 11, 30);
-          }
-      }
-  
-      function getWeekBasedYear(date) {
-          var thisDate = addDays(new Date(date.tm_year+1900, 0, 1), date.tm_yday);
-  
-          var janFourthThisYear = new Date(thisDate.getFullYear(), 0, 4);
-          var janFourthNextYear = new Date(thisDate.getFullYear()+1, 0, 4);
-  
-          var firstWeekStartThisYear = getFirstWeekStartDate(janFourthThisYear);
-          var firstWeekStartNextYear = getFirstWeekStartDate(janFourthNextYear);
-  
-          if (compareByDay(firstWeekStartThisYear, thisDate) <= 0) {
-            // this date is after the start of the first week of this year
-            if (compareByDay(firstWeekStartNextYear, thisDate) <= 0) {
-              return thisDate.getFullYear()+1;
-            }
-            return thisDate.getFullYear();
-          }
-          return thisDate.getFullYear()-1;
-      }
-  
-      var EXPANSION_RULES_2 = {
-        '%a': (date) => WEEKDAYS[date.tm_wday].substring(0,3) ,
-        '%A': (date) => WEEKDAYS[date.tm_wday],
-        '%b': (date) => MONTHS[date.tm_mon].substring(0,3),
-        '%B': (date) => MONTHS[date.tm_mon],
-        '%C': (date) => {
-          var year = date.tm_year+1900;
-          return leadingNulls((year/100)|0,2);
-        },
-        '%d': (date) => leadingNulls(date.tm_mday, 2),
-        '%e': (date) => leadingSomething(date.tm_mday, 2, ' '),
-        '%g': (date) => {
-          // %g, %G, and %V give values according to the ISO 8601:2000 standard week-based year.
-          // In this system, weeks begin on a Monday and week 1 of the year is the week that includes
-          // January 4th, which is also the week that includes the first Thursday of the year, and
-          // is also the first week that contains at least four days in the year.
-          // If the first Monday of January is the 2nd, 3rd, or 4th, the preceding days are part of
-          // the last week of the preceding year; thus, for Saturday 2nd January 1999,
-          // %G is replaced by 1998 and %V is replaced by 53. If December 29th, 30th,
-          // or 31st is a Monday, it and any following days are part of week 1 of the following year.
-          // Thus, for Tuesday 30th December 1997, %G is replaced by 1998 and %V is replaced by 01.
-  
-          return getWeekBasedYear(date).toString().substring(2);
-        },
-        '%G': getWeekBasedYear,
-        '%H': (date) => leadingNulls(date.tm_hour, 2),
-        '%I': (date) => {
-          var twelveHour = date.tm_hour;
-          if (twelveHour == 0) twelveHour = 12;
-          else if (twelveHour > 12) twelveHour -= 12;
-          return leadingNulls(twelveHour, 2);
-        },
-        '%j': (date) => {
-          // Day of the year (001-366)
-          return leadingNulls(date.tm_mday + arraySum(isLeapYear(date.tm_year+1900) ? MONTH_DAYS_LEAP : MONTH_DAYS_REGULAR, date.tm_mon-1), 3);
-        },
-        '%m': (date) => leadingNulls(date.tm_mon+1, 2),
-        '%M': (date) => leadingNulls(date.tm_min, 2),
-        '%n': () => '\n',
-        '%p': (date) => {
-          if (date.tm_hour >= 0 && date.tm_hour < 12) {
-            return 'AM';
-          }
-          return 'PM';
-        },
-        '%S': (date) => leadingNulls(date.tm_sec, 2),
-        '%t': () => '\t',
-        '%u': (date) => date.tm_wday || 7,
-        '%U': (date) => {
-          var days = date.tm_yday + 7 - date.tm_wday;
-          return leadingNulls(Math.floor(days / 7), 2);
-        },
-        '%V': (date) => {
-          // Replaced by the week number of the year (Monday as the first day of the week)
-          // as a decimal number [01,53]. If the week containing 1 January has four
-          // or more days in the new year, then it is considered week 1.
-          // Otherwise, it is the last week of the previous year, and the next week is week 1.
-          // Both January 4th and the first Thursday of January are always in week 1. [ tm_year, tm_wday, tm_yday]
-          var val = Math.floor((date.tm_yday + 7 - (date.tm_wday + 6) % 7 ) / 7);
-          // If 1 Jan is just 1-3 days past Monday, the previous week
-          // is also in this year.
-          if ((date.tm_wday + 371 - date.tm_yday - 2) % 7 <= 2) {
-            val++;
-          }
-          if (!val) {
-            val = 52;
-            // If 31 December of prev year a Thursday, or Friday of a
-            // leap year, then the prev year has 53 weeks.
-            var dec31 = (date.tm_wday + 7 - date.tm_yday - 1) % 7;
-            if (dec31 == 4 || (dec31 == 5 && isLeapYear(date.tm_year%400-1))) {
-              val++;
-            }
-          } else if (val == 53) {
-            // If 1 January is not a Thursday, and not a Wednesday of a
-            // leap year, then this year has only 52 weeks.
-            var jan1 = (date.tm_wday + 371 - date.tm_yday) % 7;
-            if (jan1 != 4 && (jan1 != 3 || !isLeapYear(date.tm_year)))
-              val = 1;
-          }
-          return leadingNulls(val, 2);
-        },
-        '%w': (date) => date.tm_wday,
-        '%W': (date) => {
-          var days = date.tm_yday + 7 - ((date.tm_wday + 6) % 7);
-          return leadingNulls(Math.floor(days / 7), 2);
-        },
-        '%y': (date) => {
-          // Replaced by the last two digits of the year as a decimal number [00,99]. [ tm_year]
-          return (date.tm_year+1900).toString().substring(2);
-        },
-        // Replaced by the year as a decimal number (for example, 1997). [ tm_year]
-        '%Y': (date) => date.tm_year+1900,
-        '%z': (date) => {
-          // Replaced by the offset from UTC in the ISO 8601:2000 standard format ( +hhmm or -hhmm ).
-          // For example, "-0430" means 4 hours 30 minutes behind UTC (west of Greenwich).
-          var off = date.tm_gmtoff;
-          var ahead = off >= 0;
-          off = Math.abs(off) / 60;
-          // convert from minutes into hhmm format (which means 60 minutes = 100 units)
-          off = (off / 60)*100 + (off % 60);
-          return (ahead ? '+' : '-') + String("0000" + off).slice(-4);
-        },
-        '%Z': (date) => date.tm_zone,
-        '%%': () => '%'
-      };
-  
-      // Replace %% with a pair of NULLs (which cannot occur in a C string), then
-      // re-inject them after processing.
-      pattern = pattern.replace(/%%/g, '\0\0')
-      for (var rule in EXPANSION_RULES_2) {
-        if (pattern.includes(rule)) {
-          pattern = pattern.replace(new RegExp(rule, 'g'), EXPANSION_RULES_2[rule](date));
-        }
-      }
-      pattern = pattern.replace(/\0\0/g, '%')
-  
-      var bytes = intArrayFromString(pattern, false);
-      if (bytes.length > maxsize) {
-        return 0;
-      }
-  
-      writeArrayToMemory(bytes, s);
-      return bytes.length-1;
-    };
-
-  var _strftime_l = (s, maxsize, format, tm, loc) => {
-      return _strftime(s, maxsize, format, tm); // no locale support yet
-    };
 
   var wasmTableMirror = [];
   
@@ -5897,6 +5584,38 @@ function dbg(...args) {
 
   var FS_createDevice = FS.createDevice;
 
+  var incrementExceptionRefcount = (ptr) => ___cxa_increment_exception_refcount(ptr);
+  Module['incrementExceptionRefcount'] = incrementExceptionRefcount;
+
+  var decrementExceptionRefcount = (ptr) => ___cxa_decrement_exception_refcount(ptr);
+  Module['decrementExceptionRefcount'] = decrementExceptionRefcount;
+
+  
+  
+  
+  
+  var stackAlloc = (sz) => __emscripten_stack_alloc(sz);
+  
+  var getExceptionMessageCommon = (ptr) => {
+      var sp = stackSave();
+      var type_addr_addr = stackAlloc(4);
+      var message_addr_addr = stackAlloc(4);
+      ___get_exception_message(ptr, type_addr_addr, message_addr_addr);
+      var type_addr = HEAPU32[((type_addr_addr)>>2)];
+      var message_addr = HEAPU32[((message_addr_addr)>>2)];
+      var type = UTF8ToString(type_addr);
+      _free(type_addr);
+      var message;
+      if (message_addr) {
+        message = UTF8ToString(message_addr);
+        _free(message_addr);
+      }
+      stackRestore(sp);
+      return [type, message];
+    };
+  var getExceptionMessage = (ptr) => getExceptionMessageCommon(ptr);
+  Module['getExceptionMessage'] = getExceptionMessage;
+
   FS.createPreloadedFile = FS_createPreloadedFile;
   FS.staticInit();Module["FS_createPath"] = FS.createPath;Module["FS_createDataFile"] = FS.createDataFile;Module["FS_createPreloadedFile"] = FS.createPreloadedFile;Module["FS_unlink"] = FS.unlink;Module["FS_createLazyFile"] = FS.createLazyFile;Module["FS_createDevice"] = FS.createDevice;;
 if (ENVIRONMENT_IS_NODE) { NODEFS.staticInit(); };
@@ -5913,7 +5632,21 @@ var wasmImports = {
   /** @export */
   __builtin_emscripten_query: ___builtin_emscripten_query,
   /** @export */
+  __cxa_begin_catch: ___cxa_begin_catch,
+  /** @export */
+  __cxa_end_catch: ___cxa_end_catch,
+  /** @export */
+  __cxa_find_matching_catch_2: ___cxa_find_matching_catch_2,
+  /** @export */
+  __cxa_find_matching_catch_3: ___cxa_find_matching_catch_3,
+  /** @export */
+  __cxa_rethrow: ___cxa_rethrow,
+  /** @export */
   __cxa_throw: ___cxa_throw,
+  /** @export */
+  __cxa_uncaught_exceptions: ___cxa_uncaught_exceptions,
+  /** @export */
+  __resumeException: ___resumeException,
   /** @export */
   __syscall_fcntl64: ___syscall_fcntl64,
   /** @export */
@@ -5965,17 +5698,65 @@ var wasmImports = {
   /** @export */
   fd_write: _fd_write,
   /** @export */
+  invoke_diii,
+  /** @export */
+  invoke_fiii,
+  /** @export */
+  invoke_i,
+  /** @export */
   invoke_ii,
   /** @export */
   invoke_iii,
   /** @export */
   invoke_iiii,
   /** @export */
+  invoke_iiiii,
+  /** @export */
+  invoke_iiiiii,
+  /** @export */
+  invoke_iiiiiii,
+  /** @export */
+  invoke_iiiiiiii,
+  /** @export */
+  invoke_iiiiiiiiii,
+  /** @export */
+  invoke_iiiiiiiiiii,
+  /** @export */
+  invoke_iiiiiiiiiiii,
+  /** @export */
+  invoke_iiiiiiiiiiiii,
+  /** @export */
+  invoke_iiiiiiiiiiiiii,
+  /** @export */
+  invoke_iiiiiiiiiiiiiiiiiiii,
+  /** @export */
+  invoke_iiiiiiiiiiiiiiiiiiiii,
+  /** @export */
+  invoke_iiiiij,
+  /** @export */
+  invoke_iiiiijiiiii,
+  /** @export */
+  invoke_iiiijii,
+  /** @export */
+  invoke_iij,
+  /** @export */
+  invoke_iiji,
+  /** @export */
+  invoke_j,
+  /** @export */
+  invoke_ji,
+  /** @export */
+  invoke_jiiii,
+  /** @export */
   invoke_v,
   /** @export */
   invoke_vi,
   /** @export */
+  invoke_vid,
+  /** @export */
   invoke_vii,
+  /** @export */
+  invoke_viid,
   /** @export */
   invoke_viii,
   /** @export */
@@ -5983,20 +5764,36 @@ var wasmImports = {
   /** @export */
   invoke_viiiii,
   /** @export */
-  strftime: _strftime,
+  invoke_viiiiii,
   /** @export */
-  strftime_l: _strftime_l
+  invoke_viiiiiii,
+  /** @export */
+  invoke_viiiiiiii,
+  /** @export */
+  invoke_viiiiiiiii,
+  /** @export */
+  invoke_viiiiiiiiii,
+  /** @export */
+  invoke_viiiiiiiiiiiiiii,
+  /** @export */
+  invoke_viij,
+  /** @export */
+  invoke_viijii,
+  /** @export */
+  invoke_vij
 };
 var wasmExports = createWasm();
 var ___wasm_call_ctors = createExportWrapper('__wasm_call_ctors', 0);
 var _malloc = createExportWrapper('malloc', 1);
 var _cgi = Module['_cgi'] = createExportWrapper('cgi', 2);
+var ___cxa_free_exception = createExportWrapper('__cxa_free_exception', 1);
 var _free = createExportWrapper('free', 1);
 var _ntohs = createExportWrapper('ntohs', 1);
 var _fflush = createExportWrapper('fflush', 1);
 var _htonl = createExportWrapper('htonl', 1);
 var _htons = createExportWrapper('htons', 1);
 var _emscripten_builtin_memalign = createExportWrapper('emscripten_builtin_memalign', 2);
+var _strerror = createExportWrapper('strerror', 1);
 var _setThrew = createExportWrapper('setThrew', 2);
 var __emscripten_tempret_set = createExportWrapper('_emscripten_tempret_set', 1);
 var _emscripten_stack_init = () => (_emscripten_stack_init = wasmExports['emscripten_stack_init'])();
@@ -6006,68 +5803,64 @@ var _emscripten_stack_get_end = () => (_emscripten_stack_get_end = wasmExports['
 var __emscripten_stack_restore = (a0) => (__emscripten_stack_restore = wasmExports['_emscripten_stack_restore'])(a0);
 var __emscripten_stack_alloc = (a0) => (__emscripten_stack_alloc = wasmExports['_emscripten_stack_alloc'])(a0);
 var _emscripten_stack_get_current = () => (_emscripten_stack_get_current = wasmExports['emscripten_stack_get_current'])();
+var ___cxa_decrement_exception_refcount = createExportWrapper('__cxa_decrement_exception_refcount', 1);
+var ___cxa_increment_exception_refcount = createExportWrapper('__cxa_increment_exception_refcount', 1);
+var ___get_exception_message = createExportWrapper('__get_exception_message', 3);
+var ___cxa_can_catch = createExportWrapper('__cxa_can_catch', 3);
 var ___cxa_is_pointer_type = createExportWrapper('__cxa_is_pointer_type', 1);
-var dynCall_ii = Module['dynCall_ii'] = createExportWrapper('dynCall_ii', 2);
-var dynCall_vii = Module['dynCall_vii'] = createExportWrapper('dynCall_vii', 3);
-var dynCall_viii = Module['dynCall_viii'] = createExportWrapper('dynCall_viii', 4);
-var dynCall_iiii = Module['dynCall_iiii'] = createExportWrapper('dynCall_iiii', 4);
 var dynCall_vi = Module['dynCall_vi'] = createExportWrapper('dynCall_vi', 2);
-var dynCall_iii = Module['dynCall_iii'] = createExportWrapper('dynCall_iii', 3);
-var dynCall_viiii = Module['dynCall_viiii'] = createExportWrapper('dynCall_viiii', 5);
-var dynCall_v = Module['dynCall_v'] = createExportWrapper('dynCall_v', 1);
-var dynCall_viiiii = Module['dynCall_viiiii'] = createExportWrapper('dynCall_viiiii', 6);
+var dynCall_ii = Module['dynCall_ii'] = createExportWrapper('dynCall_ii', 2);
+var dynCall_viii = Module['dynCall_viii'] = createExportWrapper('dynCall_viii', 4);
+var dynCall_ji = Module['dynCall_ji'] = createExportWrapper('dynCall_ji', 2);
 var dynCall_iiiii = Module['dynCall_iiiii'] = createExportWrapper('dynCall_iiiii', 5);
+var dynCall_iiii = Module['dynCall_iiii'] = createExportWrapper('dynCall_iiii', 4);
+var dynCall_iii = Module['dynCall_iii'] = createExportWrapper('dynCall_iii', 3);
+var dynCall_vii = Module['dynCall_vii'] = createExportWrapper('dynCall_vii', 3);
 var dynCall_iiiiiii = Module['dynCall_iiiiiii'] = createExportWrapper('dynCall_iiiiiii', 7);
-var dynCall_iiiiii = Module['dynCall_iiiiii'] = createExportWrapper('dynCall_iiiiii', 6);
-var dynCall_iiiiiiii = Module['dynCall_iiiiiiii'] = createExportWrapper('dynCall_iiiiiiii', 8);
-var dynCall_iiiiiiiii = Module['dynCall_iiiiiiiii'] = createExportWrapper('dynCall_iiiiiiiii', 9);
+var dynCall_v = Module['dynCall_v'] = createExportWrapper('dynCall_v', 1);
+var dynCall_viiii = Module['dynCall_viiii'] = createExportWrapper('dynCall_viiii', 5);
 var dynCall_viiiiii = Module['dynCall_viiiiii'] = createExportWrapper('dynCall_viiiiii', 7);
-var dynCall_iiid = Module['dynCall_iiid'] = createExportWrapper('dynCall_iiid', 4);
+var dynCall_viiiii = Module['dynCall_viiiii'] = createExportWrapper('dynCall_viiiii', 6);
+var dynCall_iiji = Module['dynCall_iiji'] = createExportWrapper('dynCall_iiji', 5);
+var dynCall_iiiiii = Module['dynCall_iiiiii'] = createExportWrapper('dynCall_iiiiii', 6);
+var dynCall_viiiiiiii = Module['dynCall_viiiiiiii'] = createExportWrapper('dynCall_viiiiiiii', 9);
+var dynCall_iiiiiiiiiiiii = Module['dynCall_iiiiiiiiiiiii'] = createExportWrapper('dynCall_iiiiiiiiiiiii', 13);
+var dynCall_iiiiiiiiiiiiii = Module['dynCall_iiiiiiiiiiiiii'] = createExportWrapper('dynCall_iiiiiiiiiiiiii', 14);
+var dynCall_iiiiiiiiiiiiiiiiiiiii = Module['dynCall_iiiiiiiiiiiiiiiiiiiii'] = createExportWrapper('dynCall_iiiiiiiiiiiiiiiiiiiii', 21);
+var dynCall_iiiiiiiiiiiiiiiiiiii = Module['dynCall_iiiiiiiiiiiiiiiiiiii'] = createExportWrapper('dynCall_iiiiiiiiiiiiiiiiiiii', 20);
+var dynCall_iiiiijiiiii = Module['dynCall_iiiiijiiiii'] = createExportWrapper('dynCall_iiiiijiiiii', 12);
+var dynCall_iij = Module['dynCall_iij'] = createExportWrapper('dynCall_iij', 4);
+var dynCall_iiiiiiiiiiii = Module['dynCall_iiiiiiiiiiii'] = createExportWrapper('dynCall_iiiiiiiiiiii', 12);
+var dynCall_iiiiiiiiiii = Module['dynCall_iiiiiiiiiii'] = createExportWrapper('dynCall_iiiiiiiiiii', 11);
+var dynCall_iiiiiiiiii = Module['dynCall_iiiiiiiiii'] = createExportWrapper('dynCall_iiiiiiiiii', 10);
+var dynCall_iiiijii = Module['dynCall_iiiijii'] = createExportWrapper('dynCall_iiiijii', 8);
+var dynCall_vij = Module['dynCall_vij'] = createExportWrapper('dynCall_vij', 4);
 var dynCall_i = Module['dynCall_i'] = createExportWrapper('dynCall_i', 1);
+var dynCall_vid = Module['dynCall_vid'] = createExportWrapper('dynCall_vid', 3);
+var dynCall_viij = Module['dynCall_viij'] = createExportWrapper('dynCall_viij', 5);
+var dynCall_iiiiiiii = Module['dynCall_iiiiiiii'] = createExportWrapper('dynCall_iiiiiiii', 8);
+var dynCall_viiiiiiiiii = Module['dynCall_viiiiiiiiii'] = createExportWrapper('dynCall_viiiiiiiiii', 11);
+var dynCall_viiiiiii = Module['dynCall_viiiiiii'] = createExportWrapper('dynCall_viiiiiii', 8);
+var dynCall_viiiiiiiii = Module['dynCall_viiiiiiiii'] = createExportWrapper('dynCall_viiiiiiiii', 10);
+var dynCall_iiiiiiiii = Module['dynCall_iiiiiiiii'] = createExportWrapper('dynCall_iiiiiiiii', 9);
+var dynCall_iiid = Module['dynCall_iiid'] = createExportWrapper('dynCall_iiid', 4);
 var dynCall_jiji = Module['dynCall_jiji'] = createExportWrapper('dynCall_jiji', 5);
 var dynCall_iidiiii = Module['dynCall_iidiiii'] = createExportWrapper('dynCall_iidiiii', 7);
+var dynCall_j = Module['dynCall_j'] = createExportWrapper('dynCall_j', 1);
 var dynCall_viijii = Module['dynCall_viijii'] = createExportWrapper('dynCall_viijii', 7);
 var dynCall_iiiiij = Module['dynCall_iiiiij'] = createExportWrapper('dynCall_iiiiij', 7);
+var dynCall_jiiii = Module['dynCall_jiiii'] = createExportWrapper('dynCall_jiiii', 5);
+var dynCall_fiii = Module['dynCall_fiii'] = createExportWrapper('dynCall_fiii', 4);
+var dynCall_diii = Module['dynCall_diii'] = createExportWrapper('dynCall_diii', 4);
+var dynCall_viiiiiiiiiiiiiii = Module['dynCall_viiiiiiiiiiiiiii'] = createExportWrapper('dynCall_viiiiiiiiiiiiiii', 16);
 var dynCall_iiiiid = Module['dynCall_iiiiid'] = createExportWrapper('dynCall_iiiiid', 6);
 var dynCall_iiiiijj = Module['dynCall_iiiiijj'] = createExportWrapper('dynCall_iiiiijj', 9);
 var dynCall_iiiiiijj = Module['dynCall_iiiiiijj'] = createExportWrapper('dynCall_iiiiiijj', 10);
+var dynCall_viid = Module['dynCall_viid'] = createExportWrapper('dynCall_viid', 4);
 var _asyncify_start_unwind = createExportWrapper('asyncify_start_unwind', 1);
 var _asyncify_stop_unwind = createExportWrapper('asyncify_stop_unwind', 0);
 var _asyncify_start_rewind = createExportWrapper('asyncify_start_rewind', 1);
 var _asyncify_stop_rewind = createExportWrapper('asyncify_stop_rewind', 0);
-
-function invoke_vii(index,a1,a2) {
-  var sp = stackSave();
-  try {
-    dynCall_vii(index,a1,a2);
-  } catch(e) {
-    stackRestore(sp);
-    if (e !== e+0) throw e;
-    _setThrew(1, 0);
-  }
-}
-
-function invoke_viii(index,a1,a2,a3) {
-  var sp = stackSave();
-  try {
-    dynCall_viii(index,a1,a2,a3);
-  } catch(e) {
-    stackRestore(sp);
-    if (e !== e+0) throw e;
-    _setThrew(1, 0);
-  }
-}
-
-function invoke_iiii(index,a1,a2,a3) {
-  var sp = stackSave();
-  try {
-    return dynCall_iiii(index,a1,a2,a3);
-  } catch(e) {
-    stackRestore(sp);
-    if (e !== e+0) throw e;
-    _setThrew(1, 0);
-  }
-}
 
 function invoke_vi(index,a1) {
   var sp = stackSave();
@@ -6075,7 +5868,7 @@ function invoke_vi(index,a1) {
     dynCall_vi(index,a1);
   } catch(e) {
     stackRestore(sp);
-    if (e !== e+0) throw e;
+    if (!(e instanceof EmscriptenEH)) throw e;
     _setThrew(1, 0);
   }
 }
@@ -6086,7 +5879,40 @@ function invoke_ii(index,a1) {
     return dynCall_ii(index,a1);
   } catch(e) {
     stackRestore(sp);
-    if (e !== e+0) throw e;
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_viii(index,a1,a2,a3) {
+  var sp = stackSave();
+  try {
+    dynCall_viii(index,a1,a2,a3);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiiii(index,a1,a2,a3,a4) {
+  var sp = stackSave();
+  try {
+    return dynCall_iiiii(index,a1,a2,a3,a4);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiii(index,a1,a2,a3) {
+  var sp = stackSave();
+  try {
+    return dynCall_iiii(index,a1,a2,a3);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
     _setThrew(1, 0);
   }
 }
@@ -6097,7 +5923,18 @@ function invoke_iii(index,a1,a2) {
     return dynCall_iii(index,a1,a2);
   } catch(e) {
     stackRestore(sp);
-    if (e !== e+0) throw e;
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_vii(index,a1,a2) {
+  var sp = stackSave();
+  try {
+    dynCall_vii(index,a1,a2);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
     _setThrew(1, 0);
   }
 }
@@ -6108,18 +5945,18 @@ function invoke_viiii(index,a1,a2,a3,a4) {
     dynCall_viiii(index,a1,a2,a3,a4);
   } catch(e) {
     stackRestore(sp);
-    if (e !== e+0) throw e;
+    if (!(e instanceof EmscriptenEH)) throw e;
     _setThrew(1, 0);
   }
 }
 
-function invoke_v(index) {
+function invoke_viiiiii(index,a1,a2,a3,a4,a5,a6) {
   var sp = stackSave();
   try {
-    dynCall_v(index);
+    dynCall_viiiiii(index,a1,a2,a3,a4,a5,a6);
   } catch(e) {
     stackRestore(sp);
-    if (e !== e+0) throw e;
+    if (!(e instanceof EmscriptenEH)) throw e;
     _setThrew(1, 0);
   }
 }
@@ -6130,7 +5967,359 @@ function invoke_viiiii(index,a1,a2,a3,a4,a5) {
     dynCall_viiiii(index,a1,a2,a3,a4,a5);
   } catch(e) {
     stackRestore(sp);
-    if (e !== e+0) throw e;
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiiiii(index,a1,a2,a3,a4,a5) {
+  var sp = stackSave();
+  try {
+    return dynCall_iiiiii(index,a1,a2,a3,a4,a5);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_viiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8) {
+  var sp = stackSave();
+  try {
+    dynCall_viiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_v(index) {
+  var sp = stackSave();
+  try {
+    dynCall_v(index);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiiiiiiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12) {
+  var sp = stackSave();
+  try {
+    return dynCall_iiiiiiiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiiiiiiiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13) {
+  var sp = stackSave();
+  try {
+    return dynCall_iiiiiiiiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiiiiiiiiiiiiiiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20) {
+  var sp = stackSave();
+  try {
+    return dynCall_iiiiiiiiiiiiiiiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiiiiiiiiiiiiiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19) {
+  var sp = stackSave();
+  try {
+    return dynCall_iiiiiiiiiiiiiiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiiiiiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11) {
+  var sp = stackSave();
+  try {
+    return dynCall_iiiiiiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiiiiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10) {
+  var sp = stackSave();
+  try {
+    return dynCall_iiiiiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiiiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9) {
+  var sp = stackSave();
+  try {
+    return dynCall_iiiiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_i(index) {
+  var sp = stackSave();
+  try {
+    return dynCall_i(index);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_vid(index,a1,a2) {
+  var sp = stackSave();
+  try {
+    dynCall_vid(index,a1,a2);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiiiiiii(index,a1,a2,a3,a4,a5,a6,a7) {
+  var sp = stackSave();
+  try {
+    return dynCall_iiiiiiii(index,a1,a2,a3,a4,a5,a6,a7);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiiiiii(index,a1,a2,a3,a4,a5,a6) {
+  var sp = stackSave();
+  try {
+    return dynCall_iiiiiii(index,a1,a2,a3,a4,a5,a6);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_viiiiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10) {
+  var sp = stackSave();
+  try {
+    dynCall_viiiiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_viiiiiii(index,a1,a2,a3,a4,a5,a6,a7) {
+  var sp = stackSave();
+  try {
+    dynCall_viiiiiii(index,a1,a2,a3,a4,a5,a6,a7);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_viiiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9) {
+  var sp = stackSave();
+  try {
+    dynCall_viiiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_fiii(index,a1,a2,a3) {
+  var sp = stackSave();
+  try {
+    return dynCall_fiii(index,a1,a2,a3);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_diii(index,a1,a2,a3) {
+  var sp = stackSave();
+  try {
+    return dynCall_diii(index,a1,a2,a3);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_viiiiiiiiiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15) {
+  var sp = stackSave();
+  try {
+    dynCall_viiiiiiiiiiiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_viid(index,a1,a2,a3) {
+  var sp = stackSave();
+  try {
+    dynCall_viid(index,a1,a2,a3);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_ji(index,a1) {
+  var sp = stackSave();
+  try {
+    return dynCall_ji(index,a1);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiji(index,a1,a2,a3,a4) {
+  var sp = stackSave();
+  try {
+    return dynCall_iiji(index,a1,a2,a3,a4);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiiiijiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11) {
+  var sp = stackSave();
+  try {
+    return dynCall_iiiiijiiiii(index,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iij(index,a1,a2,a3) {
+  var sp = stackSave();
+  try {
+    return dynCall_iij(index,a1,a2,a3);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiiijii(index,a1,a2,a3,a4,a5,a6,a7) {
+  var sp = stackSave();
+  try {
+    return dynCall_iiiijii(index,a1,a2,a3,a4,a5,a6,a7);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_vij(index,a1,a2,a3) {
+  var sp = stackSave();
+  try {
+    dynCall_vij(index,a1,a2,a3);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_viij(index,a1,a2,a3,a4) {
+  var sp = stackSave();
+  try {
+    dynCall_viij(index,a1,a2,a3,a4);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_j(index) {
+  var sp = stackSave();
+  try {
+    return dynCall_j(index);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_viijii(index,a1,a2,a3,a4,a5,a6) {
+  var sp = stackSave();
+  try {
+    dynCall_viijii(index,a1,a2,a3,a4,a5,a6);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_iiiiij(index,a1,a2,a3,a4,a5,a6) {
+  var sp = stackSave();
+  try {
+    return dynCall_iiiiij(index,a1,a2,a3,a4,a5,a6);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
+    _setThrew(1, 0);
+  }
+}
+
+function invoke_jiiii(index,a1,a2,a3,a4) {
+  var sp = stackSave();
+  try {
+    return dynCall_jiiii(index,a1,a2,a3,a4);
+  } catch(e) {
+    stackRestore(sp);
+    if (!(e instanceof EmscriptenEH)) throw e;
     _setThrew(1, 0);
   }
 }
@@ -6160,9 +6349,9 @@ var missingLibrarySymbols = [
   'readI53FromU64',
   'convertI32PairToI53',
   'convertU32PairToI53',
-  'stackAlloc',
   'getTempRet0',
-  'setTempRet0',
+  'arraySum',
+  'addDays',
   'inetPton4',
   'inetNtop4',
   'inetPton6',
@@ -6209,6 +6398,7 @@ var missingLibrarySymbols = [
   'stringToUTF32',
   'lengthBytesUTF32',
   'stringToUTF8OnStack',
+  'writeArrayToMemory',
   'registerKeyEventCallback',
   'maybeCStringToJsString',
   'findEventTarget',
@@ -6265,7 +6455,6 @@ var missingLibrarySymbols = [
   'makePromise',
   'idsToPromises',
   'makePromiseCallback',
-  'findMatchingCatch',
   'Browser_asyncPrepareDataCounter',
   'setMainLoop',
   'getSocketFromFD',
@@ -6319,6 +6508,8 @@ var unexportedSymbols = [
   'convertI32PairToI53Checked',
   'stackSave',
   'stackRestore',
+  'stackAlloc',
+  'setTempRet0',
   'ptrToString',
   'zeroMemory',
   'exitJS',
@@ -6331,10 +6522,8 @@ var unexportedSymbols = [
   'MONTH_DAYS_LEAP_CUMULATIVE',
   'isLeapYear',
   'ydayFromDate',
-  'arraySum',
-  'addDays',
   'ERRNO_CODES',
-  'ERRNO_MESSAGES',
+  'strError',
   'DNS',
   'Protocols',
   'Sockets',
@@ -6371,7 +6560,6 @@ var unexportedSymbols = [
   'intArrayFromString',
   'stringToAscii',
   'UTF16Decoder',
-  'writeArrayToMemory',
   'JSEvents',
   'specialHTMLTargets',
   'findCanvasEventTarget',
@@ -6387,6 +6575,11 @@ var unexportedSymbols = [
   'exceptionLast',
   'exceptionCaught',
   'ExceptionInfo',
+  'findMatchingCatch',
+  'getExceptionMessageCommon',
+  'incrementExceptionRefcount',
+  'decrementExceptionRefcount',
+  'getExceptionMessage',
   'Browser',
   'getPreloadedImageData__data',
   'wget',
@@ -6469,7 +6662,7 @@ function run() {
     initRuntime();
 
     readyPromiseResolve(Module);
-    if (Module['onRuntimeInitialized']) Module['onRuntimeInitialized']();
+    Module['onRuntimeInitialized']?.();
 
     assert(!Module['_main'], 'compiled without a main, but one is present. if you added it from JS, use Module["onRuntimeInitialized"]');
 

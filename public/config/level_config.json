@@ -15,13 +15,17 @@
             "title": "#NEWEST",
             "icon": "level",
             "filter": "",
-            "order": "id DESC"
+            "order": "id DESC",
+            "itemType": "level",
+            "searchValues": "type=quick"
         },
         {
             "title": "#RANDOM",
             "icon": "level",
             "filter": "name LIKE \"%olivier%\"",
-            "order": "RANDOM() ASC"
+            "order": "RANDOM() ASC",
+            "itemType": "level",
+            "searchValues": "type=advanced&random=1"
         }
     ],
     "levels.details.sections": [
@@ -29,13 +33,25 @@
             "title": "#RECOMMENDED",
             "icon": "star",
             "filter": "title = \"{{title}}\"",
-            "order": "id DESC"
+            "itemType": "level",
+            "order": "id DESC",
+            "searchValues": "type=advanced&keywords={{title}}"
         },
         {
             "title": "#SAME_AUTHOR",
             "icon": "crown",
             "filter": "name LIKE \"%olivier%\" AND artists = \"{{artists}}\"",
-            "order": "id DESC"
+            "itemType": "level",
+            "order": "id DESC",
+            "searchValues": "type=advanced&difficulty=00001&artists={{artists}}"
+        },
+        {
+            "title": "#BACKGROUND",
+            "icon": "background",
+            "filter": "title = \"{{title}}\"",
+            "itemType": "background",
+            "order": "id DESC",
+            "searchValues": "type=quick&keywords={{title}}"
         }
     ],
     "levels.searches": [    
@@ -57,11 +73,24 @@
                     "placeholder": "#ARTISTS_PLACEHOLDER"
                 },
                 {
-                    "name": "#DIFFICULTY",
                     "query": "difficulty",
-                    "type": "select",
-                    "def": 0,
-                    "values": [ "All", "Normal", "Hard", "Extra", "Stella", "Olivier" ]
+                    "name": "#DIFFICULTY",
+                    "type": "multi",
+                    "def": [ 1, 1, 1, 1, 1 ],
+                    "values": [ "Normal", "Hard", "Extra", "Stella", "Olivier" ],
+                    "variables": [
+                        {
+                            "name": "difficulty_or",
+                            "expr": "tags LIKE \"%({{difficulty}},)%\"",
+                            "connector": "OR",
+                            "default": "0"
+                        }, {
+                            "name": "difficulty_and",
+                            "expr": "tags LIKE \"%({{difficulty}},)%\"",
+                            "connector": "AND",
+                            "default": "1"
+                        }
+                    ]
                 },
                 {
                     "query": "minRating",
@@ -88,7 +117,7 @@
                     "def": 0
                 }
             ],
-            "filter": "title LIKE \"%{{keywords}}%\" AND artists LIKE \"%{{artist}}%\" AND name LIKE (CASE \"{{difficulty}}\" WHEN \"All\" THEN \"%\" ELSE \"%{{difficulty}}%\" END) AND rating >= {{minRating}} AND rating <= {{maxRating}}",
+            "filter": "title LIKE \"%{{keywords}}%\" AND artists LIKE \"%{{artist}}%\" AND rating >= {{minRating}} AND rating <= {{maxRating}} AND {{difficulty_or}}",
             "order": "CASE {{random}} WHEN 0 THEN id WHEN 1 THEN RANDOM() END DESC"
         }
     ],

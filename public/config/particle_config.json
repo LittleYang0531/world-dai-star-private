@@ -1,7 +1,7 @@
 {
-    "particles.enableLike": false,
-    "particles.enableComment": false,
-    "particles.enableRating": false,
+    "particles.enableLike": true,
+    "particles.enableComment": true,
+    "particles.enableRating": true,
     "particles.enableGUICreate": false,
     "particles.enableSonolusCreate": false,
     "particles.exceptGUICreate": [],
@@ -15,7 +15,9 @@
             "title": "#NEWEST",
             "icon": "particle",
             "filter": "",
-            "order": "id DESC"
+            "itemType": "particle",
+            "order": "id DESC",
+            "searchValues": "type=quick"
         }
     ],
     "particles.details.sections": [

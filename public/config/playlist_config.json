@@ -15,13 +15,17 @@
             "title": "#NEWEST",
             "icon": "playlist",
             "filter": "",
-            "order": "id DESC"
+            "order": "id DESC",
+            "itemType": "playlist",
+            "searchValues": "type=quick"
         },
         {
             "title": "#RANDOM",
             "icon": "playlist",
             "filter": "",
-            "order": "RANDOM() ASC"
+            "order": "RANDOM() ASC",
+            "itemType": "playlist",
+            "searchValues": "type=quick"
         }
     ],
     "playlists.details.sections": [

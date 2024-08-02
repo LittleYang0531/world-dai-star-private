@@ -15,12 +15,16 @@
             "title": "更新情報",
             "icon": "post",
             "filter": "tags LIKE \"%更新情報%\"",
-            "order": ""
+            "order": "",
+            "itemType": "post",
+            "searchValues": "type=quick"
         }, {
             "title": "不具合情報",
             "icon": "post",
             "filter": "tags LIKE \"%不具合情報%\"",
-            "order": ""
+            "order": "",
+            "itemType": "post",
+            "searchValues": "type=quick"
         }
     ],
     "posts.details.sections": [
