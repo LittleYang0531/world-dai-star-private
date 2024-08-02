@@ -10,7 +10,8 @@
         { "type": "background" },
         { "type": "effect" },
         { "type": "particle" },
-        { "type": "engine" }
+        { "type": "engine" },
+        { "type": "configuration" }
     ],
     "server.logo": "ebe6ea992d7a66d4e61c0341a8fb22ab367ee1b1",
     "server.banner": [
