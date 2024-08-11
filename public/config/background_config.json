@@ -14,14 +14,14 @@
         {
             "title": "Card",
             "icon": "star",
-            "filter": "name LIKE '%card%'",
+            "filter": "name LIKE \"%card%\"",
             "itemType": "background",
             "order": "id DESC",
             "searchValues": "type=card"
         }, {
             "title": "#BACKGROUND",
             "icon": "background",
-            "filter": "name NOT LIKE '%card%'",
+            "filter": "name NOT LIKE \"%card%\"",
             "itemType": "background",
             "order": "id DESC",
             "searchValues": "type=background"
