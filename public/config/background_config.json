@@ -12,19 +12,176 @@
     "backgrounds.pageSize.community": 5,
     "backgrounds.info.sections": [
         {
-            "title": "#NEWEST",
-            "icon": "background",
-            "filter": "",
+            "title": "Card",
+            "icon": "star",
+            "filter": "name LIKE '%card%'",
             "itemType": "background",
             "order": "id DESC",
-            "searchValues": "type=quick"
+            "searchValues": "type=card"
+        }, {
+            "title": "#BACKGROUND",
+            "icon": "background",
+            "filter": "name NOT LIKE '%card%'",
+            "itemType": "background",
+            "order": "id DESC",
+            "searchValues": "type=background"
         }
     ],
     "backgrounds.details.sections": [
 
     ],
     "backgrounds.searches": [
-        
+        {
+            "title": "Card",
+            "icon": "star",
+            "type": "card",
+            "options": [
+                {
+                    "query": "title",
+                    "name": "#TITLE",
+                    "type": "text",
+                    "placeholder": "#TITLE_PLACEHOLDER",
+                    "required": false
+                },
+                {
+                    "query": "actor",
+                    "name": "Actor",
+                    "type": "multi",
+                    "def": [ 
+                        1, 1, 1, 1, 1, 1,
+                        1, 1, 1, 1, 1,
+                        1, 1, 1, 1, 1,
+                        1, 1, 1, 1, 1
+                    ],
+                    "values": [
+                        "鳳ここな", "静香", "カトリナ・グリーベル", "新妻八恵", "柳場ぱんだ", "流石知冴",
+                        "連尺野初魅", "烏森大黒", "舎人仁花子", "萬容", "筆島しぐれ",
+                        "千寿暦", "ラモーナ・ウォルフ", "王雪", "リリヤ・クルトベイ", "与那国緋花里",
+                        "千寿いろは", "白丸美兎", "阿岐留カミラ", "猫足蕾", "本巣叶羽"
+                    ],
+                    "variables": [
+                        {
+                            "name": "actor_or",
+                            "expr": "subtitle LIKE \"%{{actor}}%\"",
+                            "connector": "OR",
+                            "default": "0"
+                        }, {
+                            "name": "actor_and",
+                            "expr": "subtitle LIKE \"%{{actor}}%\"",
+                            "connector": "AND",
+                            "default": "1"
+                        }
+                    ]
+                },
+                {
+                    "query": "rarity",
+                    "name": "Rarity",
+                    "type": "multi",
+                    "def": [ 1, 1, 1, 1 ],
+                    "values": [ "★", "★★", "★★★", "★★★★" ],
+                    "variables": [
+                        {
+                            "name": "rarity_or",
+                            "expr": "tags LIKE CONCAT(\"%(\", LENGTH(\"{{rarity}}\"), \",star)%\")",
+                            "connector": "OR",
+                            "default": "0"
+                        }, {
+                            "name": "rarity_and",
+                            "expr": "tags LIKE CONCAT(\"%(\", LENGTH(\"{{rarity}}\"), \",star)%\")",
+                            "connector": "AND",
+                            "default": "1"
+                        }
+                    ]
+                },
+                {
+                    "query": "attribute",
+                    "name": "Attribute",
+                    "type": "multi",
+                    "def": [ 1, 1, 1, 1 ],
+                    "values": [ "彩属性", "凛属性", "陽属性", "憐属性" ],
+                    "variables": [
+                        {
+                            "name": "attribute_or",
+                            "expr": "tags LIKE \"%({{attribute}},)%\"",
+                            "connector": "OR",
+                            "default": "0"
+                        }, {
+                            "name": "attribute_and",
+                            "expr": "tags LIKE \"%({{attribute}},)%\"",
+                            "connector": "AND",
+                            "default": "1"
+                        }
+                    ]
+                },
+                {
+                    "query": "type2",
+                    "name": "#TYPE",
+                    "type": "multi",
+                    "def": [ 1, 1, 1 ],
+                    "values": [ "Normal", "Untrained", "Trained" ],
+                    "variables": [
+                        {
+                            "name": "type2_or",
+                            "expr": "tags LIKE \"%({{type2}},)%\"",
+                            "connector": "OR",
+                            "default": "0"
+                        }, {
+                            "name": "type2_and",
+                            "expr": "tags LIKE \"%({{type2}},)%\"",
+                            "connector": "AND",
+                            "default": "1"
+                        }
+                    ]
+                }
+            ],
+            "filter": "name LIKE \"%card%\" AND title LIKE \"%{{title}}%\" AND {{actor_or}} AND {{rarity_or}} AND {{attribute_or}} AND {{type2_or}}",
+            "order": "id DESC"
+        }, {
+            "title": "#BACKGROUND",
+            "icon": "background",
+            "type": "background",
+            "options": [
+                {
+                    "query": "title",
+                    "name": "#TITLE",
+                    "type": "text",
+                    "placeholder": "#TITLE_PLACEHOLDER",
+                    "required": false
+                },
+                {
+                    "query": "actor",
+                    "name": "Actor",
+                    "type": "multi",
+                    "def": [ 
+                        1, 1, 1, 1, 1, 1,
+                        1, 1, 1, 1, 1,
+                        1, 1, 1, 1, 1,
+                        1, 1, 1, 1, 1
+                    ],
+                    "values": [
+                        "鳳ここな", "静香", "カトリナ・グリーベル", "新妻八恵", "柳場ぱんだ", "流石知冴",
+                        "連尺野初魅", "烏森大黒", "舎人仁花子", "萬容", "筆島しぐれ",
+                        "千寿暦", "ラモーナ・ウォルフ", "王雪", "リリヤ・クルトベイ", "与那国緋花里",
+                        "千寿いろは", "白丸美兎", "阿岐留カミラ", "猫足蕾", "本巣叶羽"
+                    ],
+                    "variables": [
+                        {
+                            "name": "actor_or",
+                            "expr": "subtitle LIKE \"%{{actor}}%\"",
+                            "connector": "OR",
+                            "default": "0"
+                        }, {
+                            "name": "actor_and",
+                            "expr": "subtitle LIKE \"%{{actor}}%\"",
+                            "connector": "AND",
+                            "default": "1"
+                        }
+                    ]
+                }
+            ],
+            "filter": "name NOT LIKE \"%card%\" AND title LIKE \"%{{title}}%\" AND {{actor_or}}",
+            "order": "id DESC"
+        }
     ],
     "backgrounds.creates": [
         {

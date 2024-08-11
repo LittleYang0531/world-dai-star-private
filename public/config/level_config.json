@@ -67,10 +67,34 @@
                     "placeholder": "#KEYWORDS_PLACEHOLDER"
                 },
                 {
-                    "query": "artist",
+                    "query": "artists",
                     "name": "#ARTISTS",
-                    "type": "text",
-                    "placeholder": "#ARTISTS_PLACEHOLDER"
+                    "type": "multi",
+                    "def": [ 
+                        1, 1, 1, 1, 1, 1,
+                        1, 1, 1, 1, 1,
+                        1, 1, 1, 1, 1,
+                        1, 1, 1, 1, 1
+                    ],
+                    "values": [
+                        "鳳ここな", "静香", "カトリナ・グリーベル", "新妻八恵", "柳場ぱんだ", "流石知冴",
+                        "連尺野初魅", "烏森大黒", "舎人仁花子", "萬容", "筆島しぐれ",
+                        "千寿暦", "ラモーナ・ウォルフ", "王雪", "リリヤ・クルトベイ", "与那国緋花里",
+                        "千寿いろは", "白丸美兎", "阿岐留カミラ", "猫足蕾", "本巣叶羽"
+                    ],
+                    "variables": [
+                        {
+                            "name": "artists_or",
+                            "expr": "artists LIKE \"%{{artists}}%\"",
+                            "connector": "OR",
+                            "default": "0"
+                        }, {
+                            "name": "artists_and",
+                            "expr": "artists LIKE \"%{{artists}}%\"",
+                            "connector": "AND",
+                            "default": "1"
+                        }
+                    ]
                 },
                 {
                     "query": "difficulty",
@@ -117,7 +141,7 @@
                     "def": 0
                 }
             ],
-            "filter": "title LIKE \"%{{keywords}}%\" AND artists LIKE \"%{{artist}}%\" AND rating >= {{minRating}} AND rating <= {{maxRating}} AND {{difficulty_or}}",
+            "filter": "title LIKE \"%{{keywords}}%\" AND {{artists_or}} AND rating >= {{minRating}} AND rating <= {{maxRating}} AND {{difficulty_or}}",
             "order": "CASE {{random}} WHEN 0 THEN id WHEN 1 THEN RANDOM() END DESC"
         }
     ],
