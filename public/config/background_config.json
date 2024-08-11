@@ -45,7 +45,7 @@
                 },
                 {
                     "query": "actor",
-                    "name": "Actor",
+                    "name": "#ARTISTS",
                     "type": "multi",
                     "def": [ 
                         1, 1, 1, 1, 1, 1,
@@ -150,7 +150,7 @@
                 },
                 {
                     "query": "actor",
-                    "name": "Actor",
+                    "name": "#ARTISTS",
                     "type": "multi",
                     "def": [ 
                         1, 1, 1, 1, 1, 1,
