@@ -62,13 +62,13 @@ if (ENVIRONMENT_IS_NODE) {
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /tmp/tmpwrdacdpx.js
+// include: /tmp/tmpej0j6tep.js
 
-  if (!Module.expectedDataFileDownloads) {
-    Module.expectedDataFileDownloads = 0;
+  if (!Module['expectedDataFileDownloads']) {
+    Module['expectedDataFileDownloads'] = 0;
   }
 
-  Module.expectedDataFileDownloads++;
+  Module['expectedDataFileDownloads']++;
   (() => {
     // Do not attempt to redownload the virtual filesystem data when in a pthread or a Wasm Worker context.
     var isPthread = typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD;
@@ -94,7 +94,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
 
       function fetchRemotePackage(packageName, packageSize, callback, errback) {
         if (typeof process === 'object' && typeof process.versions === 'object' && typeof process.versions.node === 'string') {
-          return; require('fs').readFile(packageName, function(err, contents) {
+          require('fs').readFile(packageName, (err, contents) => {
             if (err) {
               errback(err);
             } else {
@@ -106,40 +106,40 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
         var xhr = new XMLHttpRequest();
         xhr.open('GET', packageName, true);
         xhr.responseType = 'arraybuffer';
-        xhr.onprogress = function(event) {
+        xhr.onprogress = (event) => {
           var url = packageName;
           var size = packageSize;
           if (event.total) size = event.total;
           if (event.loaded) {
             if (!xhr.addedTotal) {
               xhr.addedTotal = true;
-              if (!Module.dataFileDownloads) Module.dataFileDownloads = {};
-              Module.dataFileDownloads[url] = {
+              if (!Module['dataFileDownloads']) Module['dataFileDownloads'] = {};
+              Module['dataFileDownloads'][url] = {
                 loaded: event.loaded,
                 total: size
               };
             } else {
-              Module.dataFileDownloads[url].loaded = event.loaded;
+              Module['dataFileDownloads'][url].loaded = event.loaded;
             }
             var total = 0;
             var loaded = 0;
             var num = 0;
-            for (var download in Module.dataFileDownloads) {
-            var data = Module.dataFileDownloads[download];
+            for (var download in Module['dataFileDownloads']) {
+            var data = Module['dataFileDownloads'][download];
               total += data.total;
               loaded += data.loaded;
               num++;
             }
-            total = Math.ceil(total * Module.expectedDataFileDownloads/num);
+            total = Math.ceil(total * Module['expectedDataFileDownloads']/num);
             Module['setStatus']?.(`Downloading data... (${loaded}/${total})`);
-          } else if (!Module.dataFileDownloads) {
+          } else if (!Module['dataFileDownloads']) {
             Module['setStatus']?.('Downloading data...');
           }
         };
-        xhr.onerror = function(event) {
+        xhr.onerror = (event) => {
           throw new Error("NetworkError for: " + packageName);
         }
-        xhr.onload = function(event) {
+        xhr.onload = (event) => {
           if (xhr.status == 200 || xhr.status == 304 || xhr.status == 206 || (xhr.status == 0 && xhr.response)) { // file URLs can return 0
             var packageData = xhr.response;
             callback(packageData);
@@ -157,7 +157,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
       var fetchedCallback = null;
       var fetched = Module['getPreloadedPackage'] ? Module['getPreloadedPackage'](REMOTE_PACKAGE_NAME, REMOTE_PACKAGE_SIZE) : null;
 
-      if (!fetched) fetchRemotePackage(REMOTE_PACKAGE_NAME, REMOTE_PACKAGE_SIZE, function(data) {
+      if (!fetched) fetchRemotePackage(REMOTE_PACKAGE_NAME, REMOTE_PACKAGE_SIZE, (data) => {
         if (fetchedCallback) {
           fetchedCallback(data);
           fetchedCallback = null;
@@ -231,9 +231,9 @@ Module['FS_createPath']("/web", "sonolus", true, true);
       };
       // Module['addRunDependency']('datafile_libsonolus.data');
 
-      if (!Module.preloadResults) Module.preloadResults = {};
+      if (!Module['preloadResults']) Module['preloadResults'] = {};
 
-      Module.preloadResults[PACKAGE_NAME] = {fromCache: false}; fetched = new ArrayBuffer(114514);
+      Module['preloadResults'][PACKAGE_NAME] = {fromCache: false};
       if (fetched) {
         processPackageData(fetched);
         fetched = null;
@@ -250,25 +250,25 @@ Module['FS_createPath']("/web", "sonolus", true, true);
     }
 
     }
-    loadPackage({"files": [{"filename": "/config/background_config.json", "start": 0, "end": 4365}, {"filename": "/config/config.json", "start": 4365, "end": 5178}, {"filename": "/config/database.json", "start": 5178, "end": 5433}, {"filename": "/config/effect_config.json", "start": 5433, "end": 9419}, {"filename": "/config/engine_config.json", "start": 9419, "end": 15921}, {"filename": "/config/level_config.json", "start": 15921, "end": 25055}, {"filename": "/config/multiplayer_config.json", "start": 25055, "end": 25140}, {"filename": "/config/particle_config.json", "start": 25140, "end": 29171}, {"filename": "/config/playlist_config.json", "start": 29171, "end": 32934}, {"filename": "/config/post_config.json", "start": 32934, "end": 36042}, {"filename": "/config/replay_config.json", "start": 36042, "end": 40097}, {"filename": "/config/room_config.json", "start": 40097, "end": 41727}, {"filename": "/config/singleplayer_config.json", "start": 41727, "end": 42769}, {"filename": "/config/skin_config.json", "start": 42769, "end": 46728}, {"filename": "/i18n/en.json", "start": 46728, "end": 60472}, {"filename": "/i18n/index.json", "start": 60472, "end": 60911}, {"filename": "/i18n/ja.json", "start": 60911, "end": 76991}, {"filename": "/i18n/ko.json", "start": 76991, "end": 91346}, {"filename": "/i18n/zhs.json", "start": 94779, "end": 108215}, {"filename": "/sonolus.db", "start": 108215, "end": 173751}, {"filename": "/web/css/import.h", "start": 173751, "end": 174295}, {"filename": "/web/css/index.css", "start": 174295, "end": 203589}, {"filename": "/web/downloader.h", "start": 203589, "end": 205248}, {"filename": "/web/gui/Index.h", "start": 205248, "end": 209814}, {"filename": "/web/gui/ItemCommunity.h", "start": 209814, "end": 212927}, {"filename": "/web/gui/ItemCommunityCommentJump.h", "start": 212927, "end": 214757}, {"filename": "/web/gui/ItemCommunityCommentList.h", "start": 214757, "end": 217745}, {"filename": "/web/gui/ItemCreate.h", "start": 217745, "end": 222880}, {"filename": "/web/gui/ItemDetails.h", "start": 222880, "end": 231287}, {"filename": "/web/gui/ItemEdit.h", "start": 231287, "end": 239375}, {"filename": "/web/gui/ItemInfo.h", "start": 239375, "end": 245003}, {"filename": "/web/gui/ItemJump.h", "start": 245003, "end": 246815}, {"filename": "/web/gui/ItemList.h", "start": 246815, "end": 252924}, {"filename": "/web/gui/ItemSearch.h", "start": 252924, "end": 259044}, {"filename": "/web/html/components/backgrounds.html", "start": 259044, "end": 260170}, {"filename": "/web/html/components/bottomBar.html", "start": 260170, "end": 270070}, {"filename": "/web/html/components/comments.html", "start": 270070, "end": 276134}, {"filename": "/web/html/components/effects.html", "start": 276134, "end": 277260}, {"filename": "/web/html/components/engines.html", "start": 277260, "end": 278386}, {"filename": "/web/html/components/header.html", "start": 278386, "end": 279266}, {"filename": "/web/html/components/iconButton.html", "start": 279266, "end": 279546}, {"filename": "/web/html/components/iconTextButton.html", "start": 279546, "end": 279922}, {"filename": "/web/html/components/indexButton.html", "start": 279922, "end": 280367}, {"filename": "/web/html/components/language.html", "start": 280367, "end": 281832}, {"filename": "/web/html/components/levels.html", "start": 281832, "end": 283962}, {"filename": "/web/html/components/navbar.html", "start": 283962, "end": 285542}, {"filename": "/web/html/components/open_in_sonolus.html", "start": 285542, "end": 292160}, {"filename": "/web/html/components/particles.html", "start": 292160, "end": 293286}, {"filename": "/web/html/components/playlists.html", "start": 293286, "end": 294412}, {"filename": "/web/html/components/posts.html", "start": 294412, "end": 295534}, {"filename": "/web/html/components/replays.html", "start": 295534, "end": 297666}, {"filename": "/web/html/components/searchColor.html", "start": 297666, "end": 304191}, {"filename": "/web/html/components/searchFile.html", "start": 304191, "end": 312300}, {"filename": "/web/html/components/searchMulti.html", "start": 312300, "end": 318269}, {"filename": "/web/html/components/searchMultiOption.html", "start": 318269, "end": 320187}, {"filename": "/web/html/components/searchSelect.html", "start": 320187, "end": 324487}, {"filename": "/web/html/components/searchSlider.html", "start": 324487, "end": 332236}, {"filename": "/web/html/components/searchText.html", "start": 332236, "end": 338298}, {"filename": "/web/html/components/searchTextArea.html", "start": 338298, "end": 343141}, {"filename": "/web/html/components/searchTitle.html", "start": 343141, "end": 343282}, {"filename": "/web/html/components/searchToggle.html", "start": 343282, "end": 347172}, {"filename": "/web/html/components/sectionBottom.html", "start": 347172, "end": 348844}, {"filename": "/web/html/components/sectionCreate.html", "start": 348844, "end": 349755}, {"filename": "/web/html/components/sectionSearch.html", "start": 349755, "end": 350826}, {"filename": "/web/html/components/sectionTitle.html", "start": 350826, "end": 352368}, {"filename": "/web/html/components/skins.html", "start": 352368, "end": 353494}, {"filename": "/web/html/icons/advanced.svg", "start": 353494, "end": 354301}, {"filename": "/web/html/icons/award.svg", "start": 354301, "end": 355767}, {"filename": "/web/html/icons/background.svg", "start": 355767, "end": 356233}, {"filename": "/web/html/icons/bookmark.svg", "start": 356233, "end": 356500}, {"filename": "/web/html/icons/comment.svg", "start": 356500, "end": 357059}, {"filename": "/web/html/icons/community.svg", "start": 357059, "end": 357854}, {"filename": "/web/html/icons/configuration.svg", "start": 357854, "end": 358969}, {"filename": "/web/html/icons/crown.svg", "start": 358969, "end": 359595}, {"filename": "/web/html/icons/description.svg", "start": 359595, "end": 360045}, {"filename": "/web/html/icons/effect.svg", "start": 360045, "end": 360840}, {"filename": "/web/html/icons/engine.svg", "start": 360840, "end": 361423}, {"filename": "/web/html/icons/global.svg", "start": 361423, "end": 362618}, {"filename": "/web/html/icons/heart.svg", "start": 362618, "end": 362990}, {"filename": "/web/html/icons/heartHollow.svg", "start": 362990, "end": 363782}, {"filename": "/web/html/icons/home.svg", "start": 363782, "end": 364413}, {"filename": "/web/html/icons/level.svg", "start": 364413, "end": 364754}, {"filename": "/web/html/icons/login.svg", "start": 364754, "end": 365242}, {"filename": "/web/html/icons/logout.svg", "start": 365242, "end": 365733}, {"filename": "/web/html/icons/medal.svg", "start": 365733, "end": 366477}, {"filename": "/web/html/icons/more.svg", "start": 366477, "end": 366688}, {"filename": "/web/html/icons/particle.svg", "start": 366688, "end": 367335}, {"filename": "/web/html/icons/playlist.svg", "start": 367335, "end": 367909}, {"filename": "/web/html/icons/post.svg", "start": 367909, "end": 368623}, {"filename": "/web/html/icons/ranking.svg", "start": 368623, "end": 369287}, {"filename": "/web/html/icons/replay.svg", "start": 369287, "end": 370280}, {"filename": "/web/html/icons/reply.svg", "start": 370280, "end": 370640}, {"filename": "/web/html/icons/search.svg", "start": 370640, "end": 370952}, {"filename": "/web/html/icons/shuffle.svg", "start": 370952, "end": 371625}, {"filename": "/web/html/icons/skin.svg", "start": 371625, "end": 371846}, {"filename": "/web/html/icons/star.svg", "start": 371846, "end": 372337}, {"filename": "/web/html/icons/tags.svg", "start": 372337, "end": 372616}, {"filename": "/web/html/icons/thumbsDown.svg", "start": 372616, "end": 373331}, {"filename": "/web/html/icons/thumbsUp.svg", "start": 373331, "end": 374037}, {"filename": "/web/html/icons/trophy.svg", "start": 374037, "end": 374963}, {"filename": "/web/html/pages/Index.html", "start": 374963, "end": 389392}, {"filename": "/web/html/pages/ItemCommunityCommentList.html", "start": 389392, "end": 400962}, {"filename": "/web/html/pages/ItemCreate.html", "start": 400962, "end": 401396}, {"filename": "/web/html/pages/ItemDetails.html", "start": 401396, "end": 421475}, {"filename": "/web/html/pages/ItemDetails/backgrounds.html", "start": 421475, "end": 423446}, {"filename": "/web/html/pages/ItemDetails/effects.html", "start": 423446, "end": 425413}, {"filename": "/web/html/pages/ItemDetails/engines.html", "start": 425413, "end": 427380}, {"filename": "/web/html/pages/ItemDetails/levels.html", "start": 427380, "end": 429774}, {"filename": "/web/html/pages/ItemDetails/particles.html", "start": 429774, "end": 431743}, {"filename": "/web/html/pages/ItemDetails/playlists.html", "start": 431743, "end": 433712}, {"filename": "/web/html/pages/ItemDetails/posts.html", "start": 433712, "end": 435673}, {"filename": "/web/html/pages/ItemDetails/replays.html", "start": 435673, "end": 438070}, {"filename": "/web/html/pages/ItemDetails/skins.html", "start": 438070, "end": 440019}, {"filename": "/web/html/pages/ItemInfo.html", "start": 440019, "end": 446778}, {"filename": "/web/html/pages/ItemJump.html", "start": 446778, "end": 454669}, {"filename": "/web/html/pages/ItemList.html", "start": 454669, "end": 456465}, {"filename": "/web/html/pages/ItemSearch.html", "start": 456465, "end": 456899}, {"filename": "/web/import.h", "start": 456899, "end": 457359}, {"filename": "/web/js/QRCode.js", "start": 457359, "end": 480827}, {"filename": "/web/js/community.js", "start": 480827, "end": 483205}, {"filename": "/web/js/import.h", "start": 483205, "end": 483746}, {"filename": "/web/js/index.js", "start": 483746, "end": 497743}, {"filename": "/web/js/jQuery.js", "start": 497743, "end": 587689}, {"filename": "/web/sonolus/Authentication.h", "start": 587689, "end": 590878}, {"filename": "/web/sonolus/CheckLogin.h", "start": 590878, "end": 591052}, {"filename": "/web/sonolus/ItemCommunity.h", "start": 591052, "end": 591378}, {"filename": "/web/sonolus/ItemCommunityCommentList.h", "start": 591378, "end": 592278}, {"filename": "/web/sonolus/ItemCommunityCommentSubmit.h", "start": 592278, "end": 593828}, {"filename": "/web/sonolus/ItemCommunityInfo.h", "start": 593828, "end": 596895}, {"filename": "/web/sonolus/ItemCommunitySubmit.h", "start": 596895, "end": 599772}, {"filename": "/web/sonolus/ItemCreate.h", "start": 599772, "end": 607433}, {"filename": "/web/sonolus/ItemDetails.h", "start": 607433, "end": 612605}, {"filename": "/web/sonolus/ItemDetailsSubmit.h", "start": 612605, "end": 614793}, {"filename": "/web/sonolus/ItemDetailsUpload.h", "start": 614793, "end": 614835}, {"filename": "/web/sonolus/ItemInfo.h", "start": 614835, "end": 618735}, {"filename": "/web/sonolus/ItemLeaderboardDetails.h", "start": 618735, "end": 618961}, {"filename": "/web/sonolus/ItemLeaderboardRecordDetails.h", "start": 618961, "end": 619208}, {"filename": "/web/sonolus/ItemLeaderboardRecordList.h", "start": 619208, "end": 619491}, {"filename": "/web/sonolus/ItemList.h", "start": 619491, "end": 622658}, {"filename": "/web/sonolus/ItemUpload.h", "start": 622658, "end": 623474}, {"filename": "/web/sonolus/RoomConnection.h", "start": 623474, "end": 642077}, {"filename": "/web/sonolus/RoomJoin.h", "start": 642077, "end": 644359}, {"filename": "/web/sonolus/ServerInfo.h", "start": 644359, "end": 646882}, {"filename": "/web/sonolus/sonolus.h", "start": 646882, "end": 651228}, {"filename": "/web/uploader.h", "start": 651228, "end": 652008}], "remote_package_size": 652008});
+    loadPackage({"files": [{"filename": "/config/background_config.json", "start": 0, "end": 4365}, {"filename": "/config/config.json", "start": 4365, "end": 5178}, {"filename": "/config/database.json", "start": 5178, "end": 5433}, {"filename": "/config/effect_config.json", "start": 5433, "end": 9419}, {"filename": "/config/engine_config.json", "start": 9419, "end": 15921}, {"filename": "/config/level_config.json", "start": 15921, "end": 25055}, {"filename": "/config/multiplayer_config.json", "start": 25055, "end": 25140}, {"filename": "/config/particle_config.json", "start": 25140, "end": 29171}, {"filename": "/config/playlist_config.json", "start": 29171, "end": 32934}, {"filename": "/config/post_config.json", "start": 32934, "end": 36042}, {"filename": "/config/replay_config.json", "start": 36042, "end": 40097}, {"filename": "/config/room_config.json", "start": 40097, "end": 41727}, {"filename": "/config/singleplayer_config.json", "start": 41727, "end": 42773}, {"filename": "/config/skin_config.json", "start": 42773, "end": 46732}, {"filename": "/i18n/en.json", "start": 46732, "end": 60499}, {"filename": "/i18n/index.json", "start": 60499, "end": 60938}, {"filename": "/i18n/ja.json", "start": 60938, "end": 77046}, {"filename": "/i18n/ko.json", "start": 77046, "end": 91429}, {"filename": "/i18n/sync.cpp", "start": 91429, "end": 94862}, {"filename": "/i18n/zhs.json", "start": 94862, "end": 108323}, {"filename": "/sonolus.db", "start": 108323, "end": 173859}, {"filename": "/web/css/import.h", "start": 173859, "end": 174422}, {"filename": "/web/css/index.css", "start": 174422, "end": 203716}, {"filename": "/web/downloader.h", "start": 203716, "end": 205394}, {"filename": "/web/gui/Index.h", "start": 205394, "end": 209960}, {"filename": "/web/gui/ItemCommunity.h", "start": 209960, "end": 213073}, {"filename": "/web/gui/ItemCommunityCommentJump.h", "start": 213073, "end": 214927}, {"filename": "/web/gui/ItemCommunityCommentList.h", "start": 214927, "end": 217915}, {"filename": "/web/gui/ItemCreate.h", "start": 217915, "end": 223091}, {"filename": "/web/gui/ItemDetails.h", "start": 223091, "end": 231874}, {"filename": "/web/gui/ItemEdit.h", "start": 231874, "end": 240022}, {"filename": "/web/gui/ItemInfo.h", "start": 240022, "end": 245985}, {"filename": "/web/gui/ItemJump.h", "start": 245985, "end": 247821}, {"filename": "/web/gui/ItemList.h", "start": 247821, "end": 254004}, {"filename": "/web/gui/ItemSearch.h", "start": 254004, "end": 261606}, {"filename": "/web/html/components/backgrounds.html", "start": 261606, "end": 262732}, {"filename": "/web/html/components/bottomBar.html", "start": 262732, "end": 272632}, {"filename": "/web/html/components/comments.html", "start": 272632, "end": 278696}, {"filename": "/web/html/components/effects.html", "start": 278696, "end": 279822}, {"filename": "/web/html/components/engines.html", "start": 279822, "end": 280948}, {"filename": "/web/html/components/header.html", "start": 280948, "end": 281828}, {"filename": "/web/html/components/iconButton.html", "start": 281828, "end": 282108}, {"filename": "/web/html/components/iconTextButton.html", "start": 282108, "end": 282484}, {"filename": "/web/html/components/indexButton.html", "start": 282484, "end": 282929}, {"filename": "/web/html/components/language.html", "start": 282929, "end": 284394}, {"filename": "/web/html/components/levels.html", "start": 284394, "end": 286524}, {"filename": "/web/html/components/navbar.html", "start": 286524, "end": 288104}, {"filename": "/web/html/components/open_in_sonolus.html", "start": 288104, "end": 294722}, {"filename": "/web/html/components/particles.html", "start": 294722, "end": 295848}, {"filename": "/web/html/components/playlists.html", "start": 295848, "end": 296974}, {"filename": "/web/html/components/posts.html", "start": 296974, "end": 298096}, {"filename": "/web/html/components/replays.html", "start": 298096, "end": 300228}, {"filename": "/web/html/components/searchColor.html", "start": 300228, "end": 306753}, {"filename": "/web/html/components/searchFile.html", "start": 306753, "end": 314862}, {"filename": "/web/html/components/searchMulti.html", "start": 314862, "end": 320831}, {"filename": "/web/html/components/searchMultiOption.html", "start": 320831, "end": 322749}, {"filename": "/web/html/components/searchSelect.html", "start": 322749, "end": 327049}, {"filename": "/web/html/components/searchSlider.html", "start": 327049, "end": 334798}, {"filename": "/web/html/components/searchText.html", "start": 334798, "end": 340860}, {"filename": "/web/html/components/searchTextArea.html", "start": 340860, "end": 345703}, {"filename": "/web/html/components/searchTitle.html", "start": 345703, "end": 345844}, {"filename": "/web/html/components/searchToggle.html", "start": 345844, "end": 349734}, {"filename": "/web/html/components/sectionBottom.html", "start": 349734, "end": 352316}, {"filename": "/web/html/components/sectionCreate.html", "start": 352316, "end": 353227}, {"filename": "/web/html/components/sectionSearch.html", "start": 353227, "end": 355208}, {"filename": "/web/html/components/sectionTitle.html", "start": 355208, "end": 357552}, {"filename": "/web/html/components/skins.html", "start": 357552, "end": 358678}, {"filename": "/web/html/icons/advanced.svg", "start": 358678, "end": 359485}, {"filename": "/web/html/icons/award.svg", "start": 359485, "end": 360951}, {"filename": "/web/html/icons/background.svg", "start": 360951, "end": 361417}, {"filename": "/web/html/icons/bookmark.svg", "start": 361417, "end": 361684}, {"filename": "/web/html/icons/comment.svg", "start": 361684, "end": 362243}, {"filename": "/web/html/icons/community.svg", "start": 362243, "end": 363038}, {"filename": "/web/html/icons/configuration.svg", "start": 363038, "end": 364153}, {"filename": "/web/html/icons/crown.svg", "start": 364153, "end": 364779}, {"filename": "/web/html/icons/description.svg", "start": 364779, "end": 365229}, {"filename": "/web/html/icons/effect.svg", "start": 365229, "end": 366024}, {"filename": "/web/html/icons/engine.svg", "start": 366024, "end": 366607}, {"filename": "/web/html/icons/global.svg", "start": 366607, "end": 367802}, {"filename": "/web/html/icons/heart.svg", "start": 367802, "end": 368174}, {"filename": "/web/html/icons/heartHollow.svg", "start": 368174, "end": 368966}, {"filename": "/web/html/icons/home.svg", "start": 368966, "end": 369597}, {"filename": "/web/html/icons/level.svg", "start": 369597, "end": 369938}, {"filename": "/web/html/icons/login.svg", "start": 369938, "end": 370426}, {"filename": "/web/html/icons/logout.svg", "start": 370426, "end": 370917}, {"filename": "/web/html/icons/medal.svg", "start": 370917, "end": 371661}, {"filename": "/web/html/icons/more.svg", "start": 371661, "end": 371872}, {"filename": "/web/html/icons/particle.svg", "start": 371872, "end": 372519}, {"filename": "/web/html/icons/playlist.svg", "start": 372519, "end": 373093}, {"filename": "/web/html/icons/post.svg", "start": 373093, "end": 373807}, {"filename": "/web/html/icons/question.svg", "start": 373807, "end": 374290}, {"filename": "/web/html/icons/ranking.svg", "start": 374290, "end": 374954}, {"filename": "/web/html/icons/replay.svg", "start": 374954, "end": 375947}, {"filename": "/web/html/icons/reply.svg", "start": 375947, "end": 376307}, {"filename": "/web/html/icons/search.svg", "start": 376307, "end": 376619}, {"filename": "/web/html/icons/shuffle.svg", "start": 376619, "end": 377292}, {"filename": "/web/html/icons/skin.svg", "start": 377292, "end": 377513}, {"filename": "/web/html/icons/star.svg", "start": 377513, "end": 378004}, {"filename": "/web/html/icons/tags.svg", "start": 378004, "end": 378283}, {"filename": "/web/html/icons/thumbsDown.svg", "start": 378283, "end": 378998}, {"filename": "/web/html/icons/thumbsUp.svg", "start": 378998, "end": 379704}, {"filename": "/web/html/icons/trophy.svg", "start": 379704, "end": 380630}, {"filename": "/web/html/pages/Index.html", "start": 380630, "end": 395059}, {"filename": "/web/html/pages/ItemCommunityCommentList.html", "start": 395059, "end": 406629}, {"filename": "/web/html/pages/ItemCreate.html", "start": 406629, "end": 407063}, {"filename": "/web/html/pages/ItemDetails.html", "start": 407063, "end": 427142}, {"filename": "/web/html/pages/ItemDetails/backgrounds.html", "start": 427142, "end": 429113}, {"filename": "/web/html/pages/ItemDetails/effects.html", "start": 429113, "end": 431080}, {"filename": "/web/html/pages/ItemDetails/engines.html", "start": 431080, "end": 433047}, {"filename": "/web/html/pages/ItemDetails/levels.html", "start": 433047, "end": 435441}, {"filename": "/web/html/pages/ItemDetails/particles.html", "start": 435441, "end": 437410}, {"filename": "/web/html/pages/ItemDetails/playlists.html", "start": 437410, "end": 439379}, {"filename": "/web/html/pages/ItemDetails/posts.html", "start": 439379, "end": 441340}, {"filename": "/web/html/pages/ItemDetails/replays.html", "start": 441340, "end": 443737}, {"filename": "/web/html/pages/ItemDetails/skins.html", "start": 443737, "end": 445686}, {"filename": "/web/html/pages/ItemInfo.html", "start": 445686, "end": 452826}, {"filename": "/web/html/pages/ItemJump.html", "start": 452826, "end": 460717}, {"filename": "/web/html/pages/ItemList.html", "start": 460717, "end": 462513}, {"filename": "/web/html/pages/ItemSearch.html", "start": 462513, "end": 463417}, {"filename": "/web/import.h", "start": 463417, "end": 463877}, {"filename": "/web/js/QRCode.js", "start": 463877, "end": 487345}, {"filename": "/web/js/community.js", "start": 487345, "end": 489723}, {"filename": "/web/js/import.h", "start": 489723, "end": 490283}, {"filename": "/web/js/index.js", "start": 490283, "end": 504726}, {"filename": "/web/js/jQuery.js", "start": 504726, "end": 594672}, {"filename": "/web/sonolus/Authentication.h", "start": 594672, "end": 598090}, {"filename": "/web/sonolus/CheckLogin.h", "start": 598090, "end": 598264}, {"filename": "/web/sonolus/ItemCommunity.h", "start": 598264, "end": 598621}, {"filename": "/web/sonolus/ItemCommunityCommentList.h", "start": 598621, "end": 599521}, {"filename": "/web/sonolus/ItemCommunityCommentSubmit.h", "start": 599521, "end": 601088}, {"filename": "/web/sonolus/ItemCommunityInfo.h", "start": 601088, "end": 604155}, {"filename": "/web/sonolus/ItemCommunitySubmit.h", "start": 604155, "end": 607049}, {"filename": "/web/sonolus/ItemCreate.h", "start": 607049, "end": 615085}, {"filename": "/web/sonolus/ItemDetails.h", "start": 615085, "end": 620394}, {"filename": "/web/sonolus/ItemDetailsSubmit.h", "start": 620394, "end": 622726}, {"filename": "/web/sonolus/ItemDetailsUpload.h", "start": 622726, "end": 622768}, {"filename": "/web/sonolus/ItemInfo.h", "start": 622768, "end": 626788}, {"filename": "/web/sonolus/ItemLeaderboardDetails.h", "start": 626788, "end": 627014}, {"filename": "/web/sonolus/ItemLeaderboardRecordDetails.h", "start": 627014, "end": 627261}, {"filename": "/web/sonolus/ItemLeaderboardRecordList.h", "start": 627261, "end": 627544}, {"filename": "/web/sonolus/ItemList.h", "start": 627544, "end": 630761}, {"filename": "/web/sonolus/ItemUpload.h", "start": 630761, "end": 631619}, {"filename": "/web/sonolus/RoomConnection.h", "start": 631619, "end": 650222}, {"filename": "/web/sonolus/RoomJoin.h", "start": 650222, "end": 652605}, {"filename": "/web/sonolus/ServerInfo.h", "start": 652605, "end": 655128}, {"filename": "/web/sonolus/sonolus.h", "start": 655128, "end": 659520}, {"filename": "/web/uploader.h", "start": 659520, "end": 660317}], "remote_package_size": 660317});
 
   })();
 
-// end include: /tmp/tmpwrdacdpx.js
-// include: /tmp/tmp4dz5qq9d.js
+// end include: /tmp/tmpej0j6tep.js
+// include: /tmp/tmpw0mujgok.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if (Module['$ww'] || (typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD)) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: /tmp/tmp4dz5qq9d.js
-// include: /tmp/tmpj6lhyakm.js
+  // end include: /tmp/tmpw0mujgok.js
+// include: /tmp/tmpx0imqgqa.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach((task) => {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: /tmp/tmpj6lhyakm.js
+  // end include: /tmp/tmpx0imqgqa.js
 
 
 // Sometimes an existing Module object exists with properties
@@ -401,13 +401,14 @@ if (ENVIRONMENT_IS_WORKER) {
     // Cordova or Electron apps are typically loaded from a file:// url.
     // So use XHR on webview if URL is a file URL.
     if (isFileURI(url)) {
-      return new Promise((reject, resolve) => {
+      return new Promise((resolve, reject) => {
         var xhr = new XMLHttpRequest();
         xhr.open('GET', url, true);
         xhr.responseType = 'arraybuffer';
         xhr.onload = () => {
           if (xhr.status == 200 || (xhr.status == 0 && xhr.response)) { // file URLs can return 0
             resolve(xhr.response);
+            return;
           }
           reject(xhr.status);
         };
@@ -449,8 +450,6 @@ if (Module['arguments']) arguments_ = Module['arguments'];legacyModuleProp('argu
 
 if (Module['thisProgram']) thisProgram = Module['thisProgram'];legacyModuleProp('thisProgram', 'thisProgram');
 
-if (Module['quit']) quit_ = Module['quit'];legacyModuleProp('quit', 'quit_');
-
 // perform assertions in shell.js after we set up out() and err(), as otherwise if an assertion fails it cannot print the message
 // Assertions on removed incoming Module JS APIs.
 assert(typeof Module['memoryInitializerPrefixURL'] == 'undefined', 'Module.memoryInitializerPrefixURL option was removed, use Module.locateFile instead');
@@ -491,8 +490,7 @@ assert(!ENVIRONMENT_IS_SHELL, 'shell environment detected but not enabled at bui
 // An online HTML version (which may be of a different version of Emscripten)
 //    is up at http://kripken.github.io/emscripten-site/docs/api_reference/preamble.js.html
 
-var wasmBinary; 
-if (Module['wasmBinary']) wasmBinary = Module['wasmBinary'];legacyModuleProp('wasmBinary', 'wasmBinary');
+var wasmBinary = Module['wasmBinary'];legacyModuleProp('wasmBinary', 'wasmBinary');
 
 if (typeof WebAssembly != 'object') {
   err('no native wasm support detected');
@@ -635,16 +633,6 @@ function checkStackCookie() {
   }
 }
 // end include: runtime_stack_check.js
-// include: runtime_assertions.js
-// Endianness check
-(function() {
-  var h16 = new Int16Array(1);
-  var h8 = new Int8Array(h16.buffer);
-  h16[0] = 0x6373;
-  if (h8[0] !== 0x73 || h8[1] !== 0x63) throw 'Runtime error: expected the system to be little-endian! (Run with -sSUPPORT_BIG_ENDIAN to bypass)';
-})();
-
-// end include: runtime_assertions.js
 var __ATPRERUN__  = []; // functions called before the runtime is initialized
 var __ATINIT__    = []; // functions called during startup
 var __ATEXIT__    = []; // functions called during shutdown
@@ -669,7 +657,7 @@ function initRuntime() {
   checkStackCookie();
 
   
-if (!Module['noFSInit'] && !FS.init.initialized)
+if (!Module['noFSInit'] && !FS.initialized)
   FS.init();
 FS.ignorePermissions = false;
 
@@ -1054,6 +1042,14 @@ var tempDouble;
 var tempI64;
 
 // include: runtime_debug.js
+// Endianness check
+(function() {
+  var h16 = new Int16Array(1);
+  var h8 = new Int8Array(h16.buffer);
+  h16[0] = 0x6373;
+  if (h8[0] !== 0x73 || h8[1] !== 0x63) throw 'Runtime error: expected the system to be little-endian! (Run with -sSUPPORT_BIG_ENDIAN to bypass)';
+})();
+
 function legacyModuleProp(prop, newName, incoming=true) {
   if (!Object.getOwnPropertyDescriptor(Module, prop)) {
     Object.defineProperty(Module, prop, {
@@ -1455,7 +1451,6 @@ function dbg(...args) {
       };
 
   var ___builtin_emscripten_query = (sql, config) => {
-          // console.log(sql);
           return Asyncify.handleAsync(async () => {
               let configJson = UTF8ToString(config)
               let appConfig = JSON.parse(configJson)
@@ -1497,6 +1492,7 @@ function dbg(...args) {
   var exceptionCaught =  [];
   
   
+  
   var uncaughtExceptionCount = 0;
   var ___cxa_begin_catch = (ptr) => {
       var info = new ExceptionInfo(ptr);
@@ -1506,8 +1502,8 @@ function dbg(...args) {
       }
       info.set_rethrown(false);
       exceptionCaught.push(info);
-      ___cxa_increment_exception_refcount(info.excPtr);
-      return info.get_exception_ptr();
+      ___cxa_increment_exception_refcount(ptr);
+      return ___cxa_get_exception_ptr(ptr);
     };
 
   
@@ -1580,22 +1576,6 @@ function dbg(...args) {
   
       get_adjusted_ptr() {
         return HEAPU32[(((this.ptr)+(16))>>2)];
-      }
-  
-      // Get pointer which is expected to be received by catch clause in C++ code. It may be adjusted
-      // when the pointer is casted to some of the exception object base classes (e.g. when virtual
-      // inheritance is used). When a pointer is thrown this method should return the thrown pointer
-      // itself.
-      get_exception_ptr() {
-        // Work around a fastcomp bug, this code is still included for some reason in a build without
-        // exceptions support.
-        var isPointer = ___cxa_is_pointer_type(this.get_type());
-        if (isPointer) {
-          return HEAPU32[((this.excPtr)>>2)];
-        }
-        var adjusted = this.get_adjusted_ptr();
-        if (adjusted !== 0) return adjusted;
-        return this.excPtr;
       }
     }
   
@@ -2367,26 +2347,28 @@ function dbg(...args) {
           var allocated;
           var contents = stream.node.contents;
           // Only make a new copy when MAP_PRIVATE is specified.
-          if (!(flags & 2) && contents.buffer === HEAP8.buffer) {
+          if (!(flags & 2) && contents && contents.buffer === HEAP8.buffer) {
             // We can't emulate MAP_SHARED when the file is not backed by the
             // buffer we're mapping to (e.g. the HEAP buffer).
             allocated = false;
             ptr = contents.byteOffset;
           } else {
-            // Try to avoid unnecessary slices.
-            if (position > 0 || position + length < contents.length) {
-              if (contents.subarray) {
-                contents = contents.subarray(position, position + length);
-              } else {
-                contents = Array.prototype.slice.call(contents, position, position + length);
-              }
-            }
             allocated = true;
             ptr = mmapAlloc(length);
             if (!ptr) {
               throw new FS.ErrnoError(48);
             }
-            HEAP8.set(contents, ptr);
+            if (contents) {
+              // Try to avoid unnecessary slices.
+              if (position > 0 || position + length < contents.length) {
+                if (contents.subarray) {
+                  contents = contents.subarray(position, position + length);
+                } else {
+                  contents = Array.prototype.slice.call(contents, position, position + length);
+                }
+              }
+              HEAP8.set(contents, ptr);
+            }
           }
           return { ptr, allocated };
         },
@@ -2970,8 +2952,8 @@ function dbg(...args) {
           this.node_ops = {};
           this.stream_ops = {};
           this.rdev = rdev;
-          this.readMode = 292/*292*/ | 73/*73*/;
-          this.writeMode = 146/*146*/;
+          this.readMode = 292 | 73;
+          this.writeMode = 146;
         }
         get read() {
           return (this.mode & this.readMode) === this.readMode;
@@ -3955,6 +3937,9 @@ function dbg(...args) {
         if (!stream.stream_ops.mmap) {
           throw new FS.ErrnoError(43);
         }
+        if (!length) {
+          throw new FS.ErrnoError(28);
+        }
         return stream.stream_ops.mmap(stream, length, position, prot, flags);
       },
   msync(stream, buffer, offset, length, mmapFlags) {
@@ -4082,7 +4067,7 @@ function dbg(...args) {
           }
         }, {}, '/proc/self/fd');
       },
-  createStandardStreams() {
+  createStandardStreams(input, output, error) {
         // TODO deprecate the old functionality of a single
         // input / output callback and that utilizes FS.createDevice
         // and instead require a unique set of stream ops
@@ -4091,18 +4076,18 @@ function dbg(...args) {
         // default tty devices. however, if the standard streams
         // have been overwritten we create a unique device for
         // them instead.
-        if (Module['stdin']) {
-          FS.createDevice('/dev', 'stdin', Module['stdin']);
+        if (input) {
+          FS.createDevice('/dev', 'stdin', input);
         } else {
           FS.symlink('/dev/tty', '/dev/stdin');
         }
-        if (Module['stdout']) {
-          FS.createDevice('/dev', 'stdout', null, Module['stdout']);
+        if (output) {
+          FS.createDevice('/dev', 'stdout', null, output);
         } else {
           FS.symlink('/dev/tty', '/dev/stdout');
         }
-        if (Module['stderr']) {
-          FS.createDevice('/dev', 'stderr', null, Module['stderr']);
+        if (error) {
+          FS.createDevice('/dev', 'stderr', null, error);
         } else {
           FS.symlink('/dev/tty1', '/dev/stderr');
         }
@@ -4136,18 +4121,18 @@ function dbg(...args) {
         };
       },
   init(input, output, error) {
-        assert(!FS.init.initialized, 'FS.init was previously called. If you want to initialize later with custom parameters, remove any earlier calls (note that one is automatically added to the generated code)');
-        FS.init.initialized = true;
+        assert(!FS.initialized, 'FS.init was previously called. If you want to initialize later with custom parameters, remove any earlier calls (note that one is automatically added to the generated code)');
+        FS.initialized = true;
   
         // Allow Module.stdin etc. to provide defaults, if none explicitly passed to us here
-        Module['stdin'] = input || Module['stdin'];
-        Module['stdout'] = output || Module['stdout'];
-        Module['stderr'] = error || Module['stderr'];
+        input ??= Module['stdin'];
+        output ??= Module['stdout'];
+        error ??= Module['stderr'];
   
-        FS.createStandardStreams();
+        FS.createStandardStreams(input, output, error);
       },
   quit() {
-        FS.init.initialized = false;
+        FS.initialized = false;
         // force-flush all streams, so we get musl std streams printed out
         _fflush(0);
         // close all of our streams
@@ -4974,6 +4959,7 @@ function dbg(...args) {
       // casing all heap size related code to treat 0 specially.
       2147483648;
   
+  
   var growMemory = (size) => {
       var b = wasmMemory.buffer;
       var pages = (size - b.byteLength + 65535) / 65536;
@@ -5021,8 +5007,6 @@ function dbg(...args) {
         return false;
       }
   
-      var alignUp = (x, multiple) => x + (multiple - x % multiple) % multiple;
-  
       // Loop through potential heap size increases. If we attempt a too eager
       // reservation that fails, cut down on the attempted size and reserve a
       // smaller bump instead. (max 3 times, chosen somewhat arbitrarily)
@@ -5031,7 +5015,7 @@ function dbg(...args) {
         // but limit overreserving (default to capping at +96MB overgrowth at most)
         overGrownHeapSize = Math.min(overGrownHeapSize, requestedSize + 100663296 );
   
-        var newSize = Math.min(maxHeapSize, alignUp(Math.max(requestedSize, overGrownHeapSize), 65536));
+        var newSize = Math.min(maxHeapSize, alignMemory(Math.max(requestedSize, overGrownHeapSize), 65536));
   
         var replacement = growMemory(newSize);
         if (replacement) {
@@ -5181,6 +5165,10 @@ function dbg(...args) {
         var curr = FS.write(stream, HEAP8, ptr, len, offset);
         if (curr < 0) return -1;
         ret += curr;
+        if (curr < len) {
+          // No more space to write.
+          break;
+        }
         if (typeof offset != 'undefined') {
           offset += curr;
         }
@@ -5619,7 +5607,15 @@ function dbg(...args) {
   Module['getExceptionMessage'] = getExceptionMessage;
 
   FS.createPreloadedFile = FS_createPreloadedFile;
-  FS.staticInit();Module["FS_createPath"] = FS.createPath;Module["FS_createDataFile"] = FS.createDataFile;Module["FS_createPreloadedFile"] = FS.createPreloadedFile;Module["FS_unlink"] = FS.unlink;Module["FS_createLazyFile"] = FS.createLazyFile;Module["FS_createDevice"] = FS.createDevice;;
+  FS.staticInit();
+  // Set module methods based on EXPORTED_RUNTIME_METHODS
+  Module["FS_createPath"] = FS.createPath;
+  Module["FS_createDataFile"] = FS.createDataFile;
+  Module["FS_createPreloadedFile"] = FS.createPreloadedFile;
+  Module["FS_unlink"] = FS.unlink;
+  Module["FS_createLazyFile"] = FS.createLazyFile;
+  Module["FS_createDevice"] = FS.createDevice;
+  ;
 if (ENVIRONMENT_IS_NODE) { NODEFS.staticInit(); };
 function checkIncomingModuleAPI() {
   ignoredModuleProp('fetchSettings');
@@ -5809,7 +5805,7 @@ var ___cxa_decrement_exception_refcount = createExportWrapper('__cxa_decrement_e
 var ___cxa_increment_exception_refcount = createExportWrapper('__cxa_increment_exception_refcount', 1);
 var ___get_exception_message = createExportWrapper('__get_exception_message', 3);
 var ___cxa_can_catch = createExportWrapper('__cxa_can_catch', 3);
-var ___cxa_is_pointer_type = createExportWrapper('__cxa_is_pointer_type', 1);
+var ___cxa_get_exception_ptr = createExportWrapper('__cxa_get_exception_ptr', 1);
 var dynCall_vi = Module['dynCall_vi'] = createExportWrapper('dynCall_vi', 2);
 var dynCall_ii = Module['dynCall_ii'] = createExportWrapper('dynCall_ii', 2);
 var dynCall_viii = Module['dynCall_viii'] = createExportWrapper('dynCall_viii', 4);
@@ -6352,8 +6348,6 @@ var missingLibrarySymbols = [
   'convertI32PairToI53',
   'convertU32PairToI53',
   'getTempRet0',
-  'arraySum',
-  'addDays',
   'inetPton4',
   'inetNtop4',
   'inetPton6',
@@ -6459,6 +6453,8 @@ var missingLibrarySymbols = [
   'makePromiseCallback',
   'Browser_asyncPrepareDataCounter',
   'setMainLoop',
+  'arraySum',
+  'addDays',
   'getSocketFromFD',
   'getSocketAddress',
   'FS_mkdirTree',
@@ -6518,12 +6514,6 @@ var unexportedSymbols = [
   'getHeapMax',
   'growMemory',
   'ENV',
-  'MONTH_DAYS_REGULAR',
-  'MONTH_DAYS_LEAP',
-  'MONTH_DAYS_REGULAR_CUMULATIVE',
-  'MONTH_DAYS_LEAP_CUMULATIVE',
-  'isLeapYear',
-  'ydayFromDate',
   'ERRNO_CODES',
   'strError',
   'DNS',
@@ -6585,6 +6575,12 @@ var unexportedSymbols = [
   'Browser',
   'getPreloadedImageData__data',
   'wget',
+  'MONTH_DAYS_REGULAR',
+  'MONTH_DAYS_LEAP',
+  'MONTH_DAYS_REGULAR_CUMULATIVE',
+  'MONTH_DAYS_LEAP_CUMULATIVE',
+  'isLeapYear',
+  'ydayFromDate',
   'SYSCALLS',
   'preloadPlugins',
   'FS_modeStringToFlags',
