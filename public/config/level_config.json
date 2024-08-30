@@ -17,7 +17,8 @@
             "filter": "",
             "order": "id DESC",
             "itemType": "level",
-            "searchValues": "type=quick"
+            "searchValues": "type=quick",
+            "description": "List of the newest levels."
         },
         {
             "title": "#RANDOM",
@@ -25,7 +26,8 @@
             "filter": "name LIKE \"%olivier%\"",
             "order": "RANDOM() ASC",
             "itemType": "level",
-            "searchValues": "type=advanced&random=1"
+            "searchValues": "type=advanced&random=1",
+            "description": "List of random levels. Refresh the page to get a new list."
         }
     ],
     "levels.details.sections": [
@@ -142,7 +144,8 @@
                 }
             ],
             "filter": "title LIKE \"%{{keywords}}%\" AND {{artists_or}} AND rating >= {{minRating}} AND rating <= {{maxRating}} AND {{difficulty_or}}",
-            "order": "CASE {{random}} WHEN 0 THEN id WHEN 1 THEN RANDOM() END DESC"
+            "order": "CASE {{random}} WHEN 0 THEN id WHEN 1 THEN RANDOM() END DESC",
+            "help": ""
         }
     ],
     "levels.creates": [
